@@ -87,12 +87,12 @@ $EndComp
 $Comp
 L power:+3.3V #PWR07
 U 1 1 5BAC209F
-P 4441 1601
-F 0 "#PWR07" H 4441 1451 50  0001 C CNN
-F 1 "+3.3V" H 4456 1774 50  0000 C CNN
-F 2 "" H 4441 1601 50  0001 C CNN
-F 3 "" H 4441 1601 50  0001 C CNN
-	1    4441 1601
+P 4033 1463
+F 0 "#PWR07" H 4033 1313 50  0001 C CNN
+F 1 "+3.3V" H 4048 1636 50  0000 C CNN
+F 2 "" H 4033 1463 50  0001 C CNN
+F 3 "" H 4033 1463 50  0001 C CNN
+	1    4033 1463
 	-1   0    0    1   
 $EndComp
 $Comp
@@ -142,28 +142,28 @@ $EndComp
 $Comp
 L electroniccats:ATSAMD21E18A-MU U2
 U 1 1 5BAD6569
-P 3440 2432
-F 0 "U2" H 3440 3799 50  0000 C CNN
-F 1 "ATSAMD21E18A-MU" H 3440 3708 50  0000 C CNN
-F 2 "QFN50P500X500X100-33N" H 3440 2432 50  0001 L BNN
-F 3 "SAMD21E Series 256 KB Flash 32 KB SRAM 48 MHz 32-Bit Microcontroller - QFN-32" H 3440 2432 50  0001 L BNN
-F 4 "ATSAMD21E18A-MU-ND" H 3440 2432 50  0001 L BNN "Campo4"
-F 5 "https://www.digikey.com.mx/product-detail/en/microchip-technology/ATSAMD21E18A-MU/ATSAMD21E18A-MU-ND/4935887?utm_source=snapeda&utm_medium=aggregator&utm_campaign=symbol" H 3440 2432 50  0001 L BNN "Campo5"
-F 6 "Microchip" H 3440 2432 50  0001 L BNN "Campo6"
-F 7 "ATSAMD21E18A-MU" H 3440 2432 50  0001 L BNN "Campo7"
-F 8 "QFN-32 Microchip" H 3440 2432 50  0001 L BNN "Campo8"
-	1    3440 2432
+P 3032 2294
+F 0 "U2" H 3032 3661 50  0000 C CNN
+F 1 "ATSAMD21E18A-MU" H 3032 3570 50  0000 C CNN
+F 2 "QFN50P500X500X100-33N" H 3032 2294 50  0001 L BNN
+F 3 "SAMD21E Series 256 KB Flash 32 KB SRAM 48 MHz 32-Bit Microcontroller - QFN-32" H 3032 2294 50  0001 L BNN
+F 4 "ATSAMD21E18A-MU-ND" H 3032 2294 50  0001 L BNN "Campo4"
+F 5 "https://www.digikey.com.mx/product-detail/en/microchip-technology/ATSAMD21E18A-MU/ATSAMD21E18A-MU-ND/4935887?utm_source=snapeda&utm_medium=aggregator&utm_campaign=symbol" H 3032 2294 50  0001 L BNN "Campo5"
+F 6 "Microchip" H 3032 2294 50  0001 L BNN "Campo6"
+F 7 "ATSAMD21E18A-MU" H 3032 2294 50  0001 L BNN "Campo7"
+F 8 "QFN-32 Microchip" H 3032 2294 50  0001 L BNN "Campo8"
+	1    3032 2294
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR011
 U 1 1 5BAD7783
-P 5133 1741
-F 0 "#PWR011" H 5133 1491 50  0001 C CNN
-F 1 "GND" H 5138 1568 50  0000 C CNN
-F 2 "" H 5133 1741 50  0001 C CNN
-F 3 "" H 5133 1741 50  0001 C CNN
-	1    5133 1741
+P 4725 1603
+F 0 "#PWR011" H 4725 1353 50  0001 C CNN
+F 1 "GND" H 4730 1430 50  0000 C CNN
+F 2 "" H 4725 1603 50  0001 C CNN
+F 3 "" H 4725 1603 50  0001 C CNN
+	1    4725 1603
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -189,129 +189,112 @@ Wire Wire Line
 $Comp
 L Device:C C3
 U 1 1 5BAC1D19
-P 5133 1519
-F 0 "C3" H 5248 1565 50  0000 L CNN
-F 1 "1uf" H 5248 1474 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 5171 1369 50  0001 C CNN
-F 3 "~" H 5133 1519 50  0001 C CNN
-	1    5133 1519
+P 4725 1381
+F 0 "C3" H 4840 1427 50  0000 L CNN
+F 1 "1uf" H 4840 1336 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 4763 1231 50  0001 C CNN
+F 3 "~" H 4725 1381 50  0001 C CNN
+	1    4725 1381
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4140 1332 5133 1332
+	3732 1194 4725 1194
 Wire Wire Line
-	5133 1332 5133 1369
+	4725 1194 4725 1231
 Wire Wire Line
-	4140 1432 4441 1432
+	3732 1294 4033 1294
 Wire Wire Line
-	4140 1532 4441 1532
+	3732 1394 4033 1394
 Wire Wire Line
-	4441 1432 4441 1532
-Connection ~ 4441 1532
+	4033 1294 4033 1394
+Connection ~ 4033 1394
 Wire Wire Line
-	4441 1532 4441 1601
+	4033 1394 4033 1463
 Wire Wire Line
-	5133 1669 5133 1741
-$Comp
-L power:GND #PWR09
-U 1 1 5BAF1AF2
-P 4620 3343
-F 0 "#PWR09" H 4620 3093 50  0001 C CNN
-F 1 "GND" H 4625 3170 50  0000 C CNN
-F 2 "" H 4620 3343 50  0001 C CNN
-F 3 "" H 4620 3343 50  0001 C CNN
-	1    4620 3343
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4140 3332 4620 3332
-Wire Wire Line
-	4620 3332 4620 3343
+	4725 1531 4725 1603
 $Comp
 L Connector:Conn_01x04_Female J1
 U 1 1 5BAF4473
-P 1182 2880
-F 0 "J1" H 1209 2856 50  0000 L CNN
-F 1 "Conn_01x04_Female" H 1209 2765 50  0000 L CNN
-F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-2-3.5-H_1x02_P3.50mm_Horizontal" H 1182 2880 50  0001 C CNN
-F 3 "~" H 1182 2880 50  0001 C CNN
-	1    1182 2880
+P 1332 2244
+F 0 "J1" H 1359 2220 50  0000 L CNN
+F 1 "SWD" H 1359 2129 50  0000 L CNN
+F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-2-3.5-H_1x02_P3.50mm_Horizontal" H 1332 2244 50  0001 C CNN
+F 3 "~" H 1332 2244 50  0001 C CNN
+	1    1332 2244
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:+3.3V #PWR04
 U 1 1 5BAF44CD
-P 812 2780
-F 0 "#PWR04" H 812 2630 50  0001 C CNN
-F 1 "+3.3V" H 827 2953 50  0000 C CNN
-F 2 "" H 812 2780 50  0001 C CNN
-F 3 "" H 812 2780 50  0001 C CNN
-	1    812  2780
+P 962 2144
+F 0 "#PWR04" H 962 1994 50  0001 C CNN
+F 1 "+3.3V" H 977 2317 50  0000 C CNN
+F 2 "" H 962 2144 50  0001 C CNN
+F 3 "" H 962 2144 50  0001 C CNN
+	1    962  2144
 	0    -1   -1   0   
 $EndComp
 $Comp
 L power:GND #PWR03
 U 1 1 5BAF4505
-P 784 3080
-F 0 "#PWR03" H 784 2830 50  0001 C CNN
-F 1 "GND" V 789 2952 50  0000 R CNN
-F 2 "" H 784 3080 50  0001 C CNN
-F 3 "" H 784 3080 50  0001 C CNN
-	1    784  3080
+P 934 2444
+F 0 "#PWR03" H 934 2194 50  0001 C CNN
+F 1 "GND" V 939 2316 50  0000 R CNN
+F 2 "" H 934 2444 50  0001 C CNN
+F 3 "" H 934 2444 50  0001 C CNN
+	1    934  2444
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	812  2780 982  2780
+	962  2144 1132 2144
 Wire Wire Line
-	784  3080 982  3080
+	934  2444 1132 2444
 $Comp
 L Connector:Conn_01x03_Female J2
 U 1 1 5BAF64C4
-P 1112 2200
-F 0 "J2" H 1139 2226 50  0000 L CNN
-F 1 "Conn_01x03_Female" H 1139 2135 50  0000 L CNN
-F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-2-3.5-H_1x02_P3.50mm_Horizontal" H 1112 2200 50  0001 C CNN
-F 3 "~" H 1112 2200 50  0001 C CNN
-	1    1112 2200
+P 1262 1564
+F 0 "J2" H 1289 1590 50  0000 L CNN
+F 1 "Serial" H 1289 1499 50  0000 L CNN
+F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-2-3.5-H_1x02_P3.50mm_Horizontal" H 1262 1564 50  0001 C CNN
+F 3 "~" H 1262 1564 50  0001 C CNN
+	1    1262 1564
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR010
 U 1 1 5BAF687C
-P 776 2300
-F 0 "#PWR010" H 776 2050 50  0001 C CNN
-F 1 "GND" V 781 2172 50  0000 R CNN
-F 2 "" H 776 2300 50  0001 C CNN
-F 3 "" H 776 2300 50  0001 C CNN
-	1    776  2300
+P 926 1664
+F 0 "#PWR010" H 926 1414 50  0001 C CNN
+F 1 "GND" V 931 1536 50  0000 R CNN
+F 2 "" H 926 1664 50  0001 C CNN
+F 3 "" H 926 1664 50  0001 C CNN
+	1    926  1664
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	912  2300 776  2300
+	1062 1664 926  1664
 $Comp
 L Switch:SW_DPST_x2 SW1
 U 1 1 5BAF7531
-P 5390 2352
-F 0 "SW1" V 5436 2264 50  0000 R CNN
-F 1 "SW_DPST_x2" V 5345 2264 50  0000 R CNN
-F 2 "Button_Switch_SMD:SW_SPST_B3U-1000P" H 5390 2352 50  0001 C CNN
-F 3 "" H 5390 2352 50  0001 C CNN
-	1    5390 2352
-	0    -1   -1   0   
+P 2043 1594
+F 0 "SW1" H 2132 1726 50  0000 R CNN
+F 1 "RST" H 2112 1514 50  0000 R CNN
+F 2 "Button_Switch_SMD:SW_SPST_B3U-1000P" H 2043 1594 50  0001 C CNN
+F 3 "" H 2043 1594 50  0001 C CNN
+	1    2043 1594
+	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR012
 U 1 1 5BAF7613
-P 5390 2634
-F 0 "#PWR012" H 5390 2384 50  0001 C CNN
-F 1 "GND" H 5395 2461 50  0000 C CNN
-F 2 "" H 5390 2634 50  0001 C CNN
-F 3 "" H 5390 2634 50  0001 C CNN
-	1    5390 2634
-	1    0    0    -1  
+P 1706 1557
+F 0 "#PWR012" H 1706 1307 50  0001 C CNN
+F 1 "GND" H 1711 1384 50  0000 C CNN
+F 2 "" H 1706 1557 50  0001 C CNN
+F 3 "" H 1706 1557 50  0001 C CNN
+	1    1706 1557
+	-1   0    0    1   
 $EndComp
-Wire Wire Line
-	5390 2634 5390 2552
 $Comp
 L power:GND #PWR06
 U 1 1 5BAF99E4
@@ -427,108 +410,100 @@ Wire Wire Line
 Connection ~ 6623 2201
 Wire Wire Line
 	6623 2201 6623 2275
-Text Label 4140 1932 0    50   ~ 0
+Text Label 3732 1794 0    50   ~ 0
 SWDIO
-Text Label 4140 2032 0    50   ~ 0
+Text Label 3732 1894 0    50   ~ 0
 SWCLK
-Text Label 4140 2132 0    50   ~ 0
+Text Label 3732 1994 0    50   ~ 0
 X
-Text Label 4140 2232 0    50   ~ 0
+Text Label 3732 2094 0    50   ~ 0
 DIO2
-Text Label 4140 2332 0    50   ~ 0
+Text Label 3732 2194 0    50   ~ 0
 D+
-Text Label 4140 2432 0    50   ~ 0
+Text Label 3732 2294 0    50   ~ 0
 D-
-Text Label 4140 2532 0    50   ~ 0
+Text Label 3732 2394 0    50   ~ 0
 DIO1
-Text Label 4140 2632 0    50   ~ 0
+Text Label 3732 2494 0    50   ~ 0
 MIS0
-Text Label 4140 2732 0    50   ~ 0
+Text Label 3732 2594 0    50   ~ 0
 SCK
-Text Label 4140 2832 0    50   ~ 0
+Text Label 3732 2694 0    50   ~ 0
 MOSI
-Text Label 4140 2932 0    50   ~ 0
+Text Label 3732 2794 0    50   ~ 0
 SS
-Text Label 4140 3032 0    50   ~ 0
+Text Label 3732 2894 0    50   ~ 0
 RFM_RST
-Text Label 4140 3132 0    50   ~ 0
+Text Label 3732 2994 0    50   ~ 0
 DIO5
-Text Label 2622 1932 0    50   ~ 0
+Text Label 2214 1794 0    50   ~ 0
 DI3
 Wire Wire Line
-	2740 1932 2622 1932
-Text Label 2610 2032 0    50   ~ 0
+	2332 1794 2214 1794
+Text Label 2202 1894 0    50   ~ 0
 DI2
 Wire Wire Line
-	2740 2032 2610 2032
-Text Label 2614 2132 0    50   ~ 0
+	2332 1894 2202 1894
+Text Label 2206 1994 0    50   ~ 0
 DI3
 Wire Wire Line
-	2740 2132 2614 2132
-Text Label 2740 2232 0    50   ~ 0
+	2332 1994 2206 1994
+Text Label 2332 2094 0    50   ~ 0
 x
-Text Label 2574 2332 0    50   ~ 0
+Text Label 2166 2194 0    50   ~ 0
 DIO0
 Wire Wire Line
-	2740 2332 2574 2332
-Text Label 2592 2432 0    50   ~ 0
+	2332 2194 2166 2194
+Text Label 2184 2294 0    50   ~ 0
 DO3
 Wire Wire Line
-	2740 2432 2592 2432
-Text Label 2592 2532 0    50   ~ 0
+	2332 2294 2184 2294
+Text Label 2184 2394 0    50   ~ 0
 DO2
 Wire Wire Line
-	2740 2532 2592 2532
-Text Label 2594 2632 0    50   ~ 0
+	2332 2394 2184 2394
+Text Label 2186 2494 0    50   ~ 0
 DO1
 Wire Wire Line
-	2740 2632 2594 2632
-Text Label 2740 2732 0    50   ~ 0
+	2332 2494 2186 2494
+Text Label 2332 2594 0    50   ~ 0
 x
-Text Label 2740 2832 0    50   ~ 0
+Text Label 2332 2694 0    50   ~ 0
 x
-Text Label 2662 2932 0    50   ~ 0
+Text Label 2254 2794 0    50   ~ 0
 Tx
 Wire Wire Line
-	2740 2932 2662 2932
-Text Label 2654 3032 0    50   ~ 0
+	2332 2794 2254 2794
+Text Label 2246 2894 0    50   ~ 0
 Rx
 Wire Wire Line
-	2740 3032 2654 3032
-Text Label 2512 3132 0    50   ~ 0
+	2332 2894 2246 2894
+Text Label 2104 2994 0    50   ~ 0
 Rx_LED
 Wire Wire Line
-	2740 3132 2512 3132
-Text Label 2614 1732 0    50   ~ 0
-RST
-Wire Wire Line
-	2740 1732 2614 1732
-Text Label 840  2100 0    50   ~ 0
+	2332 2994 2104 2994
+Text Label 990  1464 0    50   ~ 0
 Tx
 Wire Wire Line
-	912  2100 840  2100
-Text Label 824  2200 0    50   ~ 0
+	1062 1464 990  1464
+Text Label 974  1564 0    50   ~ 0
 Rx
 Wire Wire Line
-	912  2200 824  2200
-Text Label 776  2880 0    50   ~ 0
+	1062 1564 974  1564
+Text Label 926  2244 0    50   ~ 0
 SWDIO
 Wire Wire Line
-	982  2880 776  2880
-Text Label 766  2980 0    50   ~ 0
+	1132 2244 926  2244
+Text Label 916  2344 0    50   ~ 0
 SWCLK
 Wire Wire Line
-	982  2980 766  2980
+	1132 2344 916  2344
 Text Label 1566 5662 2    50   ~ 0
 MIS0
 Text Label 1566 5762 2    50   ~ 0
 SS
 Text Label 2566 5662 0    50   ~ 0
 DIO5
-Text Label 2566 5762 0    50   ~ 0
-x
-Text Label 2566 5862 0    50   ~ 0
-x
 Text Label 2566 5962 0    50   ~ 0
 DIO2
 Text Label 2566 6062 0    50   ~ 0
@@ -554,8 +529,6 @@ Text Label 7023 1711 0    50   ~ 0
 D+
 Text Label 7023 1811 0    50   ~ 0
 D-
-Text Label 5390 2152 0    50   ~ 0
-RST
 Wire Notes Line
 	410  4464 410  4476
 Wire Notes Line
@@ -1165,4 +1138,32 @@ Text Label 8716 5220 2    50   ~ 0
 S1
 Text Label 8716 5320 2    50   ~ 0
 EN
+$Comp
+L power:GND #PWR09
+U 1 1 5BAF1AF2
+P 3812 3248
+F 0 "#PWR09" H 3812 2998 50  0001 C CNN
+F 1 "GND" H 3817 3075 50  0000 C CNN
+F 2 "" H 3812 3248 50  0001 C CNN
+F 3 "" H 3812 3248 50  0001 C CNN
+	1    3812 3248
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3732 3094 3812 3094
+Wire Wire Line
+	3812 3094 3812 3194
+Wire Wire Line
+	3732 3194 3812 3194
+Connection ~ 3812 3194
+Wire Wire Line
+	3812 3194 3812 3248
+Wire Wire Line
+	2332 1594 2243 1594
+Wire Wire Line
+	1843 1594 1706 1594
+Wire Wire Line
+	1706 1594 1706 1557
+NoConn ~ 2566 5762
+NoConn ~ 2566 5862
 $EndSCHEMATC
