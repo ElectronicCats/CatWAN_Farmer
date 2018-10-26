@@ -87,12 +87,12 @@ $EndComp
 $Comp
 L power:+3.3V #PWR07
 U 1 1 5BAC209F
-P 4033 1463
-F 0 "#PWR07" H 4033 1313 50  0001 C CNN
-F 1 "+3.3V" H 4048 1636 50  0000 C CNN
-F 2 "" H 4033 1463 50  0001 C CNN
-F 3 "" H 4033 1463 50  0001 C CNN
-	1    4033 1463
+P 3811 1451
+F 0 "#PWR07" H 3811 1301 50  0001 C CNN
+F 1 "+3.3V" H 3826 1624 50  0000 C CNN
+F 2 "" H 3811 1451 50  0001 C CNN
+F 3 "" H 3811 1451 50  0001 C CNN
+	1    3811 1451
 	-1   0    0    1   
 $EndComp
 $Comp
@@ -158,12 +158,12 @@ $EndComp
 $Comp
 L power:GND #PWR011
 U 1 1 5BAD7783
-P 4725 1603
-F 0 "#PWR011" H 4725 1353 50  0001 C CNN
-F 1 "GND" H 4730 1430 50  0000 C CNN
-F 2 "" H 4725 1603 50  0001 C CNN
-F 3 "" H 4725 1603 50  0001 C CNN
-	1    4725 1603
+P 4163 1559
+F 0 "#PWR011" H 4163 1309 50  0001 C CNN
+F 1 "GND" H 4168 1386 50  0000 C CNN
+F 2 "" H 4163 1559 50  0001 C CNN
+F 3 "" H 4163 1559 50  0001 C CNN
+	1    4163 1559
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -187,92 +187,66 @@ Wire Wire Line
 Wire Wire Line
 	9720 2384 9720 2229
 $Comp
-L Device:C C3
-U 1 1 5BAC1D19
-P 4725 1381
-F 0 "C3" H 4840 1427 50  0000 L CNN
-F 1 "1uf" H 4840 1336 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 4763 1231 50  0001 C CNN
-F 3 "~" H 4725 1381 50  0001 C CNN
-	1    4725 1381
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3732 1194 4725 1194
-Wire Wire Line
-	4725 1194 4725 1231
-Wire Wire Line
-	3732 1294 4033 1294
-Wire Wire Line
-	3732 1394 4033 1394
-Wire Wire Line
-	4033 1294 4033 1394
-Connection ~ 4033 1394
-Wire Wire Line
-	4033 1394 4033 1463
-Wire Wire Line
-	4725 1531 4725 1603
-$Comp
 L Connector:Conn_01x04_Female J1
 U 1 1 5BAF4473
-P 1332 2244
-F 0 "J1" H 1359 2220 50  0000 L CNN
-F 1 "SWD" H 1359 2129 50  0000 L CNN
-F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-2-3.5-H_1x02_P3.50mm_Horizontal" H 1332 2244 50  0001 C CNN
-F 3 "~" H 1332 2244 50  0001 C CNN
-	1    1332 2244
-	1    0    0    -1  
+P 3360 3626
+F 0 "J1" H 3387 3602 50  0000 L CNN
+F 1 "SWD" H 3387 3511 50  0000 L CNN
+F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-2-3.5-H_1x02_P3.50mm_Horizontal" H 3360 3626 50  0001 C CNN
+F 3 "~" H 3360 3626 50  0001 C CNN
+	1    3360 3626
+	0    -1   -1   0   
 $EndComp
 $Comp
 L power:+3.3V #PWR04
 U 1 1 5BAF44CD
-P 962 2144
-F 0 "#PWR04" H 962 1994 50  0001 C CNN
-F 1 "+3.3V" H 977 2317 50  0000 C CNN
-F 2 "" H 962 2144 50  0001 C CNN
-F 3 "" H 962 2144 50  0001 C CNN
-	1    962  2144
-	0    -1   -1   0   
+P 3260 3996
+F 0 "#PWR04" H 3260 3846 50  0001 C CNN
+F 1 "+3.3V" H 3275 4169 50  0000 C CNN
+F 2 "" H 3260 3996 50  0001 C CNN
+F 3 "" H 3260 3996 50  0001 C CNN
+	1    3260 3996
+	-1   0    0    1   
 $EndComp
 $Comp
 L power:GND #PWR03
 U 1 1 5BAF4505
-P 934 2444
-F 0 "#PWR03" H 934 2194 50  0001 C CNN
-F 1 "GND" V 939 2316 50  0000 R CNN
-F 2 "" H 934 2444 50  0001 C CNN
-F 3 "" H 934 2444 50  0001 C CNN
-	1    934  2444
-	0    1    1    0   
+P 3560 4024
+F 0 "#PWR03" H 3560 3774 50  0001 C CNN
+F 1 "GND" V 3565 3896 50  0000 R CNN
+F 2 "" H 3560 4024 50  0001 C CNN
+F 3 "" H 3560 4024 50  0001 C CNN
+	1    3560 4024
+	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	962  2144 1132 2144
+	3260 3996 3260 3826
 Wire Wire Line
-	934  2444 1132 2444
+	3560 4024 3560 3826
 $Comp
 L Connector:Conn_01x03_Female J2
 U 1 1 5BAF64C4
-P 1262 1564
-F 0 "J2" H 1289 1590 50  0000 L CNN
-F 1 "Serial" H 1289 1499 50  0000 L CNN
-F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-2-3.5-H_1x02_P3.50mm_Horizontal" H 1262 1564 50  0001 C CNN
-F 3 "~" H 1262 1564 50  0001 C CNN
-	1    1262 1564
-	1    0    0    -1  
+P 2680 3696
+F 0 "J2" H 2707 3722 50  0000 L CNN
+F 1 "Serial" H 2707 3631 50  0000 L CNN
+F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-2-3.5-H_1x02_P3.50mm_Horizontal" H 2680 3696 50  0001 C CNN
+F 3 "~" H 2680 3696 50  0001 C CNN
+	1    2680 3696
+	0    -1   -1   0   
 $EndComp
 $Comp
 L power:GND #PWR010
 U 1 1 5BAF687C
-P 926 1664
-F 0 "#PWR010" H 926 1414 50  0001 C CNN
-F 1 "GND" V 931 1536 50  0000 R CNN
-F 2 "" H 926 1664 50  0001 C CNN
-F 3 "" H 926 1664 50  0001 C CNN
-	1    926  1664
-	0    1    1    0   
+P 2780 4032
+F 0 "#PWR010" H 2780 3782 50  0001 C CNN
+F 1 "GND" V 2785 3904 50  0000 R CNN
+F 2 "" H 2780 4032 50  0001 C CNN
+F 3 "" H 2780 4032 50  0001 C CNN
+	1    2780 4032
+	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1062 1664 926  1664
+	2780 3896 2780 4032
 $Comp
 L Switch:SW_DPST_x2 SW1
 U 1 1 5BAF7531
@@ -414,8 +388,6 @@ Text Label 3732 1794 0    50   ~ 0
 SWDIO
 Text Label 3732 1894 0    50   ~ 0
 SWCLK
-Text Label 3732 1994 0    50   ~ 0
-X
 Text Label 3732 2094 0    50   ~ 0
 DIO2
 Text Label 3732 2194 0    50   ~ 0
@@ -445,11 +417,9 @@ DI2
 Wire Wire Line
 	2332 1894 2202 1894
 Text Label 2206 1994 0    50   ~ 0
-DI3
+DI1
 Wire Wire Line
 	2332 1994 2206 1994
-Text Label 2332 2094 0    50   ~ 0
-x
 Text Label 2166 2194 0    50   ~ 0
 DIO0
 Wire Wire Line
@@ -466,10 +436,6 @@ Text Label 2186 2494 0    50   ~ 0
 DO1
 Wire Wire Line
 	2332 2494 2186 2494
-Text Label 2332 2594 0    50   ~ 0
-x
-Text Label 2332 2694 0    50   ~ 0
-x
 Text Label 2254 2794 0    50   ~ 0
 Tx
 Wire Wire Line
@@ -482,22 +448,22 @@ Text Label 2104 2994 0    50   ~ 0
 Rx_LED
 Wire Wire Line
 	2332 2994 2104 2994
-Text Label 990  1464 0    50   ~ 0
+Text Label 2580 3968 1    50   ~ 0
 Tx
 Wire Wire Line
-	1062 1464 990  1464
-Text Label 974  1564 0    50   ~ 0
+	2580 3896 2580 3968
+Text Label 2680 3984 1    50   ~ 0
 Rx
 Wire Wire Line
-	1062 1564 974  1564
-Text Label 926  2244 0    50   ~ 0
+	2680 3896 2680 3984
+Text Label 3360 4032 1    50   ~ 0
 SWDIO
 Wire Wire Line
-	1132 2244 926  2244
-Text Label 916  2344 0    50   ~ 0
+	3360 3826 3360 4032
+Text Label 3460 4042 1    50   ~ 0
 SWCLK
 Wire Wire Line
-	1132 2344 916  2344
+	3460 3826 3460 4042
 Text Label 1566 5662 2    50   ~ 0
 MIS0
 Text Label 1566 5762 2    50   ~ 0
@@ -1166,4 +1132,70 @@ Wire Wire Line
 	1706 1594 1706 1557
 NoConn ~ 2566 5762
 NoConn ~ 2566 5862
+NoConn ~ 2332 2094
+NoConn ~ 2332 2594
+NoConn ~ 2332 2694
+NoConn ~ 3732 1994
+Wire Wire Line
+	3811 1294 3811 1394
+Wire Wire Line
+	3732 1294 3811 1294
+Wire Wire Line
+	3732 1394 3811 1394
+Connection ~ 3811 1394
+Wire Wire Line
+	3811 1394 3811 1451
+$Comp
+L Device:C C3
+U 1 1 5BAC1D19
+P 4163 1409
+F 0 "C3" H 4278 1455 50  0000 L CNN
+F 1 "1uf" H 4278 1364 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 4201 1259 50  0001 C CNN
+F 3 "~" H 4163 1409 50  0001 C CNN
+	1    4163 1409
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3732 1194 4163 1194
+Wire Wire Line
+	4163 1260 4163 1259
+Connection ~ 4163 1259
+Wire Wire Line
+	4163 1259 4163 1194
+$Comp
+L Device:C C?
+U 1 1 5BEE9C07
+P 1274 2207
+F 0 "C?" H 1389 2253 50  0000 L CNN
+F 1 "0.1uf" H 1389 2162 50  0000 L CNN
+F 2 "" H 1312 2057 50  0001 C CNN
+F 3 "~" H 1274 2207 50  0001 C CNN
+	1    1274 2207
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5BEE9DF2
+P 1274 2418
+F 0 "#PWR?" H 1274 2168 50  0001 C CNN
+F 1 "GND" H 1279 2245 50  0000 C CNN
+F 2 "" H 1274 2418 50  0001 C CNN
+F 3 "" H 1274 2418 50  0001 C CNN
+	1    1274 2418
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5BEE9E65
+P 1274 2057
+F 0 "#PWR?" H 1274 1907 50  0001 C CNN
+F 1 "+3.3V" H 1289 2230 50  0000 C CNN
+F 2 "" H 1274 2057 50  0001 C CNN
+F 3 "" H 1274 2057 50  0001 C CNN
+	1    1274 2057
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1274 2357 1274 2418
 $EndSCHEMATC
