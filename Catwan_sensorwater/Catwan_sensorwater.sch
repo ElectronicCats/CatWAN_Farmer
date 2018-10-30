@@ -19,7 +19,7 @@ L Regulator_Linear:AP2127N-1.0 U1
 U 1 1 5BAC062E
 P 8715 1780
 F 0 "U1" H 8715 2022 50  0000 C CNN
-F 1 "AP2127N-1.0" H 8715 1931 50  0000 C CNN
+F 1 "AP2114N-1.0" H 8715 1931 50  0000 C CNN
 F 2 "Package_TO_SOT_SMD:SOT-23" H 8715 2005 50  0001 C CIN
 F 3 "https://www.diodes.com/assets/Datasheets/AP2127.pdf" H 8715 1780 50  0001 C CNN
 	1    8715 1780
@@ -312,10 +312,10 @@ Wire Wire Line
 Wire Wire Line
 	884  5836 884  5958
 $Comp
-L Connector:USB_B J3
+L Connector:USB_B J5
 U 1 1 5BAFF55A
 P 6723 1711
-F 0 "J3" H 6778 2178 50  0000 C CNN
+F 0 "J5" H 6778 2178 50  0000 C CNN
 F 1 "USB_B" H 6778 2087 50  0000 C CNN
 F 2 "" H 6873 1661 50  0001 C CNN
 F 3 " ~" H 6873 1661 50  0001 C CNN
@@ -618,10 +618,10 @@ F 3 "~" H 9994 5792 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector_Generic:Conn_01x02 J4
+L Connector_Generic:Conn_01x02 J3
 U 1 1 5BB6FF83
 P 10586 5641
-F 0 "J4" H 10666 5633 50  0000 L CNN
+F 0 "J3" H 10666 5633 50  0000 L CNN
 F 1 "SENSOR 3" H 10666 5542 50  0000 L CNN
 F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-2-3.5-H_1x02_P3.50mm_Horizontal" H 10586 5641 50  0001 C CNN
 F 3 "~" H 10586 5641 50  0001 C CNN
@@ -875,10 +875,10 @@ Wire Wire Line
 	4454 4783 4454 4985
 Connection ~ 4454 4985
 $Comp
-L Connector_Generic:Conn_01x02 J7
+L Connector_Generic:Conn_01x02 J4
 U 1 1 5BCD0D4B
 P 6467 5447
-F 0 "J7" H 6547 5439 50  0000 L CNN
+F 0 "J4" H 6547 5439 50  0000 L CNN
 F 1 "BATT" H 6547 5348 50  0000 L CNN
 F 2 "" H 6467 5447 50  0001 C CNN
 F 3 "~" H 6467 5447 50  0001 C CNN
@@ -944,10 +944,10 @@ Wire Wire Line
 NoConn ~ 9516 5420
 NoConn ~ 9516 5520
 $Comp
-L Connector_Generic:Conn_01x02 J6
+L Connector_Generic:Conn_01x02 J2
 U 1 1 5BB578EE
 P 10584 5242
-F 0 "J6" H 10664 5234 50  0000 L CNN
+F 0 "J2" H 10664 5234 50  0000 L CNN
 F 1 "SENSOR 2" H 10664 5143 50  0000 L CNN
 F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-2-3.5-H_1x02_P3.50mm_Horizontal" H 10584 5242 50  0001 C CNN
 F 3 "~" H 10584 5242 50  0001 C CNN
@@ -959,10 +959,10 @@ Wire Wire Line
 Wire Wire Line
 	9834 4920 9834 5016
 $Comp
-L Connector_Generic:Conn_01x02 J5
+L Connector_Generic:Conn_01x02 J1
 U 1 1 5BB53012
 P 10581 4860
-F 0 "J5" H 10661 4852 50  0000 L CNN
+F 0 "J1" H 10661 4852 50  0000 L CNN
 F 1 "SENSOR 1" H 10661 4761 50  0000 L CNN
 F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-2-3.5-H_1x02_P3.50mm_Horizontal" H 10581 4860 50  0001 C CNN
 F 3 "~" H 10581 4860 50  0001 C CNN
