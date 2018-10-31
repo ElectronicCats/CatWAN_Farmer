@@ -482,53 +482,6 @@ MODULATION LORA\n
 Text Notes 7058 4468 0    50   ~ 0
 SENSORES\n
 $Comp
-<<<<<<< Updated upstream
-L Device:D_Zener D6
-U 1 1 5BB6CA62
-P 9980 4820
-F 0 "D6" H 10084 4890 50  0000 C CNN
-F 1 "D_Zener" H 10190 4778 50  0000 C CNN
-F 2 "Diode_SMD:D_SOD-123" H 9980 4820 50  0001 C CNN
-F 3 "~" H 9980 4820 50  0001 C CNN
-	1    9980 4820
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:D_Zener D5
-U 1 1 5BB6CB06
-P 9984 5016
-F 0 "D5" H 10090 5090 50  0000 C CNN
-F 1 "D_Zener" H 10192 4962 50  0000 C CNN
-F 2 "Diode_SMD:D_SOD-123" H 9984 5016 50  0001 C CNN
-F 3 "~" H 9984 5016 50  0001 C CNN
-	1    9984 5016
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:D_Zener D4
-U 1 1 5BB6CB9A
-P 9990 5204
-F 0 "D4" H 10094 5256 50  0000 C CNN
-F 1 "D_Zener" H 10202 5142 50  0000 C CNN
-F 2 "Diode_SMD:D_SOD-123" H 9990 5204 50  0001 C CNN
-F 3 "~" H 9990 5204 50  0001 C CNN
-	1    9990 5204
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:D_Zener D3
-U 1 1 5BB6CC0E
-P 9994 5404
-F 0 "D3" H 10100 5450 50  0000 C CNN
-F 1 "D_Zener" H 10196 5334 50  0000 C CNN
-F 2 "Diode_SMD:D_SOD-123" H 9994 5404 50  0001 C CNN
-F 3 "~" H 9994 5404 50  0001 C CNN
-	1    9994 5404
-	1    0    0    -1  
-$EndComp
-$Comp
-=======
->>>>>>> Stashed changes
 L power:GND #PWR015
 U 1 1 5BB6D389
 P 7829 5570
@@ -540,44 +493,19 @@ F 3 "" H 7829 5570 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L electroniccats:74HC4052 U4
-U 1 1 5BB40CAB
-<<<<<<< Updated upstream
-P 9116 5120
-F 0 "U4" H 9116 5690 50  0000 C CNN
-F 1 "74HC4052" H 9116 5599 50  0000 C CNN
-F 2 "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm" H 9116 5120 50  0001 C CNN
-F 3 "Sig/Phil 74hc4052d Smd 50/Tube" H 9116 5120 50  0001 L BNN
-F 4 "NXP Semiconductors" H 9116 5120 50  0001 L BNN "Campo4"
-F 5 "DIP-16 NXP Semiconductors" H 9116 5120 50  0001 L BNN "Campo5"
-F 6 "Unavailable" H 9116 5120 50  0001 L BNN "Campo6"
-F 7 "74HC4052" H 9116 5120 50  0001 L BNN "Campo7"
-F 8 "None" H 9116 5120 50  0001 L BNN "Campo8"
-	1    9116 5120
-=======
+L electroniccats:74HC4052 #PWR014
+U 1 1 5BB5F6BD
 P 8414 5185
-F 0 "U4" H 8414 5755 50  0000 C CNN
-F 1 "74HC4052" H 8414 5664 50  0000 C CNN
+F 0 "#PWR014" H 8414 5035 50  0001 C CNN
+F 1 "+3.3V" H 8404 5486 50  0000 C CNN
 F 2 "" H 8414 5185 50  0001 C CNN
-F 3 "Sig/Phil 74hc4052d Smd 50/Tube" H 8414 5185 50  0001 L BNN
+F 3 "" H 8414 5185 50  0001 L BNN
 F 4 "NXP Semiconductors" H 8414 5185 50  0001 L BNN "Campo4"
 F 5 "DIP-16 NXP Semiconductors" H 8414 5185 50  0001 L BNN "Campo5"
 F 6 "Unavailable" H 8414 5185 50  0001 L BNN "Campo6"
 F 7 "74HC4052" H 8414 5185 50  0001 L BNN "Campo7"
 F 8 "None" H 8414 5185 50  0001 L BNN "Campo8"
 	1    8414 5185
->>>>>>> Stashed changes
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+3.3V #PWR014
-U 1 1 5BB5F6BD
-P 7826 4885
-F 0 "#PWR014" H 7826 4735 50  0001 C CNN
-F 1 "+3.3V" H 7841 5058 50  0000 C CNN
-F 2 "" H 7826 4885 50  0001 C CNN
-F 3 "" H 7826 4885 50  0001 C CNN
-	1    7826 4885
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -602,54 +530,12 @@ Wire Wire Line
 $Comp
 L power:GND #PWR013
 U 1 1 5BB5D62B
-<<<<<<< Updated upstream
-P 8000 5504
+P 0 0
 F 0 "#PWR013" H 8000 5254 50  0001 C CNN
 F 1 "GND" H 8066 5334 50  0000 R CNN
 F 2 "" H 8000 5504 50  0001 C CNN
 F 3 "" H 8000 5504 50  0001 C CNN
-	1    8000 5504
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:D_Zener D2
-U 1 1 5BB643E2
-P 9998 5592
-F 0 "D2" H 10104 5638 50  0000 C CNN
-F 1 "D_Zener" H 10200 5522 50  0000 C CNN
-F 2 "Diode_SMD:D_SOD-123" H 9998 5592 50  0001 C CNN
-F 3 "~" H 9998 5592 50  0001 C CNN
-	1    9998 5592
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:D_Zener D1
-U 1 1 5BB64452
-P 9994 5792
-F 0 "D1" H 10100 5838 50  0000 C CNN
-F 1 "D_Zener" H 10196 5722 50  0000 C CNN
-F 2 "Diode_SMD:D_SOD-123" H 9994 5792 50  0001 C CNN
-F 3 "~" H 9994 5792 50  0001 C CNN
-	1    9994 5792
-=======
-P 7298 5569
-F 0 "#PWR013" H 7298 5319 50  0001 C CNN
-F 1 "GND" H 7364 5399 50  0000 R CNN
-F 2 "" H 7298 5569 50  0001 C CNN
-F 3 "" H 7298 5569 50  0001 C CNN
-	1    7298 5569
->>>>>>> Stashed changes
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector_Generic:Conn_01x02 J3
-U 1 1 5BB6FF83
-P 10586 5641
-F 0 "J3" H 10666 5633 50  0000 L CNN
-F 1 "SENSOR 3" H 10666 5542 50  0000 L CNN
-F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-2-3.5-H_1x02_P3.50mm_Horizontal" H 10586 5641 50  0001 C CNN
-F 3 "~" H 10586 5641 50  0001 C CNN
-	1    10586 5641
+	1    0    0   
 	1    0    0    -1  
 $EndComp
 Text Label 7095 5085 0    50   ~ 0
@@ -967,35 +853,8 @@ Wire Wire Line
 	2166 6480 2166 6362
 NoConn ~ 8814 5485
 NoConn ~ 8814 5585
-$Comp
-L Connector_Generic:Conn_01x02 J2
-U 1 1 5BB578EE
-P 10584 5242
-F 0 "J2" H 10664 5234 50  0000 L CNN
-F 1 "SENSOR 2" H 10664 5143 50  0000 L CNN
-F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-2-3.5-H_1x02_P3.50mm_Horizontal" H 10584 5242 50  0001 C CNN
-F 3 "~" H 10584 5242 50  0001 C CNN
-	1    10584 5242
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	8814 5385 8919 5385
-Wire Wire Line
-	10140 5204 10384 5204
-Wire Wire Line
-	10384 5204 10384 5242
-Wire Wire Line
-	10144 5404 10384 5404
-Wire Wire Line
-	10384 5342 10384 5404
-Wire Wire Line
-	10148 5592 10386 5592
-Wire Wire Line
-	10386 5592 10386 5641
-Wire Wire Line
-	10144 5792 10386 5792
-Wire Wire Line
-	10386 5792 10386 5741
 $Comp
 L power:GND #PWR0102
 U 1 1 5BDFD8A3
@@ -1251,4 +1110,37 @@ Wire Wire Line
 Connection ~ 9083 4985
 Wire Wire Line
 	9083 4985 10379 4985
+$Comp
+L Connector_Generic:Conn_01x02 J?
+U 1 1 5BE53FA6
+P 10596 5542
+F 0 "J?" H 10676 5534 50  0000 L CNN
+F 1 "SENSOR 2" H 10676 5443 50  0000 L CNN
+F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-2-3.5-H_1x02_P3.50mm_Horizontal" H 10596 5542 50  0001 C CNN
+F 3 "~" H 10596 5542 50  0001 C CNN
+	1    10596 5542
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J2
+U 1 1 5BB578EE
+P 10584 5242
+F 0 "J2" H 10664 5234 50  0000 L CNN
+F 1 "SENSOR 2" H 10664 5143 50  0000 L CNN
+F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-2-3.5-H_1x02_P3.50mm_Horizontal" H 10584 5242 50  0001 C CNN
+F 3 "~" H 10584 5242 50  0001 C CNN
+	1    10584 5242
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5BE54EA3
+P 7826 4885
+F 0 "#PWR?" H 7826 4735 50  0001 C CNN
+F 1 "+3.3V" H 7841 5058 50  0000 C CNN
+F 2 "" H 7826 4885 50  0001 C CNN
+F 3 "" H 7826 4885 50  0001 C CNN
+	1    7826 4885
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
