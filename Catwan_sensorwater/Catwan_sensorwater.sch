@@ -493,10 +493,10 @@ F 3 "" H 7829 5570 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L electroniccats:74HC4052 #PWR014
+L electroniccats:74HC4052 #PWR14
 U 1 1 5BB5F6BD
 P 8414 5185
-F 0 "#PWR014" H 8414 5035 50  0001 C CNN
+F 0 "#PWR14" H 8414 5035 50  0001 C CNN
 F 1 "+3.3V" H 8404 5486 50  0000 C CNN
 F 2 "" H 8414 5185 50  0001 C CNN
 F 3 "" H 8414 5185 50  0001 L BNN
@@ -531,7 +531,7 @@ $Comp
 L power:GND #PWR013
 U 1 1 5BB5D62B
 P 0 0
-F 0 "#PWR013" H 8000 5254 50  0001 C CNN
+F 0 "#PWR013" H 50  50  50  0001 C CNN
 F 1 "GND" H 8066 5334 50  0000 R CNN
 F 2 "" H 8000 5504 50  0001 C CNN
 F 3 "" H 8000 5504 50  0001 C CNN
@@ -1034,17 +1034,6 @@ Wire Wire Line
 Wire Wire Line
 	3812 3094 3732 3094
 $Comp
-L Transistor_FET:2N7000 Q?
-U 1 1 5BDD1D76
-P 8983 6148
-F 0 "Q?" H 9188 6194 50  0000 L CNN
-F 1 "2N7000" H 9188 6103 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline" H 9183 6073 50  0001 L CIN
-F 3 "https://www.fairchildsemi.com/datasheets/2N/2N7000.pdf" H 8983 6148 50  0001 L CNN
-	1    8983 6148
-	1    0    0    -1  
-$EndComp
-$Comp
 L Connector_Generic:Conn_01x02 J1
 U 1 1 5BB53012
 P 10579 4885
@@ -1058,63 +1047,37 @@ $EndComp
 Wire Wire Line
 	8814 4885 9000 4885
 $Comp
-L Transistor_FET:2N7000 Q?
+L Transistor_FET:2N7000 Q2
 U 1 1 5BE35DD4
-P 9727 6116
-F 0 "Q?" H 9932 6162 50  0000 L CNN
-F 1 "2N7000" H 9932 6071 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline" H 9927 6041 50  0001 L CIN
-F 3 "https://www.fairchildsemi.com/datasheets/2N/2N7000.pdf" H 9727 6116 50  0001 L CNN
-	1    9727 6116
+P 9796 6071
+F 0 "Q2" H 10001 6117 50  0000 L CNN
+F 1 "2N7000" H 9564 5905 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 9996 5996 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/2N/2N7000.pdf" H 9796 6071 50  0001 L CNN
+	1    9796 6071
 	1    0    0    -1  
 $EndComp
 $Comp
-L Transistor_FET:2N7000 Q?
+L Transistor_FET:2N7000 Q3
 U 1 1 5BE35E50
-P 10475 6096
-F 0 "Q?" H 10680 6142 50  0000 L CNN
-F 1 "2N7000" H 10680 6051 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline" H 10675 6021 50  0001 L CIN
-F 3 "https://www.fairchildsemi.com/datasheets/2N/2N7000.pdf" H 10475 6096 50  0001 L CNN
-	1    10475 6096
+P 10532 6075
+F 0 "Q3" H 10737 6121 50  0000 L CNN
+F 1 "2N7000" H 10275 5913 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 10732 6000 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/2N/2N7000.pdf" H 10532 6075 50  0001 L CNN
+	1    10532 6075
 	1    0    0    -1  
 $EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 5BE39D2B
-P 9083 6403
-F 0 "#PWR?" H 9083 6153 50  0001 C CNN
-F 1 "GND" H 9225 6342 50  0000 C CNN
-F 2 "" H 9083 6403 50  0001 C CNN
-F 3 "" H 9083 6403 50  0001 C CNN
-	1    9083 6403
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	9083 6348 9083 6403
 Wire Wire Line
 	9000 5964 9000 4885
 Connection ~ 9000 4885
 Wire Wire Line
 	9000 4885 10379 4885
-Wire Wire Line
-	8783 6148 8759 6148
-Wire Wire Line
-	8759 6148 8759 5964
-Wire Wire Line
-	8759 5964 9000 5964
-Wire Wire Line
-	8814 4985 9083 4985
-Wire Wire Line
-	9083 5948 9083 4985
-Connection ~ 9083 4985
-Wire Wire Line
-	9083 4985 10379 4985
 $Comp
-L Connector_Generic:Conn_01x02 J?
+L Connector_Generic:Conn_01x02 J3
 U 1 1 5BE53FA6
 P 10596 5542
-F 0 "J?" H 10676 5534 50  0000 L CNN
+F 0 "J3" H 10676 5534 50  0000 L CNN
 F 1 "SENSOR 2" H 10676 5443 50  0000 L CNN
 F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-2-3.5-H_1x02_P3.50mm_Horizontal" H 10596 5542 50  0001 C CNN
 F 3 "~" H 10596 5542 50  0001 C CNN
@@ -1133,14 +1096,47 @@ F 3 "~" H 10584 5242 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+3.3V #PWR?
+L power:+3.3V #PWR026
 U 1 1 5BE54EA3
 P 7826 4885
-F 0 "#PWR?" H 7826 4735 50  0001 C CNN
+F 0 "#PWR026" H 7826 4735 50  0001 C CNN
 F 1 "+3.3V" H 7841 5058 50  0000 C CNN
 F 2 "" H 7826 4885 50  0001 C CNN
 F 3 "" H 7826 4885 50  0001 C CNN
 	1    7826 4885
 	1    0    0    -1  
 $EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5BE5CD63
+P 9132 6345
+F 0 "#PWR?" H 9132 6095 50  0001 C CNN
+F 1 "GND" H 9004 6283 50  0000 C CNN
+F 2 "" H 9132 6345 50  0001 C CNN
+F 3 "" H 9132 6345 50  0001 C CNN
+	1    9132 6345
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9131 5864 9131 4985
+Wire Wire Line
+	8814 4985 9131 4985
+Connection ~ 9131 4985
+Wire Wire Line
+	9131 4985 10379 4985
+$Comp
+L Transistor_FET:2N7000 Q1
+U 1 1 5BDD1D76
+P 9031 6064
+F 0 "Q1" H 9236 6110 50  0000 L CNN
+F 1 "2N7000" H 8802 5903 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 9231 5989 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/2N/2N7000.pdf" H 9031 6064 50  0001 L CNN
+	1    9031 6064
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8831 6064 8831 5964
+Wire Wire Line
+	8831 5964 9000 5964
 $EndSCHEMATC
