@@ -1069,8 +1069,6 @@ F 3 "" H 3812 3248 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3732 3094 3812 3094
-Wire Wire Line
 	3812 3094 3812 3194
 Wire Wire Line
 	3732 3194 3812 3194
@@ -1195,4 +1193,6 @@ Wire Wire Line
 	9624 1780 9809 1780
 Wire Wire Line
 	9624 2172 9624 2248
+Wire Wire Line
+	3812 3094 3732 3094
 $EndSCHEMATC
