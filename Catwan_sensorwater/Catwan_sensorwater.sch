@@ -1089,37 +1089,12 @@ F 3 "" H 7798 3258 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	7798 3258 7798 3311
-$Comp
-L Device:R R7
-U 1 1 5BE37FCE
-P 7855 3634
-F 0 "R7" H 7925 3680 50  0000 L CNN
-F 1 "4.7k" H 7925 3589 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 7785 3634 50  0001 C CNN
-F 3 "~" H 7855 3634 50  0001 C CNN
-	1    7855 3634
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	7798 3311 7855 3311
-Wire Wire Line
-	7855 3484 7855 3311
-Connection ~ 7855 3311
-Wire Wire Line
-	7855 3311 8428 3311
 Text Label 7287 3893 0    50   ~ 0
 DHT_DAT
 Wire Wire Line
 	8428 3411 8112 3411
 Wire Wire Line
 	8112 3411 8112 3893
-Wire Wire Line
-	8112 3893 7855 3893
-Wire Wire Line
-	7855 3784 7855 3893
-Connection ~ 7855 3893
-Wire Wire Line
-	7855 3893 7287 3893
 Wire Wire Line
 	8377 3511 8428 3511
 Wire Wire Line
@@ -1384,4 +1359,8 @@ Text Label 2194 1994 2    50   ~ 0
 SENS_X
 Text Label 2184 2294 2    50   ~ 0
 SENS_Y
+Wire Wire Line
+	7287 3893 8112 3893
+Wire Wire Line
+	7798 3311 8428 3311
 $EndSCHEMATC
