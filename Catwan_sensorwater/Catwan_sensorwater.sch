@@ -5,11 +5,11 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
-Title ""
-Date ""
-Rev ""
-Comp ""
-Comment1 ""
+Title "CatWAN"
+Date "2018-11-07"
+Rev "0.3"
+Comp "Electronic Cats"
+Comment1 "Andres Sabas"
 Comment2 ""
 Comment3 ""
 Comment4 ""
@@ -60,17 +60,6 @@ F 3 "" H 8642 2231 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	8642 2231 8642 2026
-$Comp
-L power:VCC #PWR0106
-U 1 1 5BAC11BD
-P 7301 1164
-F 0 "#PWR0106" H 7301 1014 50  0001 C CNN
-F 1 "VCC" H 7318 1337 50  0000 C CNN
-F 2 "" H 7301 1164 50  0001 C CNN
-F 3 "" H 7301 1164 50  0001 C CNN
-	1    7301 1164
-	1    0    0    -1  
-$EndComp
 $Comp
 L power:+3.3V #PWR07
 U 1 1 5BAC209F
@@ -219,13 +208,13 @@ $EndComp
 $Comp
 L power:GND #PWR012
 U 1 1 5BAF7613
-P 1706 1557
-F 0 "#PWR012" H 1706 1307 50  0001 C CNN
-F 1 "GND" H 1711 1384 50  0000 C CNN
-F 2 "" H 1706 1557 50  0001 C CNN
-F 3 "" H 1706 1557 50  0001 C CNN
-	1    1706 1557
-	-1   0    0    1   
+P 1706 1594
+F 0 "#PWR012" H 1706 1344 50  0001 C CNN
+F 1 "GND" H 1711 1421 50  0000 C CNN
+F 2 "" H 1706 1594 50  0001 C CNN
+F 3 "" H 1706 1594 50  0001 C CNN
+	1    1706 1594
+	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR06
@@ -366,32 +355,18 @@ Text Label 3732 2894 0    50   ~ 0
 RFM_RST
 Text Label 3732 2994 0    50   ~ 0
 DIO5
-Text Label 2214 1794 0    50   ~ 0
-DI3
-Wire Wire Line
-	2332 1794 2214 1794
-Text Label 2202 1894 0    50   ~ 0
-DI2
-Wire Wire Line
-	2332 1894 2202 1894
-Text Label 2206 1994 0    50   ~ 0
-DI1
-Wire Wire Line
-	2332 1994 2206 1994
 Text Label 2166 2194 0    50   ~ 0
 DIO0
 Wire Wire Line
 	2332 2194 2166 2194
-Text Label 2184 2294 0    50   ~ 0
-DO3
 Wire Wire Line
 	2332 2294 2184 2294
 Text Label 2184 2394 0    50   ~ 0
-DO2
+S0
 Wire Wire Line
 	2332 2394 2184 2394
 Text Label 2186 2494 0    50   ~ 0
-DO1
+S1
 Wire Wire Line
 	2332 2494 2186 2494
 Text Label 2254 2794 0    50   ~ 0
@@ -402,10 +377,6 @@ Text Label 2246 2894 0    50   ~ 0
 Rx
 Wire Wire Line
 	2332 2894 2246 2894
-Text Label 2104 2994 0    50   ~ 0
-Rx_LED
-Wire Wire Line
-	2332 2994 2104 2994
 Text Label 2580 3968 1    50   ~ 0
 Tx
 Wire Wire Line
@@ -436,19 +407,8 @@ Text Label 2566 6162 0    50   ~ 0
 DIO0
 Text Label 1566 5962 2    50   ~ 0
 RFM_RST
-$Comp
-L power:VBUS #PWR017
-U 1 1 5BB42E7D
-P 6950 1357
-F 0 "#PWR017" H 6950 1207 50  0001 C CNN
-F 1 "VBUS" H 6965 1530 50  0000 C CNN
-F 2 "" H 6950 1357 50  0001 C CNN
-F 3 "" H 6950 1357 50  0001 C CNN
-	1    6950 1357
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
-	6950 1457 6950 1357
+	6950 1457 6950 1358
 Text Label 6950 1657 0    50   ~ 0
 D+
 Text Label 6950 1757 0    50   ~ 0
@@ -521,9 +481,9 @@ F 3 "" H 8000 5504 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text Label 7095 5085 0    50   ~ 0
-Y
+SENS_Y
 Text Label 7088 4985 0    50   ~ 0
-X
+SENS_X
 $Comp
 L Device:R R1
 U 1 1 5BB55DB0
@@ -857,7 +817,7 @@ Connection ~ 7542 5085
 Wire Wire Line
 	7542 5085 8014 5085
 Wire Wire Line
-	7298 5497 7298 5569
+	7298 5497 7298 5568
 Wire Wire Line
 	7542 5495 7542 5569
 Wire Wire Line
@@ -895,11 +855,8 @@ Wire Wire Line
 	2332 1594 2243 1594
 Wire Wire Line
 	1843 1594 1706 1594
-Wire Wire Line
-	1706 1594 1706 1557
 NoConn ~ 2566 5762
 NoConn ~ 2566 5862
-NoConn ~ 2332 2594
 NoConn ~ 2332 2694
 NoConn ~ 3732 1994
 Wire Wire Line
@@ -1026,7 +983,7 @@ L Connector_Generic:Conn_01x02 J3
 U 1 1 5BE53FA6
 P 10584 5398
 F 0 "J3" H 10664 5390 50  0000 L CNN
-F 1 "SENSOR 2" H 10664 5299 50  0000 L CNN
+F 1 "SENSOR 3" H 10664 5299 50  0000 L CNN
 F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-2-3.5-H_1x02_P3.50mm_Horizontal" H 10584 5398 50  0001 C CNN
 F 3 "~" H 10584 5398 50  0001 C CNN
 	1    10584 5398
@@ -1217,7 +1174,7 @@ L Connector_Generic:Conn_01x02 J9
 U 1 1 5BDB99E8
 P 10592 5646
 F 0 "J9" H 10672 5638 50  0000 L CNN
-F 1 "SENSOR 2" H 10672 5547 50  0000 L CNN
+F 1 "SENSOR 4" H 10672 5547 50  0000 L CNN
 F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-2-3.5-H_1x02_P3.50mm_Horizontal" H 10592 5646 50  0001 C CNN
 F 3 "~" H 10592 5646 50  0001 C CNN
 	1    10592 5646
@@ -1375,4 +1332,56 @@ Text Label 2109 2094 0    50   ~ 0
 DHT_DAT
 Wire Wire Line
 	2332 2094 2109 2094
+$Comp
+L power:VCC #PWR0106
+U 1 1 5BAC11BD
+P 7301 1164
+F 0 "#PWR0106" H 7301 1014 50  0001 C CNN
+F 1 "VCC" H 7318 1337 50  0000 C CNN
+F 2 "" H 7301 1164 50  0001 C CNN
+F 3 "" H 7301 1164 50  0001 C CNN
+	1    7301 1164
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR0112
+U 1 1 5BE4FB31
+P 6950 1358
+F 0 "#PWR0112" H 6950 1208 50  0001 C CNN
+F 1 "VCC" H 6967 1531 50  0000 C CNN
+F 2 "" H 6950 1358 50  0001 C CNN
+F 3 "" H 6950 1358 50  0001 C CNN
+	1    6950 1358
+	1    0    0    -1  
+$EndComp
+Connection ~ 6950 1358
+Wire Wire Line
+	6950 1358 6950 1357
+$Comp
+L power:GND #PWR0113
+U 1 1 5BE51AC5
+P 7298 5568
+F 0 "#PWR0113" H 7298 5318 50  0001 C CNN
+F 1 "GND" H 7303 5395 50  0000 C CNN
+F 2 "" H 7298 5568 50  0001 C CNN
+F 3 "" H 7298 5568 50  0001 C CNN
+	1    7298 5568
+	1    0    0    -1  
+$EndComp
+Connection ~ 7298 5568
+Wire Wire Line
+	7298 5568 7298 5569
+Wire Wire Line
+	2332 2594 2198 2594
+Text Label 2198 2594 0    50   ~ 0
+EN
+NoConn ~ 2332 1794
+NoConn ~ 2332 1894
+NoConn ~ 2332 2994
+Wire Wire Line
+	2332 1994 2194 1994
+Text Label 2194 1994 2    50   ~ 0
+SENS_X
+Text Label 2184 2294 2    50   ~ 0
+SENS_Y
 $EndSCHEMATC
