@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:Catwan_sensorwater-cache
 EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
@@ -111,42 +112,27 @@ $EndComp
 Wire Wire Line
 	9461 1693 9461 1530
 $Comp
-L Connector:Conn_01x04_Female J6
-U 1 1 5BAF4473
-P 2744 3505
-F 0 "J6" H 2771 3481 50  0000 L CNN
-F 1 "SWD" H 2771 3390 50  0000 L CNN
-F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-2-3.5-H_1x02_P3.50mm_Horizontal" H 2744 3505 50  0001 C CNN
-F 3 "~" H 2744 3505 50  0001 C CNN
-	1    2744 3505
-	0    -1   -1   0   
-$EndComp
-$Comp
 L power:+3.3V #PWR04
 U 1 1 5BAF44CD
-P 2644 3875
-F 0 "#PWR04" H 2644 3725 50  0001 C CNN
-F 1 "+3.3V" H 2659 4048 50  0000 C CNN
-F 2 "" H 2644 3875 50  0001 C CNN
-F 3 "" H 2644 3875 50  0001 C CNN
-	1    2644 3875
+P 3209 3716
+F 0 "#PWR04" H 3209 3566 50  0001 C CNN
+F 1 "+3.3V" H 3224 3889 50  0000 C CNN
+F 2 "" H 3209 3716 50  0001 C CNN
+F 3 "" H 3209 3716 50  0001 C CNN
+	1    3209 3716
 	-1   0    0    1   
 $EndComp
 $Comp
 L power:GND #PWR03
 U 1 1 5BAF4505
-P 2944 3903
-F 0 "#PWR03" H 2944 3653 50  0001 C CNN
-F 1 "GND" V 2949 3775 50  0000 R CNN
-F 2 "" H 2944 3903 50  0001 C CNN
-F 3 "" H 2944 3903 50  0001 C CNN
-	1    2944 3903
+P 3509 3716
+F 0 "#PWR03" H 3509 3466 50  0001 C CNN
+F 1 "GND" V 3514 3588 50  0000 R CNN
+F 2 "" H 3509 3716 50  0001 C CNN
+F 3 "" H 3509 3716 50  0001 C CNN
+	1    3509 3716
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	2644 3875 2644 3705
-Wire Wire Line
-	2944 3903 2944 3705
 $Comp
 L Connector:Conn_01x03_Female J7
 U 1 1 5BAF64C4
@@ -362,14 +348,8 @@ Text Label 2064 3863 1    50   ~ 0
 Rx
 Wire Wire Line
 	2064 3775 2064 3863
-Text Label 2744 3911 1    50   ~ 0
-SWDIO
-Wire Wire Line
-	2744 3705 2744 3911
-Text Label 2844 3921 1    50   ~ 0
+Text Label 3409 3716 3    50   ~ 0
 SWCLK
-Wire Wire Line
-	2844 3705 2844 3921
 Text Label 1566 5662 2    50   ~ 0
 MIS0
 Text Label 1566 5762 2    50   ~ 0
@@ -1524,4 +1504,17 @@ Wire Wire Line
 Connection ~ 5543 4941
 Wire Wire Line
 	5543 4941 5543 5047
+$Comp
+L Connector_Generic:Conn_01x04 J6
+U 1 1 5BEBEC90
+P 3309 3516
+F 0 "J6" V 3275 3228 50  0000 R CNN
+F 1 "Conn_01x04" V 3184 3228 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 3309 3516 50  0001 C CNN
+F 3 "~" H 3309 3516 50  0001 C CNN
+	1    3309 3516
+	0    -1   -1   0   
+$EndComp
+Text Label 3309 3716 3    50   ~ 0
+SWDIO
 $EndSCHEMATC
