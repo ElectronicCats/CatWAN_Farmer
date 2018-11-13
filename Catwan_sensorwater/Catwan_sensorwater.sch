@@ -1,5 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:Catwan_sensorwater-cache
 EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
@@ -506,17 +505,6 @@ Wire Wire Line
 	7026 1131 7026 1365
 Wire Notes Line
 	7388 6536 7396 6536
-$Comp
-L Battery_Management:MCP73831-4-OT U5
-U 1 1 5BC0A0C7
-P 5543 5785
-F 0 "U5" H 5477 6126 50  0000 C CNN
-F 1 "MCP73831-4-OT" H 5345 6034 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:SOT-223" H 5593 5535 50  0001 L CIN
-F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/20001984g.pdf" H 5393 5735 50  0001 C CNN
-	1    5543 5785
-	1    0    0    -1  
-$EndComp
 $Comp
 L Device:LED D10
 U 1 1 5BC0A216
@@ -1345,14 +1333,6 @@ F 3 "~" H 4563 5837 50  0001 C CNN
 	1    4563 5837
 	1    0    0    -1  
 $EndComp
-Connection ~ 5143 5885
-Connection ~ 5543 6085
-Text Label 4097 5295 0    50   ~ 0
-Vsp
-Wire Wire Line
-	4097 5295 4097 5386
-Wire Wire Line
-	4097 5386 4434 5386
 Wire Wire Line
 	5543 5386 5543 5485
 Wire Wire Line
@@ -1362,9 +1342,6 @@ Wire Wire Line
 	4563 5386 5543 5386
 Wire Wire Line
 	4057 5676 4434 5676
-Wire Wire Line
-	4434 5676 4434 5386
-Connection ~ 4434 5386
 Wire Wire Line
 	4434 5386 4563 5386
 $Comp
@@ -1391,8 +1368,6 @@ Wire Wire Line
 	6611 5841 6611 5885
 Wire Wire Line
 	6611 5885 5943 5885
-Wire Wire Line
-	5543 4871 5543 5047
 Connection ~ 5543 5386
 Wire Wire Line
 	6611 5153 6611 5047
@@ -1508,4 +1483,45 @@ Wire Wire Line
 Connection ~ 6064 6309
 Wire Wire Line
 	6064 6309 6065 6309
+Wire Wire Line
+	4434 5386 4434 5676
+$Comp
+L Connector_Generic:Conn_01x02 J10
+U 1 1 5BEBB2FC
+P 4113 4837
+F 0 "J10" H 4193 4829 50  0000 L CNN
+F 1 "VSP" H 4193 4738 50  0000 L CNN
+F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-2-3.5-H_1x02_P3.50mm_Horizontal" H 4113 4837 50  0001 C CNN
+F 3 "~" H 4113 4837 50  0001 C CNN
+	1    4113 4837
+	-1   0    0    1   
+$EndComp
+Text Label 4313 4737 0    50   ~ 0
+Vsp
+$Comp
+L power:GND #PWR0116
+U 1 1 5BEFE203
+P 4327 4904
+F 0 "#PWR0116" H 4327 4654 50  0001 C CNN
+F 1 "GND" H 4332 4731 50  0000 C CNN
+F 2 "" H 4327 4904 50  0001 C CNN
+F 3 "" H 4327 4904 50  0001 C CNN
+	1    4327 4904
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4313 4837 4327 4837
+Wire Wire Line
+	4327 4837 4327 4904
+Text Label 5264 4901 0    50   ~ 0
+Vsp
+Wire Wire Line
+	5543 4871 5543 4941
+Wire Wire Line
+	5264 4901 5264 4941
+Wire Wire Line
+	5264 4941 5543 4941
+Connection ~ 5543 4941
+Wire Wire Line
+	5543 4941 5543 5047
 $EndSCHEMATC
