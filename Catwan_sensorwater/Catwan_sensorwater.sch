@@ -1253,10 +1253,6 @@ Wire Wire Line
 Connection ~ 4563 5386
 Wire Wire Line
 	4563 5386 5543 5386
-Wire Wire Line
-	4057 5676 4434 5676
-Wire Wire Line
-	4434 5386 4563 5386
 $Comp
 L power:GND #PWR0114
 U 1 1 5BFB79E0
@@ -1321,8 +1317,6 @@ Wire Wire Line
 Connection ~ 6064 6309
 Wire Wire Line
 	6064 6309 6065 6309
-Wire Wire Line
-	4434 5386 4434 5676
 $Comp
 L Connector_Generic:Conn_01x02 J10
 U 1 1 5BEBB2FC
@@ -1351,17 +1345,8 @@ Wire Wire Line
 	4313 4837 4327 4837
 Wire Wire Line
 	4327 4837 4327 4904
-Text Label 5264 4901 0    50   ~ 0
+Text Label 5470 5048 2    50   ~ 0
 Vsp
-Wire Wire Line
-	5543 4871 5543 4941
-Wire Wire Line
-	5264 4901 5264 4941
-Wire Wire Line
-	5264 4941 5543 4941
-Connection ~ 5543 4941
-Wire Wire Line
-	5543 4941 5543 5047
 $Comp
 L Connector_Generic:Conn_01x04 J6
 U 1 1 5BEBEC90
@@ -1473,12 +1458,12 @@ Connection ~ 3601 1983
 Wire Wire Line
 	3601 1983 3601 2100
 $Comp
-L Device:D_Schottky D?
+L Device:D_Schottky D1
 U 1 1 5BF8C939
 P 7602 1471
-F 0 "D?" V 7648 1392 50  0000 R CNN
+F 0 "D1" V 7648 1392 50  0000 R CNN
 F 1 "D_Schottky" V 7557 1392 50  0000 R CNN
-F 2 "" H 7602 1471 50  0001 C CNN
+F 2 "Diode_SMD:D_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 7602 1471 50  0001 C CNN
 F 3 "~" H 7602 1471 50  0001 C CNN
 	1    7602 1471
 	0    -1   -1   0   
@@ -1498,4 +1483,12 @@ Wire Wire Line
 	7603 2117 7603 2190
 Wire Wire Line
 	6675 1324 6675 1424
+Wire Wire Line
+	5543 4871 5543 5047
+Wire Wire Line
+	5470 5048 5544 5048
+Wire Wire Line
+	4057 5676 4057 5386
+Wire Wire Line
+	4057 5386 4563 5386
 $EndSCHEMATC
