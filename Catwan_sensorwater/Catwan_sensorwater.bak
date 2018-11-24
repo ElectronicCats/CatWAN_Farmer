@@ -20,7 +20,7 @@ U 1 1 5BAC062E
 P 8367 1693
 F 0 "U1" H 8367 1935 50  0000 C CNN
 F 1 "AP2114N-1.0" H 8367 1844 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:SOT-23" H 8367 1918 50  0001 C CIN
+F 2 "Package_TO_SOT_SMD:SOT-223-3_TabPin2" H 8367 1918 50  0001 C CIN
 F 3 "https://www.diodes.com/assets/Datasheets/AP2127.pdf" H 8367 1693 50  0001 C CNN
 	1    8367 1693
 	1    0    0    -1  
@@ -433,8 +433,6 @@ F 3 "~" H 7298 5347 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	7088 4985 7298 4985
-Wire Wire Line
-	7602 1621 7602 1692
 Wire Notes Line
 	7388 6536 7396 6536
 $Comp
@@ -780,12 +778,12 @@ Wire Wire Line
 $Comp
 L power:GND #PWR0103
 U 1 1 5BAC0A14
-P 7603 2190
-F 0 "#PWR0103" H 7603 1940 50  0001 C CNN
-F 1 "GND" H 7608 2017 50  0000 C CNN
-F 2 "" H 7603 2190 50  0001 C CNN
-F 3 "" H 7603 2190 50  0001 C CNN
-	1    7603 2190
+P 7602 2084
+F 0 "#PWR0103" H 7602 1834 50  0001 C CNN
+F 1 "GND" H 7607 1911 50  0000 C CNN
+F 2 "" H 7602 2084 50  0001 C CNN
+F 3 "" H 7602 2084 50  0001 C CNN
+	1    7602 2084
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -795,17 +793,6 @@ Wire Wire Line
 Connection ~ 8854 1693
 Wire Wire Line
 	8854 1693 9276 1693
-$Comp
-L Device:C C4
-U 1 1 5BAD5278
-P 7603 1967
-F 0 "C4" H 7718 2013 50  0000 L CNN
-F 1 "10uf" H 7718 1922 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 7641 1817 50  0001 C CNN
-F 3 "~" H 7603 1967 50  0001 C CNN
-	1    7603 1967
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	8854 2086 8854 2184
 Wire Wire Line
@@ -1253,10 +1240,6 @@ Wire Wire Line
 Connection ~ 4563 5386
 Wire Wire Line
 	4563 5386 5543 5386
-Wire Wire Line
-	4057 5676 4434 5676
-Wire Wire Line
-	4434 5386 4563 5386
 $Comp
 L power:GND #PWR0114
 U 1 1 5BFB79E0
@@ -1321,8 +1304,6 @@ Wire Wire Line
 Connection ~ 6064 6309
 Wire Wire Line
 	6064 6309 6065 6309
-Wire Wire Line
-	4434 5386 4434 5676
 $Comp
 L Connector_Generic:Conn_01x02 J10
 U 1 1 5BEBB2FC
@@ -1477,20 +1458,35 @@ $EndComp
 Wire Wire Line
 	7392 1223 7392 1692
 Wire Wire Line
-	7392 1692 7602 1692
-Connection ~ 7602 1692
-Wire Wire Line
-	7602 1692 7602 1693
-Wire Wire Line
-	7602 1693 8067 1693
-Wire Wire Line
-	7603 1693 7603 1817
-Wire Wire Line
-	7603 2117 7603 2190
-Wire Wire Line
 	6675 1324 6675 1424
 Wire Wire Line
 	5543 4871 5543 5047
 Wire Wire Line
 	5470 5048 5544 5048
+Wire Wire Line
+	4057 5676 4057 5386
+Wire Wire Line
+	4057 5386 4563 5386
+$Comp
+L Device:C C4
+U 1 1 5BAD5278
+P 7602 1892
+F 0 "C4" H 7717 1938 50  0000 L CNN
+F 1 "10uf" H 7717 1847 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 7640 1742 50  0001 C CNN
+F 3 "~" H 7602 1892 50  0001 C CNN
+	1    7602 1892
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7602 1693 8067 1693
+Wire Wire Line
+	7602 2042 7602 2084
+Wire Wire Line
+	7602 1621 7602 1693
+Connection ~ 7602 1693
+Wire Wire Line
+	7602 1693 7602 1742
+Wire Wire Line
+	7392 1692 7602 1692
 $EndSCHEMATC
