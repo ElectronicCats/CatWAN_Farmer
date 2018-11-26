@@ -486,7 +486,7 @@ F 3 "" H 5120 6510 50  0001 C CNN
 	1    5120 6510
 	1    0    0    -1  
 $EndComp
-Text Label 6200 6700 0    50   ~ 0
+Text Label 5977 6279 2    50   ~ 0
 BAT
 $Comp
 L power:GND #PWR023
@@ -541,17 +541,6 @@ Wire Wire Line
 Wire Wire Line
 	9965 2335 9965 2405
 $Comp
-L Connector_Generic:Conn_01x02 J4
-U 1 1 5BCD0D4B
-P 6621 4446
-F 0 "J4" H 6701 4438 50  0000 L CNN
-F 1 "BATT" H 6701 4347 50  0000 L CNN
-F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-2-3.5-H_1x02_P3.50mm_Horizontal" H 6621 4446 50  0001 C CNN
-F 3 "~" H 6621 4446 50  0001 C CNN
-	1    6621 4446
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:GND #PWR020
 U 1 1 5BCD15BF
 P 6401 4682
@@ -566,10 +555,6 @@ Wire Wire Line
 	6421 4546 6401 4546
 Wire Wire Line
 	6401 4546 6401 4682
-Text Label 6165 4446 0    50   ~ 0
-BAT
-Wire Wire Line
-	6421 4446 6165 4446
 Text Notes 3928 4460 0    50   ~ 0
 Charger
 Wire Notes Line
@@ -1458,7 +1443,7 @@ Connection ~ 4100 5980
 Wire Wire Line
 	4100 5980 4100 6020
 Wire Wire Line
-	6070 6340 6070 6250
+	6070 6340 6070 6279
 Wire Wire Line
 	5120 6370 5120 6460
 Wire Wire Line
@@ -1468,11 +1453,28 @@ Wire Wire Line
 Connection ~ 5120 6460
 Wire Wire Line
 	5120 6460 5120 6510
+Text Label 6367 4445 2    50   ~ 0
+BAT
+$Comp
+L Connector_Generic:Conn_01x02 J4
+U 1 1 5BFD31FF
+P 6621 4446
+F 0 "J4" H 6701 4438 50  0000 L CNN
+F 1 "BATT" H 6701 4347 50  0000 L CNN
+F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-2-3.5-H_1x02_P3.50mm_Horizontal" H 6621 4446 50  0001 C CNN
+F 3 "~" H 6621 4446 50  0001 C CNN
+	1    6621 4446
+	1    0    0    -1  
+$EndComp
 Wire Wire Line
-	6070 6770 6070 6700
+	6421 4446 6367 4446
 Wire Wire Line
-	6200 6700 6070 6700
-Connection ~ 6070 6700
+	6367 4446 6367 4445
 Wire Wire Line
-	6070 6700 6070 6640
+	6070 6640 6070 6770
+Wire Wire Line
+	5977 6279 6070 6279
+Connection ~ 6070 6279
+Wire Wire Line
+	6070 6279 6070 6250
 $EndSCHEMATC

@@ -1077,9 +1077,9 @@ NoConn ~ 1716 1773
 NoConn ~ 1716 2873
 Wire Wire Line
 	1716 1873 1578 1873
-Text Label 1578 1873 2    50   ~ 0
-SENS_X
 Text Label 1568 2173 2    50   ~ 0
+SENS_X
+Text Label 1578 1873 2    50   ~ 0
 SENS_Y
 Wire Wire Line
 	7034 3981 7859 3981
