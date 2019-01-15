@@ -2,6 +2,22 @@
 //int digPin=3;//output PWM5 sch
 
 //Name readings
+#include <Adafruit_Sensor.h>
+#include <DHT.h>
+#include <DHT_U.h>
+
+#define DHTPIN 8 //PIN DIGITAL PARA SENSOR DHT22
+#define DHTTYPE           DHT22     // DHT 22 (AM2302)Type sensor in use
+#define Serial SerialUSB
+
+#define DHTPIN 8 // Pin which is connected to the DHT sensor.
+#define DHTTYPE           DHT22
+
+DHT_Unified dht(DHTPIN, DHTTYPE);
+
+uint32_t delayMS;
+
+//Lecturas analogicas
 float ReadA0 =0;
 float ReadA1 =0;
 
@@ -16,7 +32,7 @@ void setup()
 {
   //Resolution reads and write 
   analogWriteResolution(10);
-  analogReadResolution(12);
+  analogReadResolution(10);
 
   //inputs and outputs
   pinMode(3, OUTPUT);//Energyzate the sensor 
@@ -26,6 +42,7 @@ void setup()
   pinMode(4, OUTPUT);//Enable disable MUX 
   
   SerialUSB.begin(9600);
+  dht.begin();
   delay(100);// sure OUTPUT  
 }
 
@@ -71,14 +88,14 @@ void loop()
   
 // R=7800*(Vout-Vin)/Vin;
   
-     SerialUSB.print("Lectura A0 Sensor 2: ");
-     SerialUSB.print(ReadA0);
-     SerialUSB.print(" ");
+  SerialUSB.print("Lectura A0 Sensor 2: ");
+  SerialUSB.print(ReadA0);
+  SerialUSB.print(" ");
   SerialUSB.print(Vout);
-  SerialUSB.println(" ");
-     SerialUSB.print("Lectura A3 Sensor 2: ");
-     SerialUSB.print(ReadA1);
-     SerialUSB.print(" ");
+  SerialUSB.println(" ");   
+  SerialUSB.print("Lectura A3 Sensor 2: ");
+  SerialUSB.print(ReadA1);
+  SerialUSB.print(" ");
   SerialUSB.print(Vin);
   SerialUSB.println(" ");
   /*SerialUSB.print("Resistencia: ");
