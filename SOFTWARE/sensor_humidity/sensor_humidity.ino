@@ -24,25 +24,31 @@ float ReadA1 =0;
 //Volatajes
 float Vin =0;
 float Vout =0;
+float readVolresitor10k=0;
+float readGNDresitor10k=0;
+float res=0;
+float vol=0;
 
 //Calculus
 float R=0;
 
 void setup()
 {
-  //Resolution reads and write 
+  
+  /*//Resolution reads and write 
   analogWriteResolution(10);
   analogReadResolution(10);
-
+  */
+  SerialUSB.begin(9600);
+   
   //inputs and outputs
-  pinMode(3, OUTPUT);//Energyzate the sensor 
+  pinMode(3,  OUTPUT);//Energyzate the sensor 
   pinMode(11, OUTPUT);//S0 control MUX
   pinMode(13, OUTPUT);//S1 control MUX
   pinMode(10, OUTPUT);//S2 control MUX
-  pinMode(4, OUTPUT);//Enable disable MUX 
+  pinMode(4,  OUTPUT);//Enable disable MUX 
   
-  SerialUSB.begin(9600);
-  dht.begin();
+ // dht.begin();
   delay(100);// sure OUTPUT  
 }
 
@@ -51,24 +57,35 @@ void loop()
   ReadA0=0;
   ReadA1=0;
   digitalWrite(4,LOW);//Activation enable
-  digitalWrite(11, LOW);//S0
-  digitalWrite(13, LOW);//S1
-  digitalWrite(10, LOW);//S2
+  digitalWrite(13, LOW);//S0=0
+  digitalWrite(11, LOW);//S1=0
+  digitalWrite(10, LOW);//S2=0
   delay(10);//Initialice the MUX channels, ready for activation
-  digitalWrite(3, HIGH); //Energize the sensor 
+  //READ RESISTOR 10K in the channel 0
+  digitalWrite(3, HIGH); //Energize the sensor A0 
   delay(0.09); //wait 90 micro seconds and take sensor read...do not exceed 100uS
   ReadA0=analogRead(A0);//Sensor Voltage whit pwm D3 Vin divisor
-  ReadA1=analogRead(A3);//Sensor before resistor Vout divisor
+  //ReadA1=analogRead(A3);//Sensor before resistor Rx=7.8k Vout divisor
   digitalWrite(3,LOW);//off sensor 
+  readVolresitor10k=ReadA0;
+  //readGNDresitor10k=ReadA1;
   delay(100);//Delay 0.1 second wait before change channel MUX
-    
-    SerialUSB.print("Lectura A0 Sensor 1: ");
-    SerialUSB.print(ReadA0);
+ // res= 7800*((readVolresitor10k-readGNDresitor10k)/readGNDresitor10k);
+  vol= (readVolresitor10k*3.3)/1023;
+  
+    SerialUSB.print("Lectura A0 Resistor 1: ");
+    SerialUSB.print(readVolresitor10k);
     SerialUSB.print(" ");
-    SerialUSB.print("Lectura A3 Sensor 1: ");
-    SerialUSB.print(ReadA1);
+    SerialUSB.print("Lectura A3 Resustir 1: ");
+    SerialUSB.print(readGNDresitor10k);
+    SerialUSB.print(" ");
+    SerialUSB.print("Voltaje: ");
+    SerialUSB.print(vol);
     SerialUSB.println(" ");
 
+   
+  
+/*
   ReadA0=0;
   ReadA1=0;
   digitalWrite(4,LOW);//Activation enable
