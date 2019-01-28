@@ -1077,25 +1077,14 @@ NoConn ~ 1716 1773
 NoConn ~ 1716 2873
 Wire Wire Line
 	1716 1873 1578 1873
-Text Label 1578 1873 2    50   ~ 0
-SENS_X
 Text Label 1568 2173 2    50   ~ 0
+SENS_X
+Text Label 1578 1873 2    50   ~ 0
 SENS_Y
 Wire Wire Line
 	7034 3981 7859 3981
 Wire Wire Line
 	7545 3399 8175 3399
-$Comp
-L power:GND #PWR011
-U 1 1 5BAD7783
-P 3502 1158
-F 0 "#PWR011" H 3502 908 50  0001 C CNN
-F 1 "GND" H 3507 985 50  0000 C CNN
-F 2 "" H 3502 1158 50  0001 C CNN
-F 3 "" H 3502 1158 50  0001 C CNN
-	1    3502 1158
-	1    0    0    -1  
-$EndComp
 Wire Notes Line
 	4342 4326 4353 4326
 Wire Notes Line
@@ -1228,10 +1217,6 @@ F 3 "" H 4176 1244 50  0001 C CNN
 	1    4176 1244
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	3116 1073 3502 1073
-Wire Wire Line
-	3502 1073 3502 1158
 Wire Wire Line
 	3116 1173 3293 1173
 Wire Wire Line
