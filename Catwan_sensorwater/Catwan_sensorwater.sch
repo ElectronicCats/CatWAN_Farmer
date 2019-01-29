@@ -443,17 +443,6 @@ F 3 "~" H 9965 1759 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:R R4
-U 1 1 5BC24D96
-P 6070 6100
-F 0 "R4" H 6140 6146 50  0000 L CNN
-F 1 "10K" H 6140 6055 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 6000 6100 50  0001 C CNN
-F 3 "~" H 6070 6100 50  0001 C CNN
-	1    6070 6100
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:VCC #PWR022
 U 1 1 5BC3B2D4
 P 5540 4900
@@ -1098,39 +1087,6 @@ Wire Notes Line
 Wire Notes Line
 	11224 2695 11224 2706
 $Comp
-L Device:C C9
-U 1 1 5BF450D9
-P 4100 5780
-F 0 "C9" H 4215 5826 50  0000 L CNN
-F 1 "47uf" H 4215 5735 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 4138 5630 50  0001 C CNN
-F 3 "~" H 4100 5780 50  0001 C CNN
-	1    4100 5780
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C C10
-U 1 1 5BF45235
-P 4520 5780
-F 0 "C10" H 4635 5826 50  0000 L CNN
-F 1 "100nf" H 4635 5735 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 4558 5630 50  0001 C CNN
-F 3 "~" H 4520 5780 50  0001 C CNN
-	1    4520 5780
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR0114
-U 1 1 5BFB79E0
-P 4100 6020
-F 0 "#PWR0114" H 4100 5770 50  0001 C CNN
-F 1 "GND" H 4105 5847 50  0000 C CNN
-F 2 "" H 4100 6020 50  0001 C CNN
-F 3 "" H 4100 6020 50  0001 C CNN
-	1    4100 6020
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:C C8
 U 1 1 5BEB65DE
 P 3601 1770
@@ -1156,7 +1112,7 @@ F 3 "" H 4320 4710 50  0001 C CNN
 	1    4320 4710
 	1    0    0    -1  
 $EndComp
-Text Label 5460 5080 2    50   ~ 0
+Text Label 5014 4990 2    50   ~ 0
 Vsp
 $Comp
 L Connector_Generic:Conn_01x04 J6
@@ -1345,11 +1301,6 @@ F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/20001984g.pdf" H 5390 5710 
 	1    5540 5760
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	5540 4900 5540 5080
-Wire Wire Line
-	5460 5080 5540 5080
-Connection ~ 5540 5080
 $Comp
 L Device:LED D7
 U 1 1 5BC0A15A
@@ -1375,8 +1326,6 @@ $EndComp
 Wire Wire Line
 	6610 5510 6610 5560
 Wire Wire Line
-	5540 5080 5540 5160
-Wire Wire Line
 	6610 5860 5940 5860
 Wire Wire Line
 	6610 5210 6610 5160
@@ -1384,11 +1333,7 @@ Wire Wire Line
 	6610 5160 5540 5160
 Connection ~ 5540 5160
 Wire Wire Line
-	5540 5160 5540 5310
-Wire Wire Line
 	5940 5660 6070 5660
-Wire Wire Line
-	6070 5660 6070 5950
 $Comp
 L Device:C C6
 U 1 1 5BC716B5
@@ -1404,27 +1349,6 @@ Wire Wire Line
 	5140 5860 5120 5860
 Wire Wire Line
 	5120 5860 5120 6070
-Wire Wire Line
-	4100 5630 4100 5310
-Wire Wire Line
-	4100 5310 4520 5310
-Connection ~ 5540 5310
-Wire Wire Line
-	5540 5310 5540 5460
-Wire Wire Line
-	4520 5630 4520 5310
-Connection ~ 4520 5310
-Wire Wire Line
-	4520 5310 5540 5310
-Wire Wire Line
-	4100 5930 4100 5980
-Wire Wire Line
-	4520 5930 4520 5980
-Wire Wire Line
-	4520 5980 4100 5980
-Connection ~ 4100 5980
-Wire Wire Line
-	4100 5980 4100 6020
 Wire Wire Line
 	6070 6340 6070 6279
 Wire Wire Line
@@ -1458,8 +1382,6 @@ Wire Wire Line
 Wire Wire Line
 	5977 6279 6070 6279
 Connection ~ 6070 6279
-Wire Wire Line
-	6070 6279 6070 6250
 $Comp
 L Device:C C11
 U 1 1 5C51E879
@@ -1505,4 +1427,59 @@ Wire Wire Line
 	6890 1370 6890 1424
 Wire Wire Line
 	6890 974  6890 1070
+Wire Wire Line
+	6070 5660 6070 6279
+Wire Wire Line
+	5540 4900 5540 4990
+$Comp
+L Device:D_Schottky D?
+U 1 1 5C536A87
+P 5230 4990
+F 0 "D?" V 5252 4836 50  0000 R CNN
+F 1 "D_Schottky" V 5138 4884 50  0000 R CNN
+F 2 "Diode_SMD:D_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 5230 4990 50  0001 C CNN
+F 3 "~" H 5230 4990 50  0001 C CNN
+	1    5230 4990
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5380 4990 5540 4990
+Connection ~ 5540 4990
+Wire Wire Line
+	5540 4990 5540 5160
+Wire Wire Line
+	5014 4990 5080 4990
+$Comp
+L power:GND #PWR0114
+U 1 1 5BFB79E0
+P 4824 5916
+F 0 "#PWR0114" H 4824 5666 50  0001 C CNN
+F 1 "GND" H 4829 5743 50  0000 C CNN
+F 2 "" H 4824 5916 50  0001 C CNN
+F 3 "" H 4824 5916 50  0001 C CNN
+	1    4824 5916
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5540 5160 5540 5268
+Wire Wire Line
+	5540 5268 4824 5268
+Wire Wire Line
+	4824 5268 4824 5544
+Connection ~ 5540 5268
+Wire Wire Line
+	5540 5268 5540 5460
+$Comp
+L Device:C C10
+U 1 1 5BF45235
+P 4824 5694
+F 0 "C10" H 4939 5740 50  0000 L CNN
+F 1 "10uF" H 4939 5649 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 4862 5544 50  0001 C CNN
+F 3 "~" H 4824 5694 50  0001 C CNN
+	1    4824 5694
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4824 5844 4824 5916
 $EndSCHEMATC

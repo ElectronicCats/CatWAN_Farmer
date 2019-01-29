@@ -97,7 +97,7 @@ U 1 1 5BAD6569
 P 2416 2173
 F 0 "U2" H 2416 3540 50  0000 C CNN
 F 1 "ATSAMD21E18A-MU" H 2416 3449 50  0000 C CNN
-F 2 "Package_QFP:LQFP-32_7x7mm_P0.8mm" H 2416 2173 50  0001 L BNN
+F 2 "Package_QFP:TQFP-32_7x7mm_P0.8mm" H 2416 2173 50  0001 L BNN
 F 3 "SAMD21E Series 256 KB Flash 32 KB SRAM 48 MHz 32-Bit Microcontroller - QFN-32" H 2416 2173 50  0001 L BNN
 F 4 "ATSAMD21E18A-MU-ND" H 2416 2173 50  0001 L BNN "Campo4"
 F 5 "https://www.digikey.com.mx/product-detail/en/microchip-technology/ATSAMD21E18A-MU/ATSAMD21E18A-MU-ND/4935887?utm_source=snapeda&utm_medium=aggregator&utm_campaign=symbol" H 2416 2173 50  0001 L BNN "Campo5"
@@ -441,17 +441,6 @@ F 2 "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 9965 1759 50  0001
 F 3 "~" H 9965 1759 50  0001 C CNN
 	1    9965 1759
 	0    -1   -1   0   
-$EndComp
-$Comp
-L Device:R R4
-U 1 1 5BC24D96
-P 6070 6100
-F 0 "R4" H 6140 6146 50  0000 L CNN
-F 1 "10K" H 6140 6055 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 6000 6100 50  0001 C CNN
-F 3 "~" H 6070 6100 50  0001 C CNN
-	1    6070 6100
-	1    0    0    -1  
 $EndComp
 $Comp
 L power:VCC #PWR022
@@ -1156,7 +1145,7 @@ F 3 "" H 4320 4710 50  0001 C CNN
 	1    4320 4710
 	1    0    0    -1  
 $EndComp
-Text Label 5460 5080 2    50   ~ 0
+Text Label 5014 4990 2    50   ~ 0
 Vsp
 $Comp
 L Connector_Generic:Conn_01x04 J6
@@ -1345,11 +1334,6 @@ F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/20001984g.pdf" H 5390 5710 
 	1    5540 5760
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	5540 4900 5540 5080
-Wire Wire Line
-	5460 5080 5540 5080
-Connection ~ 5540 5080
 $Comp
 L Device:LED D7
 U 1 1 5BC0A15A
@@ -1375,8 +1359,6 @@ $EndComp
 Wire Wire Line
 	6610 5510 6610 5560
 Wire Wire Line
-	5540 5080 5540 5160
-Wire Wire Line
 	6610 5860 5940 5860
 Wire Wire Line
 	6610 5210 6610 5160
@@ -1387,8 +1369,6 @@ Wire Wire Line
 	5540 5160 5540 5310
 Wire Wire Line
 	5940 5660 6070 5660
-Wire Wire Line
-	6070 5660 6070 5950
 $Comp
 L Device:C C6
 U 1 1 5BC716B5
@@ -1458,8 +1438,6 @@ Wire Wire Line
 Wire Wire Line
 	5977 6279 6070 6279
 Connection ~ 6070 6279
-Wire Wire Line
-	6070 6279 6070 6250
 $Comp
 L Device:C C11
 U 1 1 5C51E879
@@ -1505,4 +1483,26 @@ Wire Wire Line
 	6890 1370 6890 1424
 Wire Wire Line
 	6890 974  6890 1070
+Wire Wire Line
+	6070 5660 6070 6279
+Wire Wire Line
+	5540 4900 5540 4990
+$Comp
+L Device:D_Schottky D?
+U 1 1 5C536A87
+P 5230 4990
+F 0 "D?" V 5252 4836 50  0000 R CNN
+F 1 "D_Schottky" V 5138 4884 50  0000 R CNN
+F 2 "Diode_SMD:D_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 5230 4990 50  0001 C CNN
+F 3 "~" H 5230 4990 50  0001 C CNN
+	1    5230 4990
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5380 4990 5540 4990
+Connection ~ 5540 4990
+Wire Wire Line
+	5540 4990 5540 5160
+Wire Wire Line
+	5014 4990 5080 4990
 $EndSCHEMATC
