@@ -97,7 +97,7 @@ U 1 1 5BAD6569
 P 2416 2173
 F 0 "U2" H 2416 3540 50  0000 C CNN
 F 1 "ATSAMD21E18A-MU" H 2416 3449 50  0000 C CNN
-F 2 "Package_QFP:LQFP-32_7x7mm_P0.8mm" H 2416 2173 50  0001 L BNN
+F 2 "Package_QFP:TQFP-32_7x7mm_P0.8mm" H 2416 2173 50  0001 L BNN
 F 3 "SAMD21E Series 256 KB Flash 32 KB SRAM 48 MHz 32-Bit Microcontroller - QFN-32" H 2416 2173 50  0001 L BNN
 F 4 "ATSAMD21E18A-MU-ND" H 2416 2173 50  0001 L BNN "Campo4"
 F 5 "https://www.digikey.com.mx/product-detail/en/microchip-technology/ATSAMD21E18A-MU/ATSAMD21E18A-MU-ND/4935887?utm_source=snapeda&utm_medium=aggregator&utm_campaign=symbol" H 2416 2173 50  0001 L BNN "Campo5"
@@ -370,7 +370,7 @@ MICROCONTROLLER
 Text Notes 6006 553  0    50   ~ 0
 POWER SUPPLY
 Text Notes 542  4480 0    50   ~ 0
-MODULATION LORA\n
+MODULE LORA\n
 Text Notes 7058 4468 0    50   ~ 0
 SENSORES\n
 $Comp
@@ -556,7 +556,7 @@ Wire Wire Line
 Wire Wire Line
 	6401 4546 6401 4682
 Text Notes 3928 4460 0    50   ~ 0
-Charger
+CHARGER 
 Wire Notes Line
 	6964 6532 6964 4332
 Wire Notes Line

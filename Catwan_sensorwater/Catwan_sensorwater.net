@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source C:\Users\Admin\Documents\Practicas\Catwan_sensorwater\Catwan_sensorwater\Catwan_sensorwater.sch)
-    (date "28/01/2019 01:39:07 p. m.")
+    (date "29/01/2019 01:34:57 p. m.")
     (tool "Eeschema (5.0.0)")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -38,7 +38,7 @@
       (tstamp 5BAD54FC))
     (comp (ref U2)
       (value ATSAMD21E18A-MU)
-      (footprint Package_QFP:LQFP-32_7x7mm_P0.8mm)
+      (footprint Package_QFP:TQFP-32_7x7mm_P0.8mm)
       (datasheet "SAMD21E Series 256 KB Flash 32 KB SRAM 48 MHz 32-Bit Microcontroller - QFN-32")
       (fields
         (field (name Campo4) ATSAMD21E18A-MU-ND)

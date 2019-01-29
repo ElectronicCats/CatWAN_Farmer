@@ -370,7 +370,7 @@ MICROCONTROLLER
 Text Notes 6006 553  0    50   ~ 0
 POWER SUPPLY
 Text Notes 542  4480 0    50   ~ 0
-MODULATION LORA\n
+MODULE LORA\n
 Text Notes 7058 4468 0    50   ~ 0
 SENSORES\n
 $Comp
@@ -556,7 +556,7 @@ Wire Wire Line
 Wire Wire Line
 	6401 4546 6401 4682
 Text Notes 3928 4460 0    50   ~ 0
-Charger
+CHARGER 
 Wire Notes Line
 	6964 6532 6964 4332
 Wire Notes Line
@@ -1049,12 +1049,12 @@ $EndComp
 $Comp
 L power:VCC #PWR0112
 U 1 1 5BE4FB31
-P 6675 1324
-F 0 "#PWR0112" H 6675 1174 50  0001 C CNN
-F 1 "VCC" H 6692 1497 50  0000 C CNN
-F 2 "" H 6675 1324 50  0001 C CNN
-F 3 "" H 6675 1324 50  0001 C CNN
-	1    6675 1324
+P 6890 974
+F 0 "#PWR0112" H 6890 824 50  0001 C CNN
+F 1 "VCC" H 6907 1147 50  0000 C CNN
+F 2 "" H 6890 974 50  0001 C CNN
+F 3 "" H 6890 974 50  0001 C CNN
+	1    6890 974 
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1275,8 +1275,6 @@ F 3 "~" H 7580 1430 50  0001 C CNN
 	1    7580 1430
 	0    -1   -1   0   
 $EndComp
-Wire Wire Line
-	6675 1324 6675 1424
 $Comp
 L Device:C C4
 U 1 1 5BAD5278
@@ -1462,4 +1460,49 @@ Wire Wire Line
 Connection ~ 6070 6279
 Wire Wire Line
 	6070 6279 6070 6250
+$Comp
+L Device:C C11
+U 1 1 5C51E879
+P 3566 1073
+F 0 "C11" V 3314 1073 50  0000 C CNN
+F 1 "1uF" V 3405 1073 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 3604 923 50  0001 C CNN
+F 3 "~" H 3566 1073 50  0001 C CNN
+	1    3566 1073
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3116 1073 3416 1073
+$Comp
+L power:GND #PWR011
+U 1 1 5C559755
+P 3754 1164
+F 0 "#PWR011" H 3754 914 50  0001 C CNN
+F 1 "GND" H 3759 991 50  0000 C CNN
+F 2 "" H 3754 1164 50  0001 C CNN
+F 3 "" H 3754 1164 50  0001 C CNN
+	1    3754 1164
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3716 1073 3754 1073
+Wire Wire Line
+	3754 1073 3754 1164
+$Comp
+L Device:D_Schottky D2
+U 1 1 5C56404F
+P 6890 1220
+F 0 "D2" V 6942 1436 50  0000 R CNN
+F 1 "D_Schottky" V 6784 1680 50  0000 R CNN
+F 2 "Diode_SMD:D_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 6890 1220 50  0001 C CNN
+F 3 "~" H 6890 1220 50  0001 C CNN
+	1    6890 1220
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6675 1424 6890 1424
+Wire Wire Line
+	6890 1370 6890 1424
+Wire Wire Line
+	6890 974  6890 1070
 $EndSCHEMATC
