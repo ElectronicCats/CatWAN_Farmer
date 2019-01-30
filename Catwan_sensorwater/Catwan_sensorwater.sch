@@ -1432,10 +1432,10 @@ Wire Wire Line
 Wire Wire Line
 	5540 4900 5540 4990
 $Comp
-L Device:D_Schottky D?
+L Device:D_Schottky D3
 U 1 1 5C536A87
 P 5230 4990
-F 0 "D?" V 5252 4836 50  0000 R CNN
+F 0 "D3" V 5252 4836 50  0000 R CNN
 F 1 "D_Schottky" V 5138 4884 50  0000 R CNN
 F 2 "Diode_SMD:D_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 5230 4990 50  0001 C CNN
 F 3 "~" H 5230 4990 50  0001 C CNN
