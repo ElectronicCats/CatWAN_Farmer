@@ -57,8 +57,8 @@ void loop()
   ReadA0=0;
   ReadA1=0;
   digitalWrite(4, LOW);//Activation enable
-  digitalWrite(8, LOW);//S0=0
-  digitalWrite(9, LOW);//S1=0
+  digitalWrite(8, HIGH);//S0=0
+  digitalWrite(9, HIGH);//S1=0
  // digitalWrite(10, LOW);//S2=0
  // delay(10);//Initialice the MUX channels, ready for activation
   //READ RESISTOR 10K in the channel 0
