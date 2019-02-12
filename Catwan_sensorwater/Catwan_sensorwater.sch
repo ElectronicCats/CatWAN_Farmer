@@ -288,10 +288,6 @@ Text Label 1570 2373 0    50   ~ 0
 S1
 Wire Wire Line
 	1716 2373 1570 2373
-Wire Wire Line
-	1716 2673 1638 2673
-Wire Wire Line
-	1716 2773 1630 2773
 Text Label 3089 3744 3    50   ~ 0
 SWCLK
 Text Label 1566 5662 2    50   ~ 0
@@ -1463,7 +1459,7 @@ F 3 "" H 4890 4975 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Catwan_sensorwater-rescue:ATSAMD21E18A-MU-electroniccats U2
+L Catwan_sensorwater-rescue:ATSAMD21E18A-MU-electroniccats-Catwan_sensorwater-rescue U2
 U 1 1 5BAD6569
 P 2416 2173
 F 0 "U2" H 2416 3540 50  0000 C CNN
@@ -1478,4 +1474,6 @@ F 8 "QFN-32 Microchip" H 2416 2173 50  0001 L BNN "Campo8"
 	1    2416 2173
 	1    0    0    -1  
 $EndComp
+NoConn ~ 1716 2773
+NoConn ~ 1716 2673
 $EndSCHEMATC
