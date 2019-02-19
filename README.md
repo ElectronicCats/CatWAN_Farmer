@@ -1,6 +1,6 @@
-# CatWAN Barn by Electronic Cats
+# CatWAN Farmer by Electronic Cats
 
-CatWAN Barn, a grower's water saving project
+CatWAN Farmer, a grower's water saving project
 
 Monitoring soil moisture at different depths to determine when to irrigate, and - more importantly - how much water is needed. Save 25%!
 
