@@ -119,7 +119,7 @@ U 1 1 5BAF7531
 P 1427 1473
 F 0 "SW1" H 1516 1605 50  0000 R CNN
 F 1 "RST" H 1496 1393 50  0000 R CNN
-F 2 "Button_Switch_SMD:SW_SPST_B3U-1000P" H 1427 1473 50  0001 C CNN
+F 2 "Button_Switch_SMD:SW_SPST_TL3342" H 1427 1473 50  0001 C CNN
 F 3 "" H 1427 1473 50  0001 C CNN
 	1    1427 1473
 	1    0    0    -1  
@@ -711,12 +711,12 @@ $EndComp
 $Comp
 L power:GND #PWR0108
 U 1 1 5BE5CD63
-P 8873 6371
-F 0 "#PWR0108" H 8873 6121 50  0001 C CNN
-F 1 "GND" H 8745 6309 50  0000 C CNN
-F 2 "" H 8873 6371 50  0001 C CNN
-F 3 "" H 8873 6371 50  0001 C CNN
-	1    8873 6371
+P 9005 6401
+F 0 "#PWR0108" H 9005 6151 50  0001 C CNN
+F 1 "GND" H 8877 6339 50  0000 C CNN
+F 2 "" H 9005 6401 50  0001 C CNN
+F 3 "" H 9005 6401 50  0001 C CNN
+	1    9005 6401
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -799,28 +799,9 @@ Wire Wire Line
 Wire Wire Line
 	8910 5485 8910 5646
 Wire Wire Line
-	8910 5646 10134 5646
-Wire Wire Line
 	8813 5746 8813 5585
 Wire Wire Line
 	8813 5585 8814 5585
-Wire Wire Line
-	8921 5252 9463 5252
-Wire Wire Line
-	8922 5152 9300 5152
-Wire Wire Line
-	8949 5498 9876 5498
-$Comp
-L Transistor_FET:2N7000 Q2
-U 1 1 5BE35DD4
-P 9334 6086
-F 0 "Q2" H 9539 6132 50  0000 L CNN
-F 1 "2N7000" H 9102 5920 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline" H 9534 6011 50  0001 L CIN
-F 3 "https://www.fairchildsemi.com/datasheets/2N/2N7000.pdf" H 9334 6086 50  0001 L CNN
-	1    9334 6086
-	1    0    0    -1  
-$EndComp
 $Comp
 L Connector_Generic:Conn_01x02 J9
 U 1 1 5BDB99E8
@@ -833,153 +814,38 @@ F 3 "~" H 10592 5646 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Transistor_FET:2N7000 Q1
-U 1 1 5BDD1D76
-P 8773 6082
-F 0 "Q1" H 8978 6128 50  0000 L CNN
-F 1 "2N7000" H 8544 5921 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline" H 8973 6007 50  0001 L CIN
-F 3 "https://www.fairchildsemi.com/datasheets/2N/2N7000.pdf" H 8773 6082 50  0001 L CNN
-	1    8773 6082
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	8814 4985 9107 4985
-$Comp
 L power:GND #PWR0109
 U 1 1 5BDCFBA0
-P 9434 6373
-F 0 "#PWR0109" H 9434 6123 50  0001 C CNN
-F 1 "GND" H 9306 6311 50  0000 C CNN
-F 2 "" H 9434 6373 50  0001 C CNN
-F 3 "" H 9434 6373 50  0001 C CNN
-	1    9434 6373
+P 9550 6393
+F 0 "#PWR0109" H 9550 6143 50  0001 C CNN
+F 1 "GND" H 9422 6331 50  0000 C CNN
+F 2 "" H 9550 6393 50  0001 C CNN
+F 3 "" H 9550 6393 50  0001 C CNN
+	1    9550 6393
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR0110
 U 1 1 5BDCFC6E
-P 10056 6384
-F 0 "#PWR0110" H 10056 6134 50  0001 C CNN
-F 1 "GND" H 9928 6322 50  0000 C CNN
-F 2 "" H 10056 6384 50  0001 C CNN
-F 3 "" H 10056 6384 50  0001 C CNN
-	1    10056 6384
+P 10074 6399
+F 0 "#PWR0110" H 10074 6149 50  0001 C CNN
+F 1 "GND" H 9946 6337 50  0000 C CNN
+F 2 "" H 10074 6399 50  0001 C CNN
+F 3 "" H 10074 6399 50  0001 C CNN
+	1    10074 6399
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR0111
 U 1 1 5BDCFCC3
-P 10581 6393
-F 0 "#PWR0111" H 10581 6143 50  0001 C CNN
-F 1 "GND" H 10453 6331 50  0000 C CNN
-F 2 "" H 10581 6393 50  0001 C CNN
-F 3 "" H 10581 6393 50  0001 C CNN
-	1    10581 6393
+P 10560 6402
+F 0 "#PWR0111" H 10560 6152 50  0001 C CNN
+F 1 "GND" H 10432 6340 50  0000 C CNN
+F 2 "" H 10560 6402 50  0001 C CNN
+F 3 "" H 10560 6402 50  0001 C CNN
+	1    10560 6402
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	8814 4885 8984 4885
-Wire Wire Line
-	8984 5712 8984 4885
-Connection ~ 8984 4885
-Wire Wire Line
-	8984 4885 10379 4885
-Wire Wire Line
-	8873 5882 8873 5796
-Wire Wire Line
-	8873 5796 9107 5796
-Wire Wire Line
-	9107 5796 9107 4985
-Connection ~ 9107 4985
-Wire Wire Line
-	9107 4985 10379 4985
-Wire Wire Line
-	8873 6282 8873 6371
-Wire Wire Line
-	8573 6082 8573 5712
-Wire Wire Line
-	8573 5712 8984 5712
-Wire Wire Line
-	9134 6086 9134 5901
-Wire Wire Line
-	9134 5901 9300 5901
-Wire Wire Line
-	9300 5901 9300 5152
-Connection ~ 9300 5152
-Wire Wire Line
-	9300 5152 10380 5152
-Wire Wire Line
-	9434 5886 9434 5835
-Wire Wire Line
-	9434 5835 9463 5835
-Wire Wire Line
-	9463 5835 9463 5252
-Connection ~ 9463 5252
-Wire Wire Line
-	9463 5252 10380 5252
-$Comp
-L Transistor_FET:2N7000 Q3
-U 1 1 5BE35E50
-P 9956 6087
-F 0 "Q3" H 10161 6133 50  0000 L CNN
-F 1 "2N7000" H 9699 5925 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline" H 10156 6012 50  0001 L CIN
-F 3 "https://www.fairchildsemi.com/datasheets/2N/2N7000.pdf" H 9956 6087 50  0001 L CNN
-	1    9956 6087
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	9066 5398 9756 5398
-Wire Wire Line
-	9756 6087 9756 5398
-Connection ~ 9756 5398
-Wire Wire Line
-	9756 5398 10384 5398
-Wire Wire Line
-	10056 5887 10056 5823
-Wire Wire Line
-	10056 5823 9876 5823
-Wire Wire Line
-	9876 5823 9876 5498
-Connection ~ 9876 5498
-Wire Wire Line
-	9876 5498 10384 5498
-Wire Wire Line
-	10281 6098 10281 5836
-Wire Wire Line
-	10281 5836 10134 5836
-Wire Wire Line
-	10134 5836 10134 5646
-Connection ~ 10134 5646
-Wire Wire Line
-	10134 5646 10392 5646
-$Comp
-L Transistor_FET:2N7000 Q4
-U 1 1 5BDC958C
-P 10481 6098
-F 0 "Q4" H 10686 6144 50  0000 L CNN
-F 1 "2N7000" H 10224 5936 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline" H 10681 6023 50  0001 L CIN
-F 3 "https://www.fairchildsemi.com/datasheets/2N/2N7000.pdf" H 10481 6098 50  0001 L CNN
-	1    10481 6098
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	8813 5746 10352 5746
-Wire Wire Line
-	10581 5898 10352 5898
-Wire Wire Line
-	10352 5898 10352 5746
-Connection ~ 10352 5746
-Wire Wire Line
-	10352 5746 10392 5746
-Wire Wire Line
-	10581 6298 10581 6393
-Wire Wire Line
-	10056 6287 10056 6384
-Wire Wire Line
-	9434 6286 9434 6373
 Text Label 1493 1973 0    50   ~ 0
 DHT_DAT
 Wire Wire Line
@@ -1257,7 +1123,7 @@ U 1 1 5BC0BB9F
 P 6610 5710
 F 0 "R5" H 6540 5664 50  0000 R CNN
 F 1 "1K" H 6540 5755 50  0000 R CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" V 6540 5710 50  0001 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 6540 5710 50  0001 C CNN
 F 3 "~" H 6610 5710 50  0001 C CNN
 	1    6610 5710
 	-1   0    0    1   
@@ -1456,7 +1322,7 @@ F 3 "" H 4890 4975 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Catwan_sensorwater-rescue:ATSAMD21E18A-MU-electroniccats-Catwan_sensorwater-rescue-Catwan_sensorwater-rescue U2
+L Catwan_sensorwater-rescue:ATSAMD21E18A-MU-electroniccats-Catwan_sensorwater-rescue-Catwan_sensorwater-rescue-Catwan_sensorwater-rescue U2
 U 1 1 5BAD6569
 P 2416 2173
 F 0 "U2" H 2416 3540 50  0000 C CNN
@@ -1494,7 +1360,7 @@ U 1 1 5C70B7C1
 P 680 2180
 F 0 "C12" H 580 2240 50  0000 L CNN
 F 1 "0.1uF" H 510 2110 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0805_HandSoldering" H 680 2180 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 680 2180 50  0001 C CNN
 F 3 "~" H 680 2180 50  0001 C CNN
 	1    680  2180
 	1    0    0    -1  
@@ -1505,7 +1371,7 @@ U 1 1 5C70BB35
 P 880 2160
 F 0 "C9" H 972 2206 50  0000 L CNN
 F 1 "0.1uF" H 972 2115 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0805_HandSoldering" H 880 2160 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 880 2160 50  0001 C CNN
 F 3 "~" H 880 2160 50  0001 C CNN
 	1    880  2160
 	1    0    0    -1  
@@ -1556,7 +1422,7 @@ U 1 1 5C76FBCB
 P 7410 1130
 F 0 "R4" H 7469 1176 50  0000 L CNN
 F 1 "100K" H 7469 1085 50  0000 L CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" H 7410 1130 50  0001 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 7410 1130 50  0001 C CNN
 F 3 "~" H 7410 1130 50  0001 C CNN
 	1    7410 1130
 	1    0    0    -1  
@@ -1567,7 +1433,7 @@ U 1 1 5C76FC89
 P 7410 1390
 F 0 "R7" H 7469 1436 50  0000 L CNN
 F 1 "100K" H 7469 1345 50  0000 L CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" H 7410 1390 50  0001 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 7410 1390 50  0001 C CNN
 F 3 "~" H 7410 1390 50  0001 C CNN
 	1    7410 1390
 	1    0    0    -1  
@@ -1602,4 +1468,132 @@ Wire Wire Line
 	1716 2573 1594 2573
 Text Label 1594 2573 2    50   ~ 0
 ADC_BAT
+$Comp
+L Transistor_FET:BSS214NW Q1
+U 1 1 5C6F67E5
+P 8905 6046
+F 0 "Q1" H 9062 6158 50  0000 L CNN
+F 1 "BSS214NW" H 8544 5805 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 9105 5971 50  0001 L CIN
+F 3 "https://www.infineon.com/dgdl/Infineon-BSS214NW-DS-v02_02-en.pdf?fileId=db3a30431b3e89eb011b695aebc01bde" H 8905 6046 50  0001 L CNN
+	1    8905 6046
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8949 5498 10074 5498
+Wire Wire Line
+	9005 6246 9005 6401
+$Comp
+L Transistor_FET:BSS214NW Q2
+U 1 1 5C81EBFF
+P 9450 6038
+F 0 "Q2" H 9606 6146 50  0000 L CNN
+F 1 "BSS214NW" H 9110 5809 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 9650 5963 50  0001 L CIN
+F 3 "https://www.infineon.com/dgdl/Infineon-BSS214NW-DS-v02_02-en.pdf?fileId=db3a30431b3e89eb011b695aebc01bde" H 9450 6038 50  0001 L CNN
+	1    9450 6038
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9550 6238 9550 6393
+Wire Wire Line
+	8813 5746 10341 5746
+Wire Wire Line
+	8910 5646 10227 5646
+$Comp
+L Transistor_FET:BSS214NW Q3
+U 1 1 5C85476C
+P 9974 6048
+F 0 "Q3" H 10121 6166 50  0000 L CNN
+F 1 "BSS214NW" H 9634 5819 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 10174 5973 50  0001 L CIN
+F 3 "https://www.infineon.com/dgdl/Infineon-BSS214NW-DS-v02_02-en.pdf?fileId=db3a30431b3e89eb011b695aebc01bde" H 9974 6048 50  0001 L CNN
+	1    9974 6048
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_FET:BSS214NW Q4
+U 1 1 5C85E227
+P 10460 6049
+F 0 "Q4" H 10642 6173 50  0000 L CNN
+F 1 "BSS214NW" H 10120 5820 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 10660 5974 50  0001 L CIN
+F 3 "https://www.infineon.com/dgdl/Infineon-BSS214NW-DS-v02_02-en.pdf?fileId=db3a30431b3e89eb011b695aebc01bde" H 10460 6049 50  0001 L CNN
+	1    10460 6049
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8814 4885 8940 4885
+Wire Wire Line
+	8814 4985 9015 4985
+Wire Wire Line
+	8922 5152 9199 5152
+Wire Wire Line
+	8921 5252 9420 5252
+Wire Wire Line
+	9066 5398 9748 5398
+Wire Wire Line
+	8705 6046 8652 6046
+Wire Wire Line
+	8652 6046 8652 5727
+Wire Wire Line
+	8652 5727 8940 5727
+Wire Wire Line
+	8940 5727 8940 4885
+Connection ~ 8940 4885
+Wire Wire Line
+	8940 4885 10379 4885
+Wire Wire Line
+	9005 5846 9015 5846
+Wire Wire Line
+	9015 5846 9015 4985
+Connection ~ 9015 4985
+Wire Wire Line
+	9015 4985 10379 4985
+Wire Wire Line
+	9250 6038 9199 6038
+Wire Wire Line
+	9199 5152 9199 6038
+Connection ~ 9199 5152
+Wire Wire Line
+	9199 5152 10380 5152
+Wire Wire Line
+	9550 5838 9420 5838
+Wire Wire Line
+	9420 5838 9420 5252
+Connection ~ 9420 5252
+Wire Wire Line
+	9420 5252 10380 5252
+Wire Wire Line
+	9774 6048 9748 6048
+Wire Wire Line
+	9748 6048 9748 5398
+Connection ~ 9748 5398
+Wire Wire Line
+	9748 5398 10384 5398
+Wire Wire Line
+	10074 5498 10074 5848
+Connection ~ 10074 5498
+Wire Wire Line
+	10074 5498 10384 5498
+Wire Wire Line
+	10074 6248 10074 6399
+Wire Wire Line
+	10227 6049 10227 5646
+Wire Wire Line
+	10227 6049 10260 6049
+Connection ~ 10227 5646
+Wire Wire Line
+	10227 5646 10392 5646
+Wire Wire Line
+	10560 5849 10560 5822
+Wire Wire Line
+	10560 5822 10341 5822
+Wire Wire Line
+	10341 5822 10341 5746
+Connection ~ 10341 5746
+Wire Wire Line
+	10341 5746 10392 5746
+Wire Wire Line
+	10560 6249 10560 6402
 $EndSCHEMATC
