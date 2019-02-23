@@ -260,7 +260,7 @@ Text Label 3200 2060 0    50   ~ 0
 D+
 Text Label 3200 2160 0    50   ~ 0
 D-
-Text Label 1800 2460 2    50   ~ 0
+Text Label 1800 2560 2    50   ~ 0
 DIO1
 Text Label 3200 2360 0    50   ~ 0
 MIS0
@@ -274,7 +274,7 @@ Text Label 3200 2760 0    50   ~ 0
 RFM_RST
 Text Label 3200 2860 0    50   ~ 0
 DIO5
-Text Label 1800 2560 2    50   ~ 0
+Text Label 1800 2860 2    50   ~ 0
 DIO0
 Text Label 3200 1960 0    50   ~ 0
 S0
@@ -834,7 +834,7 @@ F 3 "" H 7298 5568 50  0001 C CNN
 $EndComp
 Text Label 3200 2260 0    50   ~ 0
 EN
-NoConn ~ 1800 2860
+NoConn ~ 1800 2460
 Text Label 1800 1860 2    50   ~ 0
 SENS_X
 Text Label 1800 1960 2    50   ~ 0
