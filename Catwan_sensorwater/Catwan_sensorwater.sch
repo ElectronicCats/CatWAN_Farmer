@@ -260,7 +260,7 @@ Text Label 3200 2060 0    50   ~ 0
 D+
 Text Label 3200 2160 0    50   ~ 0
 D-
-Text Label 1800 2560 2    50   ~ 0
+Text Label 1800 2460 2    50   ~ 0
 DIO1
 Text Label 3200 2360 0    50   ~ 0
 MIS0
@@ -274,7 +274,7 @@ Text Label 3200 2760 0    50   ~ 0
 RFM_RST
 Text Label 3200 2860 0    50   ~ 0
 DIO5
-Text Label 1800 2460 2    50   ~ 0
+Text Label 1800 2560 2    50   ~ 0
 DIO0
 Text Label 3200 1960 0    50   ~ 0
 S0
