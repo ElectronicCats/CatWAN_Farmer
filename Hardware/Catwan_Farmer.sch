@@ -1206,7 +1206,7 @@ F 3 "" H 4890 4975 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Catwan_Farmer-rescue:ATSAMD21E18A-MU-electroniccats-Catwan_sensorwater-rescue-Catwan_sensorwater-rescue-Catwan_sensorwater-rescue-Catwan_sensorwater-rescue-Catwan_sensorwater-rescue U2
+L Catwan_Farmer-rescue:ATSAMD21E18A-MU-electroniccats-Catwan_sensorwater-rescue-Catwan_sensorwater-rescue-Catwan_sensorwater-rescue-Catwan_sensorwater-rescue-Catwan_sensorwater-rescue-Catwan_Farmer-rescue U2
 U 1 1 5BAD6569
 P 2500 2160
 F 0 "U2" H 2500 3527 50  0000 C CNN
@@ -1347,7 +1347,7 @@ L Transistor_FET:BSS214NW Q1
 U 1 1 5C6F67E5
 P 8905 6046
 F 0 "Q1" H 9062 6158 50  0000 L CNN
-F 1 "BSS214NW" H 8544 5805 50  0000 L CNN
+F 1 "2N7002" H 8544 5805 50  0000 L CNN
 F 2 "Package_TO_SOT_SMD:SOT-23" H 9105 5971 50  0001 L CIN
 F 3 "https://www.infineon.com/dgdl/Infineon-BSS214NW-DS-v02_02-en.pdf?fileId=db3a30431b3e89eb011b695aebc01bde" H 8905 6046 50  0001 L CNN
 	1    8905 6046
@@ -1362,7 +1362,7 @@ L Transistor_FET:BSS214NW Q2
 U 1 1 5C81EBFF
 P 9450 6038
 F 0 "Q2" H 9606 6146 50  0000 L CNN
-F 1 "BSS214NW" H 9110 5809 50  0000 L CNN
+F 1 "2N7002" H 9110 5809 50  0000 L CNN
 F 2 "Package_TO_SOT_SMD:SOT-23" H 9650 5963 50  0001 L CIN
 F 3 "https://www.infineon.com/dgdl/Infineon-BSS214NW-DS-v02_02-en.pdf?fileId=db3a30431b3e89eb011b695aebc01bde" H 9450 6038 50  0001 L CNN
 	1    9450 6038
@@ -1379,7 +1379,7 @@ L Transistor_FET:BSS214NW Q3
 U 1 1 5C85476C
 P 9974 6048
 F 0 "Q3" H 10121 6166 50  0000 L CNN
-F 1 "BSS214NW" H 9634 5819 50  0000 L CNN
+F 1 "2N7002" H 9634 5819 50  0000 L CNN
 F 2 "Package_TO_SOT_SMD:SOT-23" H 10174 5973 50  0001 L CIN
 F 3 "https://www.infineon.com/dgdl/Infineon-BSS214NW-DS-v02_02-en.pdf?fileId=db3a30431b3e89eb011b695aebc01bde" H 9974 6048 50  0001 L CNN
 	1    9974 6048
@@ -1390,7 +1390,7 @@ L Transistor_FET:BSS214NW Q4
 U 1 1 5C85E227
 P 10460 6049
 F 0 "Q4" H 10642 6173 50  0000 L CNN
-F 1 "BSS214NW" H 10120 5820 50  0000 L CNN
+F 1 "2N7002" H 10120 5820 50  0000 L CNN
 F 2 "Package_TO_SOT_SMD:SOT-23" H 10660 5974 50  0001 L CIN
 F 3 "https://www.infineon.com/dgdl/Infineon-BSS214NW-DS-v02_02-en.pdf?fileId=db3a30431b3e89eb011b695aebc01bde" H 10460 6049 50  0001 L CNN
 	1    10460 6049
