@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:Catwan_Farmer-cache
-EELAYER 26 0
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -834,7 +834,6 @@ F 3 "" H 7298 5568 50  0001 C CNN
 $EndComp
 Text Label 3200 2260 0    50   ~ 0
 EN
-NoConn ~ 1800 2460
 Text Label 1800 1860 2    50   ~ 0
 SENS_X
 Text Label 1800 1960 2    50   ~ 0
@@ -893,7 +892,7 @@ Wire Wire Line
 Wire Wire Line
 	3279 3754 3279 3982
 $Comp
-L electroniccats:74HC4052 U5
+L Catwan_Farmer-rescue:74HC4052-electroniccats U5
 U 1 1 5C0415EA
 P 8414 5185
 F 0 "U5" H 8414 5755 50  0000 C CNN
@@ -1206,7 +1205,7 @@ F 3 "" H 4890 4975 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Catwan_Farmer-rescue:ATSAMD21E18A-MU-electroniccats-Catwan_sensorwater-rescue-Catwan_sensorwater-rescue-Catwan_sensorwater-rescue-Catwan_sensorwater-rescue-Catwan_sensorwater-rescue-Catwan_Farmer-rescue U2
+L Catwan_Farmer-rescue:ATSAMD21E18A-MU-electroniccats-Catwan_sensorwater-rescue-Catwan_sensorwater-rescue-Catwan_sensorwater-rescue-Catwan_sensorwater-rescue-Catwan_sensorwater-rescue-Catwan_Farmer-rescue-Catwan_Farmer-rescue U2
 U 1 1 5BAD6569
 P 2500 2160
 F 0 "U2" H 2500 3527 50  0000 C CNN
@@ -1265,25 +1264,7 @@ Wire Wire Line
 	970  2070 970  2020
 Connection ~ 970  2020
 Wire Wire Line
-	770  2290 870  2290
-Wire Wire Line
 	970  2290 970  2270
-Wire Wire Line
-	870  2290 870  2360
-Connection ~ 870  2290
-Wire Wire Line
-	870  2290 970  2290
-$Comp
-L power:GND #PWR010
-U 1 1 5C7439DB
-P 870 2360
-F 0 "#PWR010" H 870 2110 50  0001 C CNN
-F 1 "GND" H 875 2187 50  0000 C CNN
-F 2 "" H 870 2360 50  0001 C CNN
-F 3 "" H 870 2360 50  0001 C CNN
-	1    870  2360
-	1    0    0    -1  
-$EndComp
 Text Label 970  1840 0    50   ~ 0
 Y1
 Text Label 770  1840 0    50   ~ 0
@@ -1534,9 +1515,7 @@ Wire Wire Line
 	1170 1460 1320 1460
 Wire Wire Line
 	1720 1460 1800 1460
-NoConn ~ 1800 2160
 NoConn ~ 1800 2260
-NoConn ~ 1800 2360
 Wire Wire Line
 	5020 7220 5020 7120
 Wire Wire Line
@@ -1597,4 +1576,18 @@ Wire Wire Line
 	9460 3500 9460 3620
 Wire Wire Line
 	9460 3620 9280 3620
+Wire Wire Line
+	770  2290 970  2290
+Wire Wire Line
+	1800 2460 1515 2460
+Wire Wire Line
+	1800 2360 1515 2360
+Wire Wire Line
+	1800 2160 1535 2160
+Text Label 1515 2460 0    50   ~ 0
+LED
+Text Label 1515 2360 0    50   ~ 0
+SEN_Y
+Text Label 1535 2160 0    50   ~ 0
+SEN_X
 $EndSCHEMATC
