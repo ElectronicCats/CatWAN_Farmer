@@ -1,15 +1,15 @@
 /*******************************************************
-* Test program for CatWAN Farmer
-* Andres Sabas @ Electronic Cats
-* Date Mar 28, 2019
-* 
-* Based in the work of Reinier van der Lee, www.vanderleevineyard.com
-* 
-* This code is beerware; if you see me (or any other Electronic Cats 
-* member) at the local, and you've found our code helpful, 
-* please buy us a round!
-*
-* Distributed as-is; no warranty is given.
+  Test program for CatWAN Farmer
+  Andres Sabas @ Electronic Cats
+  Date Mar 28, 2019
+
+  Based in the work of Reinier van der Lee, www.vanderleevineyard.com
+
+  This code is beerware; if you see me (or any other Electronic Cats
+  member) at the local, and you've found our code helpful,
+  please buy us a round!
+
+  Distributed as-is; no warranty is given.
 *********************************************************/
 #include <math.h>                 // Conversion equation from resistance to %
 
@@ -33,71 +33,71 @@ const long knownResistor = 4700;  // Value of R9 and R10 in Ohms, = reference fo
 int supplyVoltage;      // Measured supply voltage
 int sensorVoltage;      // Measured sensor voltage
 int zeroCalibration = 95;        // calibrate sensor resistace to zero when input is short circuited
-                                  // basically this is compensating for the mux switch resistance
+// basically this is compensating for the mux switch resistance
 
 values valueOf[NUM_READS];        // Calculated  resistances to be averaged
 long buffer[NUM_READS];
 int index2;
 int i;                            // Simple index variable
-int j=0;                          // Simple index variable
+int j = 0;                        // Simple index variable
 
 void setup() {
-  
+
   // initialize serial communications at 9600 bps:
   Serial.begin(9600);             // initialize LoRa module communications
-  
-// setting up the sensor interface
+
+  // setting up the sensor interface
   // initialize digital pins D5, D6 as an high impedance input.
   // Pin 5,6 are for driving the soil moisture sensor
-  pinMode(SENS_X, INPUT); // SENS_X  
+  pinMode(SENS_X, INPUT); // SENS_X
   pinMode(SENS_Y, INPUT); // SENS_Y
   // Pin 7 is for enabling Mux switches
-  pinMode(ENABLE, OUTPUT); //ENABLE 
+  pinMode(ENABLE, OUTPUT); //ENABLE
   // Pin 8,9 are for selecting sensor 1-4
   pinMode(S0, OUTPUT);  // S0
-  pinMode(S1, OUTPUT);  // S1 
+  pinMode(S1, OUTPUT);  // S1
 }
 
 
-void loop() 
+void loop()
 {
-    soilsensors(); 
+  soilsensors();
 
-    delay (100);
+  delay (100);
 
 }
 
-void soilsensors(){
-  
-// Select sensor 1, and enable MUX
-  digitalWrite(S0, LOW); 
-  digitalWrite(S1, LOW); 
-  digitalWrite(ENABLE, LOW); 
+void soilsensors() {
+
+  // Select sensor 1, and enable MUX
+  digitalWrite(S0, LOW);
+  digitalWrite(S1, LOW);
+  digitalWrite(ENABLE, LOW);
   measureSensor();
   unsigned long read1 = average();
 
-// Select sensor 2, and enable MUX
- /* digitalWrite(S0, LOW); 
-  digitalWrite(S1, HIGH); 
-  digitalWrite(ENABLE, LOW); 
-  measureSensor();
-  unsigned long read2 = average();
-*/
-    // Select sensor 3, and enable MUX
-  /*digitalWrite(S0, HIGH); 
-  digitalWrite(S1, LOW); 
-  digitalWrite(ENABLE, LOW); 
-  measureSensor();
-  unsigned long read3 = average();
-*/
+  // Select sensor 2, and enable MUX
+  /* digitalWrite(S0, LOW);
+    digitalWrite(S1, HIGH);
+    digitalWrite(ENABLE, LOW);
+    measureSensor();
+    unsigned long read2 = average();
+  */
+  // Select sensor 3, and enable MUX
+  /*digitalWrite(S0, HIGH);
+    digitalWrite(S1, LOW);
+    digitalWrite(ENABLE, LOW);
+    measureSensor();
+    unsigned long read3 = average();
+  */
   // Select sensor 4, and enable MUX
-  /*digitalWrite(S0, HIGH); 
-  digitalWrite(S1, HIGH); 
-  digitalWrite(ENABLE, LOW); 
-  measureSensor();
-  unsigned long read4 = average();
-*/
-  float Vsys = analogRead(ADC_BAT)*0.00647;   // read the battery voltage
+  /*digitalWrite(S0, HIGH);
+    digitalWrite(S1, HIGH);
+    digitalWrite(ENABLE, LOW);
+    measureSensor();
+    unsigned long read4 = average();
+  */
+  float Vsys = analogRead(ADC_BAT) * 0.00647; // read the battery voltage
   delay (50);
 
 
@@ -112,7 +112,7 @@ void soilsensors(){
   //Serial.print(",");
   //Serial.print(read4);
   //Serial.print(",");
-  Serial.println(Vsys,2);
+  Serial.println(Vsys, 2);
 
   delay (1000);
 
@@ -122,64 +122,68 @@ void soilsensors(){
 void measureSensor()
 {
 
-  for (i=0; i<NUM_READS; i++) 
-      {
-  
-    pinMode(SENS_Y, OUTPUT); 
-    digitalWrite(SENS_Y, LOW);  
-    digitalWrite(SENS_Y, HIGH); 
-    delayMicroseconds(250);
-    sensorVoltage = analogRead(A0);   // read the sensor voltage
-    supplyVoltage = analogRead(A1);   // read the supply voltage
-    delayMicroseconds(250);
-    //digitalWrite(SENS_X, LOW); 
-    //pinMode(SENS_X, INPUT);
-    Serial.print("REsistor con: ");
-    Serial.println(knownResistor);
-    Serial.print("Supply V: ");
-    Serial.println(supplyVoltage);
-    Serial.print("Sensor V: ");
-    Serial.println(sensorVoltage);
-    long resistance = (knownResistor * (supplyVoltage - sensorVoltage ) / sensorVoltage)-zeroCalibration ;
-    Serial.print("Resistor: ");
-    Serial.println(resistance);
-   addReading(resistance);
-   delay(1);
-/*
-    pinMode(SENS_Y, OUTPUT); 
-    digitalWrite(SENS_Y, LOW);  
-    digitalWrite(SENS_Y, HIGH); 
-    delayMicroseconds(25);
-    sensorVoltage = analogRead(A1);   // read the sensor voltage
-    supplyVoltage = analogRead(A0);   // read the supply voltage
-    delayMicroseconds(25);
-    digitalWrite(SENS_Y, LOW); 
-    //pinMode(SENS_Y, INPUT);
-    Serial.print("REsistor con2: ");
-    Serial.println(knownResistor);
-    Serial.print("Supply V2: ");
-    Serial.println(supplyVoltage);
-    Serial.print("Sensor V2: ");
-    Serial.println(sensorVoltage);
-    resistance = (knownResistor * (supplyVoltage - sensorVoltage ) / sensorVoltage)-zeroCalibration ;
-    Serial.print("Resistor2: ");
-    Serial.println(resistance);
-   addReading(resistance);
-   */
-   delay(100);
+  for (i = 0; i < NUM_READS; i++)
+  {
 
-      } 
+    pinMode(SENS_X, OUTPUT);
+    digitalWrite(SENS_X, HIGH);
+    delayMicroseconds(25);
+    //sensorVoltage = analogRead(A0);   // read the sensor voltage
+    supplyVoltage = analogRead(A1);   // read the supply voltage
+    delayMicroseconds(25);
+    digitalWrite(SENS_X, LOW);
+    pinMode(SENS_X, INPUT);
+    delay(1);
+    
+    //Serial.print("Resistor con: ");
+    //Serial.println(knownResistor);
+    //Serial.print("Supply V: ");
+    //Serial.println(supplyVoltage);
+    //Serial.print("Sensor V: ");
+    //Serial.println(sensorVoltage);
+    
+    //Serial.print("Resistor: ");
+    //Serial.println(resistance);
+    //addReading(resistance);
+    //delay(1);
+    
+        pinMode(SENS_Y, OUTPUT);
+        digitalWrite(SENS_Y, LOW);
+        digitalWrite(SENS_Y, HIGH);
+        delayMicroseconds(25);
+        sensorVoltage = analogRead(A1);   // read the sensor voltage
+        //supplyVoltage = analogRead(A0);   // read the supply voltage
+        delayMicroseconds(25);
+        digitalWrite(SENS_Y, LOW);
+        pinMode(SENS_Y, INPUT);
+        
+        Serial.print("Resistor con: ");
+        Serial.println(knownResistor);
+        Serial.print("Supply V2: ");
+        Serial.println(supplyVoltage);
+        Serial.print("Sensor V2: ");
+        Serial.println(sensorVoltage);
+        
+        resistance = (knownResistor * (supplyVoltage - sensorVoltage ) / sensorVoltage)-zeroCalibration ;
+        delay(1);
+        
+        Serial.print("Resistor2: ");
+        Serial.println(resistance);
+        addReading(resistance);
+
+  }
 }
 
 // Averaging algorithm
-void addReading(long resistance){
-  buffer[index2] = resistance;
-  index2++;
-  if (index2 >= NUM_READS) index2 = 0;
+void addReading(long resistance) {
+  buffer[index] = resistance;
+  index++;
+  if (index >= NUM_READS) index = 0;
 }
-long average(){
+
+long average() {
   long sum = 0;
-  for (int i = 0; i < NUM_READS; i++){
+  for (int i = 0; i < NUM_READS; i++) {
     sum += buffer[i];
   }
   return (long)(sum / NUM_READS);
