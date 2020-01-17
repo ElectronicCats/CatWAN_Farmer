@@ -1391,7 +1391,7 @@ Wire Wire Line
 	1170 1460 1320 1460
 Wire Wire Line
 	1720 1460 1800 1460
-NoConn ~ 1800 2362
+NoConn ~ 1800 2360
 Wire Wire Line
 	5020 7220 5020 7120
 Wire Wire Line
