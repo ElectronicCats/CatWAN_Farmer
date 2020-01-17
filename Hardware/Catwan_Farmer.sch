@@ -114,7 +114,7 @@ F 3 "" H 3279 3982 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Catwan_Farmer-rescue:SW_DPST_x2-Switch SW1
+L Catwan_Farmer-rescue:SW_DPST_x2-Switch-Catwan_Farmer-rescue SW1
 U 1 1 5BAF7531
 P 1520 1460
 F 0 "SW1" H 1609 1592 50  0000 R CNN
@@ -516,7 +516,7 @@ Connection ~ 2066 6480
 Wire Wire Line
 	2166 6480 2066 6480
 $Comp
-L Catwan_Farmer-rescue:RFM95W-868S2-RF_AM_FM U3
+L Catwan_Farmer-rescue:RFM95W-868S2-RF_AM_FM-Catwan_Farmer-rescue U3
 U 1 1 5BAF85CF
 P 2066 5762
 F 0 "U3" H 1734 6196 50  0000 C CNN
@@ -881,7 +881,7 @@ Wire Wire Line
 Wire Wire Line
 	3279 3754 3279 3982
 $Comp
-L Catwan_Farmer-rescue:74HC4052-electroniccats-Catwan_Farmer-rescue U5
+L Catwan_Farmer-rescue:74HC4052-electroniccats-Catwan_Farmer-rescue-Catwan_Farmer-rescue U5
 U 1 1 5C0415EA
 P 8414 5185
 F 0 "U5" H 8414 5755 50  0000 C CNN
@@ -1194,7 +1194,7 @@ F 3 "" H 4890 4975 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Catwan_Farmer-rescue:ATSAMD21E18A-MU-electroniccats-Catwan_sensorwater-rescue-Catwan_sensorwater-rescue-Catwan_sensorwater-rescue-Catwan_sensorwater-rescue-Catwan_sensorwater-rescue-Catwan_Farmer-rescue-Catwan_Farmer-rescue U2
+L Catwan_Farmer-rescue:ATSAMD21E18A-MU-electroniccats-Catwan_sensorwater-rescue-Catwan_sensorwater-rescue-Catwan_sensorwater-rescue-Catwan_sensorwater-rescue-Catwan_sensorwater-rescue-Catwan_Farmer-rescue-Catwan_Farmer-rescue-Catwan_Farmer-rescue U2
 U 1 1 5BAD6569
 P 2500 2160
 F 0 "U2" H 2500 3527 50  0000 C CNN
@@ -1391,7 +1391,7 @@ Wire Wire Line
 	1170 1460 1320 1460
 Wire Wire Line
 	1720 1460 1800 1460
-NoConn ~ 1800 2260
+NoConn ~ 1800 2362
 Wire Wire Line
 	5020 7220 5020 7120
 Wire Wire Line
@@ -1455,14 +1455,10 @@ Wire Wire Line
 Wire Wire Line
 	770  2290 970  2290
 Wire Wire Line
-	1800 2460 1515 2460
-Wire Wire Line
-	1800 2360 1515 2360
-Wire Wire Line
 	1800 2160 1535 2160
-Text Label 1515 2460 0    50   ~ 0
+Text Label 1600 2460 0    50   ~ 0
 LED
-Text Label 1515 2360 0    50   ~ 0
+Text Label 1530 2260 0    50   ~ 0
 SENS_Y
 Text Label 1535 2160 0    50   ~ 0
 SENS_X
@@ -1661,4 +1657,8 @@ Wire Wire Line
 	6600 1865 6600 1935
 Text Label 6600 990  0    50   ~ 0
 LED
+Wire Wire Line
+	1800 2460 1600 2460
+Wire Wire Line
+	1530 2260 1800 2260
 $EndSCHEMATC
