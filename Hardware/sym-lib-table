@@ -1,3 +1,3 @@
 (sym_lib_table
-  (lib (name Catwan_Farmer-rescue)(type Legacy)(uri ${KIPRJMOD}/Catwan_Farmer-rescue.lib)(options "")(descr ""))
+  (lib (name Catwan_Farmer-rescue)(type Legacy)(uri "/Users/montse/Documents/Mariam Figue/CatWAN_Farmer/Hardware/Catwan_Farmer-rescue.lib")(options "")(descr ""))
 )
