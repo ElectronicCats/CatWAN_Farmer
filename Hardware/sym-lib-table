@@ -1,3 +1,4 @@
 (sym_lib_table
   (lib (name Catwan_Farmer-cache)(type Legacy)(uri ${KIPRJMOD}/Catwan_Farmer-cache.lib)(options "")(descr ""))
+  (lib (name Catwan_Farmer-rescue)(type Legacy)(uri ${KIPRJMOD}/Catwan_Farmer-rescue.lib)(options "")(descr ""))
 )

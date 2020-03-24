@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:Catwan_Farmer-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
@@ -478,12 +479,12 @@ EN
 $Comp
 L power:GND #PWR09
 U 1 1 5BAF1AF2
-P 3300 3120
-F 0 "#PWR09" H 3300 2870 50  0001 C CNN
-F 1 "GND" H 3305 2947 50  0000 C CNN
-F 2 "" H 3300 3120 50  0001 C CNN
-F 3 "" H 3300 3120 50  0001 C CNN
-	1    3300 3120
+P 3300 3170
+F 0 "#PWR09" H 3300 2920 50  0001 C CNN
+F 1 "GND" H 3305 2997 50  0000 C CNN
+F 2 "" H 3300 3170 50  0001 C CNN
+F 3 "" H 3300 3170 50  0001 C CNN
+	1    3300 3170
 	1    0    0    -1  
 $EndComp
 NoConn ~ 2296 6157
@@ -1096,10 +1097,10 @@ Connection ~ 3550 1380
 Wire Wire Line
 	3550 1380 3970 1380
 Wire Wire Line
-	3300 2960 3300 3060
-Connection ~ 3300 3060
+	3300 3010 3300 3110
+Connection ~ 3300 3110
 Wire Wire Line
-	3300 3060 3300 3120
+	3300 3110 3300 3170
 Wire Wire Line
 	1170 1480 1170 1460
 Wire Wire Line
@@ -1181,17 +1182,6 @@ Wire Wire Line
 Wire Wire Line
 	9640 4515 9640 4450
 $Comp
-L Device:LED D9
-U 1 1 5E206ABC
-P 6600 1289
-F 0 "D9" V 6638 1172 50  0000 R CNN
-F 1 "LED" V 6547 1172 50  0000 R CNN
-F 2 "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 6600 1289 50  0001 C CNN
-F 3 "~" H 6600 1289 50  0001 C CNN
-	1    6600 1289
-	0    -1   -1   0   
-$EndComp
-$Comp
 L Device:R R9
 U 1 1 5E206AC2
 P 6600 1715
@@ -1202,8 +1192,6 @@ F 3 "~" H 6600 1715 50  0001 C CNN
 	1    6600 1715
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	6600 1565 6600 1439
 $Comp
 L power:GND #PWR0119
 U 1 1 5E206AC9
@@ -1216,11 +1204,7 @@ F 3 "" H 6600 1935 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6600 1139 6600 989 
-Wire Wire Line
 	6600 1865 6600 1935
-Text Label 6600 990  0    50   ~ 0
-LED
 $Comp
 L power:GND #PWR0120
 U 1 1 5E72ACF0
@@ -1290,9 +1274,9 @@ Wire Wire Line
 Wire Wire Line
 	5825 3010 5825 2955
 Wire Wire Line
-	3200 3060 3300 3060
+	3200 3110 3300 3110
 Wire Wire Line
-	3200 2960 3300 2960
+	3200 3010 3300 3010
 Wire Wire Line
 	3200 1260 3300 1260
 Wire Wire Line
@@ -1573,7 +1557,7 @@ Wire Notes Line
 Wire Notes Line
 	6975 4725 6965 4725
 $Comp
-L Electronic_Cats:ATSAMD21E18A-MU U3
+L Catwan_Farmer-rescue:ATSAMD21E18A-MU-Electronic_Cats U3
 U 1 1 5E7C2C42
 P 2500 2160
 F 0 "U3" H 2500 3527 50  0000 C CNN
@@ -1589,19 +1573,32 @@ F 8 "QFN-32 Microchip" H 2500 2160 50  0001 L BNN "Campo8"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Electronic_Cats:74HC4052 U5
+L Catwan_Farmer-rescue:74HC4052-Electronic_Cats U5
 U 1 1 5E7C5328
 P 6390 3310
 F 0 "U5" H 6390 3880 50  0000 C CNN
 F 1 "74HC4052" H 6390 3789 50  0000 C CNN
 F 2 "" H 6390 3310 50  0001 C CNN
 F 3 "Sig/Phil 74hc4052d Smd 50/Tube" H 6390 3310 50  0001 L BNN
-F 4 "NXP Semiconductors" H 6390 3310 50  0001 L BNN "Campo4"
-F 5 "DIP-16 NXP Semiconductors" H 6390 3310 50  0001 L BNN "Campo5"
-F 6 "Unavailable" H 6390 3310 50  0001 L BNN "Campo6"
-F 7 "74HC4052" H 6390 3310 50  0001 L BNN "Campo7"
-F 8 "None" H 6390 3310 50  0001 L BNN "Campo8"
 	1    6390 3310
 	1    0    0    -1  
 $EndComp
+Text Label 6600 935  0    50   ~ 0
+LED
+$Comp
+L Device:LED D9
+U 1 1 5E206ABC
+P 6600 1290
+F 0 "D9" V 6638 1173 50  0000 R CNN
+F 1 "LED" V 6547 1173 50  0000 R CNN
+F 2 "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 6600 1290 50  0001 C CNN
+F 3 "~" H 6600 1290 50  0001 C CNN
+	1    6600 1290
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6600 1565 6600 1440
+Wire Wire Line
+	6600 1140 6600 935 
+NoConn ~ 3200 3210
 $EndSCHEMATC
