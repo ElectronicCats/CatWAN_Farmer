@@ -490,17 +490,6 @@ $EndComp
 NoConn ~ 2296 6157
 NoConn ~ 2296 6257
 $Comp
-L Device:C C3
-U 1 1 5BAC1D19
-P 3970 1600
-F 0 "C3" H 4085 1646 50  0000 L CNN
-F 1 "1uf" H 4085 1555 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 4008 1450 50  0001 C CNN
-F 3 "~" H 3970 1600 50  0001 C CNN
-	1    3970 1600
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:C C7
 U 1 1 5BEE9C07
 P 4148 2996
@@ -661,17 +650,6 @@ Wire Wire Line
 	789  3279 789  3503
 Wire Wire Line
 	1089 3279 1089 3507
-$Comp
-L power:GND #PWR0117
-U 1 1 5BF6525E
-P 3720 1920
-F 0 "#PWR0117" H 3720 1670 50  0001 C CNN
-F 1 "GND" H 3725 1747 50  0000 C CNN
-F 2 "" H 3720 1920 50  0001 C CNN
-F 3 "" H 3720 1920 50  0001 C CNN
-	1    3720 1920
-	1    0    0    -1  
-$EndComp
 $Comp
 L Device:D_Schottky D1
 U 1 1 5BF8C939
@@ -1064,17 +1042,6 @@ Wire Wire Line
 Connection ~ 3300 1260
 Wire Wire Line
 	3300 1260 3300 1380
-Wire Wire Line
-	3550 1740 3550 1920
-Wire Wire Line
-	3550 1920 3720 1920
-Wire Wire Line
-	3720 1920 3970 1920
-Wire Wire Line
-	3970 1920 3970 1750
-Connection ~ 3720 1920
-Wire Wire Line
-	3970 1450 3970 1380
 $Comp
 L power:+3.3V #PWR07
 U 1 1 5BAC209F
@@ -1087,15 +1054,7 @@ F 3 "" H 3970 1200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3300 1380 3550 1380
-Connection ~ 3970 1380
-Wire Wire Line
-	3970 1380 3970 1200
-Wire Wire Line
 	3550 1440 3550 1380
-Connection ~ 3550 1380
-Wire Wire Line
-	3550 1380 3970 1380
 Wire Wire Line
 	3300 3010 3300 3110
 Connection ~ 3300 3110
@@ -1601,4 +1560,47 @@ Wire Wire Line
 Wire Wire Line
 	6600 1140 6600 935 
 NoConn ~ 3200 3210
+$Comp
+L Device:C C3
+U 1 1 5BAC1D19
+P 3970 1590
+F 0 "C3" H 4085 1636 50  0000 L CNN
+F 1 "1uf" H 4085 1545 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 4008 1440 50  0001 C CNN
+F 3 "~" H 3970 1590 50  0001 C CNN
+	1    3970 1590
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3550 1740 3550 1835
+Wire Wire Line
+	3970 1835 3970 1740
+$Comp
+L power:GND #PWR0117
+U 1 1 5BF6525E
+P 3765 1925
+F 0 "#PWR0117" H 3765 1675 50  0001 C CNN
+F 1 "GND" H 3770 1752 50  0000 C CNN
+F 2 "" H 3765 1925 50  0001 C CNN
+F 3 "" H 3765 1925 50  0001 C CNN
+	1    3765 1925
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3765 1925 3765 1835
+Wire Wire Line
+	3550 1835 3765 1835
+Wire Wire Line
+	3765 1835 3970 1835
+Connection ~ 3765 1835
+Wire Wire Line
+	3300 1380 3550 1380
+Wire Wire Line
+	3970 1200 3970 1380
+Connection ~ 3970 1380
+Wire Wire Line
+	3970 1380 3970 1440
+Connection ~ 3550 1380
+Wire Wire Line
+	3550 1380 3970 1380
 $EndSCHEMATC
