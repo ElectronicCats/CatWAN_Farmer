@@ -1,5 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:Catwan_Farmer-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
@@ -111,17 +110,6 @@ F 1 "GND" V 1094 3379 50  0000 R CNN
 F 2 "" H 1089 3507 50  0001 C CNN
 F 3 "" H 1089 3507 50  0001 C CNN
 	1    1089 3507
-	1    0    0    -1  
-$EndComp
-$Comp
-L Catwan_Farmer-rescue:SW_DPST_x2-Switch-Catwan_Farmer-rescue SW1
-U 1 1 5BAF7531
-P 1520 1460
-F 0 "SW1" H 1609 1592 50  0000 R CNN
-F 1 "RST" H 1589 1380 50  0000 R CNN
-F 2 "Button_Switch_SMD:SW_SPST_TL3342" H 1520 1460 50  0001 C CNN
-F 3 "" H 1520 1460 50  0001 C CNN
-	1    1520 1460
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1371,38 +1359,6 @@ Wire Wire Line
 Connection ~ 5935 3665
 Wire Wire Line
 	5935 3665 5935 3710
-$Comp
-L Catwan_Farmer-rescue:74HC4052-electroniccats-Catwan_Farmer-rescue-Catwan_Farmer-rescue-Catwan_Farmer-rescue U?
-U 1 1 5E7C7542
-P 6390 3310
-F 0 "U?" H 6390 3880 50  0000 C CNN
-F 1 "74HC4052" H 6390 3789 50  0000 C CNN
-F 2 "" H 6390 3310 50  0001 C CNN
-F 3 "Sig/Phil 74hc4052d Smd 50/Tube" H 6390 3310 50  0001 L BNN
-F 4 "NXP Semiconductors" H 6390 3310 50  0001 L BNN "Campo4"
-F 5 "DIP-16 NXP Semiconductors" H 6390 3310 50  0001 L BNN "Campo5"
-F 6 "Unavailable" H 6390 3310 50  0001 L BNN "Campo6"
-F 7 "74HC4052" H 6390 3310 50  0001 L BNN "Campo7"
-F 8 "None" H 6390 3310 50  0001 L BNN "Campo8"
-	1    6390 3310
-	1    0    0    -1  
-$EndComp
-$Comp
-L Catwan_Farmer-rescue:ATSAMD21E18A-MU-electroniccats-Catwan_sensorwater-rescue-Catwan_sensorwater-rescue-Catwan_sensorwater-rescue-Catwan_sensorwater-rescue-Catwan_sensorwater-rescue-Catwan_Farmer-rescue-Catwan_Farmer-rescue-Catwan_Farmer-rescue-Catwan_Farmer-rescue U?
-U 1 1 5E7A1AED
-P 2500 2160
-F 0 "U?" H 2500 3527 50  0000 C CNN
-F 1 "ATSAMD21E18A-MU" H 2500 3436 50  0000 C CNN
-F 2 "QFN50P500X500X100-33N" H 2500 2160 50  0001 L BNN
-F 3 "SAMD21E Series 256 KB Flash 32 KB SRAM 48 MHz 32-Bit Microcontroller - QFN-32" H 2500 2160 50  0001 L BNN
-F 4 "ATSAMD21E18A-MU-ND" H 2500 2160 50  0001 L BNN "Campo4"
-F 5 "https://www.digikey.com.mx/product-detail/en/microchip-technology/ATSAMD21E18A-MU/ATSAMD21E18A-MU-ND/4935887?utm_source=snapeda&utm_medium=aggregator&utm_campaign=symbol" H 2500 2160 50  0001 L BNN "Campo5"
-F 6 "Microchip" H 2500 2160 50  0001 L BNN "Campo6"
-F 7 "ATSAMD21E18A-MU" H 2500 2160 50  0001 L BNN "Campo7"
-F 8 "QFN-32 Microchip" H 2500 2160 50  0001 L BNN "Campo8"
-	1    2500 2160
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	10145 6070 9965 6070
 Wire Wire Line
@@ -1611,4 +1567,47 @@ Wire Wire Line
 Wire Wire Line
 	10195 3010 6885 3010
 Connection ~ 6885 3010
+$Comp
+L Electronic_Cats:ATSAMD21E18A-MU U?
+U 1 1 5E7A06A8
+P 2500 2160
+F 0 "U?" H 2500 3527 50  0000 C CNN
+F 1 "ATSAMD21E18A-MU" H 2500 3436 50  0000 C CNN
+F 2 "QFN50P500X500X100-33N" H 2500 2160 50  0001 L BNN
+F 3 "SAMD21E Series 256 KB Flash 32 KB SRAM 48 MHz 32-Bit Microcontroller - QFN-32" H 2500 2160 50  0001 L BNN
+F 4 "ATSAMD21E18A-MU-ND" H 2500 2160 50  0001 L BNN "Campo4"
+F 5 "https://www.digikey.com.mx/product-detail/en/microchip-technology/ATSAMD21E18A-MU/ATSAMD21E18A-MU-ND/4935887?utm_source=snapeda&utm_medium=aggregator&utm_campaign=symbol" H 2500 2160 50  0001 L BNN "Campo5"
+F 6 "Microchip" H 2500 2160 50  0001 L BNN "Campo6"
+F 7 "ATSAMD21E18A-MU" H 2500 2160 50  0001 L BNN "Campo7"
+F 8 "QFN-32 Microchip" H 2500 2160 50  0001 L BNN "Campo8"
+	1    2500 2160
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_Push SW?
+U 1 1 5E7A3257
+P 1520 1460
+F 0 "SW?" H 1520 1745 50  0000 C CNN
+F 1 "SW_Push" H 1520 1654 50  0000 C CNN
+F 2 "" H 1520 1660 50  0001 C CNN
+F 3 "~" H 1520 1660 50  0001 C CNN
+	1    1520 1460
+	1    0    0    -1  
+$EndComp
+$Comp
+L Electronic_Cats:74HC4052 U?
+U 1 1 5E7A477B
+P 6390 3310
+F 0 "U?" H 6390 3880 50  0000 C CNN
+F 1 "74HC4052" H 6390 3789 50  0000 C CNN
+F 2 "" H 6390 3310 50  0001 C CNN
+F 3 "Sig/Phil 74hc4052d Smd 50/Tube" H 6390 3310 50  0001 L BNN
+F 4 "NXP Semiconductors" H 6390 3310 50  0001 L BNN "Campo4"
+F 5 "DIP-16 NXP Semiconductors" H 6390 3310 50  0001 L BNN "Campo5"
+F 6 "Unavailable" H 6390 3310 50  0001 L BNN "Campo6"
+F 7 "74HC4052" H 6390 3310 50  0001 L BNN "Campo7"
+F 8 "None" H 6390 3310 50  0001 L BNN "Campo8"
+	1    6390 3310
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
