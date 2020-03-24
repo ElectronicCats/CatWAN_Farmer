@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:Catwan_Farmer-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
@@ -283,12 +284,6 @@ Wire Notes Line
 Wire Notes Line
 	410  4476 486  4476
 Wire Notes Line
-	9252 2779 9252 2757
-Wire Notes Line
-	9240 2647 9240 2567
-Wire Notes Line
-	5325 4879 5337 4879
-Wire Notes Line
 	3933 7835 3919 7835
 Wire Notes Line
 	3919 7835 3919 7849
@@ -335,8 +330,6 @@ F 3 "" H 8000 5504 50  0001 C CNN
 $EndComp
 Text Label 5070 3110 0    50   ~ 0
 SENS_X
-Wire Notes Line
-	5398 5146 5406 5146
 $Comp
 L Device:LED D10
 U 1 1 5BC0A216
@@ -564,8 +557,6 @@ F 3 "" H 8095 4525 50  0001 C CNN
 	1    8095 4525
 	1    0    0    -1  
 $EndComp
-Wire Notes Line
-	4689 4875 4678 4875
 Text Notes 10170 5315 0    50   ~ 0
 DHT SENSOR\n
 $Comp
@@ -631,12 +622,6 @@ Text Label 1800 1860 2    50   ~ 0
 SENS_X
 Text Label 1800 1960 2    50   ~ 0
 SENS_Y
-Wire Notes Line
-	3452 4786 3463 4786
-Wire Notes Line
-	4041 4878 4019 4878
-Wire Notes Line
-	4019 4878 4019 4867
 $Comp
 L Device:C C8
 U 1 1 5BEB65DE
@@ -1238,10 +1223,10 @@ Wire Wire Line
 Text Label 6600 990  0    50   ~ 0
 LED
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0120
 U 1 1 5E72ACF0
 P 865 2400
-F 0 "#PWR?" H 865 2150 50  0001 C CNN
+F 0 "#PWR0120" H 865 2150 50  0001 C CNN
 F 1 "GND" H 870 2227 50  0000 C CNN
 F 2 "" H 865 2400 50  0001 C CNN
 F 3 "" H 865 2400 50  0001 C CNN
@@ -1270,10 +1255,10 @@ Wire Wire Line
 Wire Wire Line
 	1696 6757 1696 6875
 $Comp
-L RF_Module:RFM95W-915S2 U?
+L RF_Module:RFM95W-915S2 U2
 U 1 1 5E782561
 P 1796 6157
-F 0 "U?" H 1796 6838 50  0000 C CNN
+F 0 "U2" H 1796 6838 50  0000 C CNN
 F 1 "RFM95W-915S2" H 2136 6620 50  0000 C CNN
 F 2 "" H -1504 7807 50  0001 C CNN
 F 3 "https://www.hoperf.com/data/upload/portal/20181127/5bfcbea20e9ef.pdf" H -1504 7807 50  0001 C CNN
@@ -1485,18 +1470,6 @@ F 3 "~" H 10395 3610 50  0001 C CNN
 	1    10395 3610
 	1    0    0    -1  
 $EndComp
-Wire Notes Line
-	11224 2695 11224 2706
-Wire Notes Line
-	11212 2703 11212 2692
-Wire Notes Line
-	11223 2703 11212 2703
-Wire Notes Line
-	11223 2692 11223 2703
-Wire Notes Line
-	11212 2769 11212 2780
-Wire Notes Line
-	11256 2780 11256 2769
 Wire Wire Line
 	6790 3610 9295 3610
 Wire Wire Line
@@ -1568,10 +1541,10 @@ Wire Wire Line
 	10195 3010 6885 3010
 Connection ~ 6885 3010
 $Comp
-L Electronic_Cats:ATSAMD21E18A-MU U?
+L Catwan_Farmer-rescue:ATSAMD21E18A-MU-Electronic_Cats U3
 U 1 1 5E7A06A8
 P 2500 2160
-F 0 "U?" H 2500 3527 50  0000 C CNN
+F 0 "U3" H 2500 3527 50  0000 C CNN
 F 1 "ATSAMD21E18A-MU" H 2500 3436 50  0000 C CNN
 F 2 "QFN50P500X500X100-33N" H 2500 2160 50  0001 L BNN
 F 3 "SAMD21E Series 256 KB Flash 32 KB SRAM 48 MHz 32-Bit Microcontroller - QFN-32" H 2500 2160 50  0001 L BNN
@@ -1584,21 +1557,21 @@ F 8 "QFN-32 Microchip" H 2500 2160 50  0001 L BNN "Campo8"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Switch:SW_Push SW?
+L Switch:SW_Push SW1
 U 1 1 5E7A3257
 P 1520 1460
-F 0 "SW?" H 1520 1745 50  0000 C CNN
+F 0 "SW1" H 1520 1745 50  0000 C CNN
 F 1 "SW_Push" H 1520 1654 50  0000 C CNN
-F 2 "" H 1520 1660 50  0001 C CNN
+F 2 "Button_Switch_SMD:SW_SPST_SKQG_WithStem" H 1520 1660 50  0001 C CNN
 F 3 "~" H 1520 1660 50  0001 C CNN
 	1    1520 1460
 	1    0    0    -1  
 $EndComp
 $Comp
-L Electronic_Cats:74HC4052 U?
+L Catwan_Farmer-rescue:74HC4052-Electronic_Cats U5
 U 1 1 5E7A477B
 P 6390 3310
-F 0 "U?" H 6390 3880 50  0000 C CNN
+F 0 "U5" H 6390 3880 50  0000 C CNN
 F 1 "74HC4052" H 6390 3789 50  0000 C CNN
 F 2 "" H 6390 3310 50  0001 C CNN
 F 3 "Sig/Phil 74hc4052d Smd 50/Tube" H 6390 3310 50  0001 L BNN
@@ -1610,4 +1583,26 @@ F 8 "None" H 6390 3310 50  0001 L BNN "Campo8"
 	1    6390 3310
 	1    0    0    -1  
 $EndComp
+Wire Notes Line
+	11220 4730 465  4730
+Wire Notes Line
+	3495 4735 3495 7800
+Wire Notes Line
+	3495 7800 3490 7800
+Wire Notes Line
+	4725 4725 4725 465 
+Wire Notes Line
+	4725 465  4715 465 
+Wire Notes Line
+	4725 2460 11215 2460
+Wire Notes Line
+	11215 2460 11215 2450
+Wire Notes Line
+	8880 6540 8880 4725
+Wire Notes Line
+	8880 4725 8870 4725
+Wire Notes Line
+	6975 6540 6975 4725
+Wire Notes Line
+	6975 4725 6965 4725
 $EndSCHEMATC
