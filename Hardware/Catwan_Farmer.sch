@@ -1516,7 +1516,7 @@ Wire Notes Line
 Wire Notes Line
 	6975 4725 6965 4725
 $Comp
-L Catwan_Farmer-rescue:ATSAMD21E18A-MU-Electronic_Cats U3
+L Catwan_Farmer-rescue:ATSAMD21E18A-MU-Electronic_Cats-Catwan_Farmer-rescue U3
 U 1 1 5E7C2C42
 P 2500 2160
 F 0 "U3" H 2500 3527 50  0000 C CNN
@@ -1527,7 +1527,7 @@ F 3 "SAMD21E Series 256 KB Flash 32 KB SRAM 48 MHz 32-Bit Microcontroller - QFN-
 	1    0    0    -1  
 $EndComp
 $Comp
-L Catwan_Farmer-rescue:74HC4052-Electronic_Cats U5
+L Catwan_Farmer-rescue:74HC4052-Electronic_Cats-Catwan_Farmer-rescue U5
 U 1 1 5E7C5328
 P 6390 3310
 F 0 "U5" H 6390 3880 50  0000 C CNN
