@@ -1,4 +1,4 @@
-update=2020 June 11, Thursday 13:13:26
+update=lunes, 15 de junio de 2020, 01:24:06
 version=1
 last_client=kicad
 [general]
@@ -25,7 +25,7 @@ ERC_TestSimilarLabels=1
 [pcbnew]
 version=1
 PageLayoutDescrFile=
-LastNetListRead=Catwan_Farmer.net
+LastNetListRead=
 CopperLayerCount=2
 BoardThickness=1.6
 AllowMicroVias=0
@@ -39,6 +39,8 @@ MinMicroViaDiameter=0.2
 MinMicroViaDrill=0.09999999999999999
 MinHoleToHole=0.25
 TrackWidth1=0.3
+TrackWidth2=0.3
+TrackWidth3=0.5
 ViaDiameter1=1
 ViaDrill1=0.4
 dPairWidth1=0.2

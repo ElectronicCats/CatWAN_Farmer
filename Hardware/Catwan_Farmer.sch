@@ -1,13 +1,12 @@
 EESchema Schematic File Version 4
-LIBS:Catwan_Farmer-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "CatWAN"
-Date "2019-05-27"
-Rev "0.5"
+Date "2020-06-15"
+Rev "1.0"
 Comp "Electronic Cats"
 Comment1 "Montserrat Figueroa"
 Comment2 "Andres Sabas"
@@ -261,7 +260,7 @@ Text Label 1800 2860 2    50   ~ 0
 DIO0
 Text Label 3200 1960 0    50   ~ 0
 S0
-Text Label 989  3279 3    50   ~ 0
+Text Label 889  3279 3    50   ~ 0
 SWCLK
 Text Label 1296 6057 2    50   ~ 0
 MIS0
@@ -335,7 +334,7 @@ L Device:LED D10
 U 1 1 5BC0A216
 P 10710 1379
 F 0 "D10" V 10748 1262 50  0000 R CNN
-F 1 "LED" V 10657 1262 50  0000 R CNN
+F 1 "ON" V 10657 1262 50  0000 R CNN
 F 2 "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 10710 1379 50  0001 C CNN
 F 3 "~" H 10710 1379 50  0001 C CNN
 	1    10710 1379
@@ -638,13 +637,13 @@ L Connector_Generic:Conn_01x04 J6
 U 1 1 5BEBEC90
 P 889 3079
 F 0 "J6" V 855 2791 50  0000 R CNN
-F 1 "Conn_01x04" V 764 2791 50  0000 R CNN
+F 1 "SWD" V 764 2791 50  0000 R CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 889 3079 50  0001 C CNN
 F 3 "~" H 889 3079 50  0001 C CNN
 	1    889  3079
 	0    -1   -1   0   
 $EndComp
-Text Label 889  3279 3    50   ~ 0
+Text Label 989  3279 3    50   ~ 0
 SWDIO
 Wire Wire Line
 	789  3279 789  3503
@@ -936,8 +935,8 @@ $Comp
 L Device:Crystal_Small Y1
 U 1 1 5C6E769E
 P 870 2020
-F 0 "Y1" H 1035 2015 50  0000 C CNN
-F 1 "32.768Khz" H 870 2154 50  0000 C CNN
+F 0 "Y1" H 1035 2085 50  0000 C CNN
+F 1 "32.768Khz" H 1190 2015 50  0000 C CNN
 F 2 "Crystal:Crystal_SMD_MicroCrystal_CC7V-T1A-2Pin_3.2x1.5mm_HandSoldering" H 870 2020 50  0001 C CNN
 F 3 "~" H 870 2020 50  0001 C CNN
 	1    870  2020
@@ -1119,7 +1118,7 @@ F 2 "Package_TO_SOT_SMD:SOT-23" H 8895 4255 50  0001 C CNN
 F 3 "~" H 8895 4255 50  0001 C CNN
 F 4 "" H 8895 4255 50  0001 C CNN "manf#"
 	1    8895 4255
-	1    0    0    -1  
+	-1   0    0    -1  
 $EndComp
 $Comp
 L Device:D_Zener_x2_ACom_KKA D4
@@ -1487,7 +1486,7 @@ L Switch:SW_Push SW1
 U 1 1 5E7A3257
 P 1520 1460
 F 0 "SW1" H 1520 1745 50  0000 C CNN
-F 1 "SW_Push" H 1520 1654 50  0000 C CNN
+F 1 "RST" H 1520 1654 50  0000 C CNN
 F 2 "Button_Switch_SMD:SW_SPST_SKQG_WithStem" H 1520 1660 50  0001 C CNN
 F 3 "~" H 1520 1660 50  0001 C CNN
 	1    1520 1460
@@ -1516,7 +1515,7 @@ Wire Notes Line
 Wire Notes Line
 	6975 4725 6965 4725
 $Comp
-L Catwan_Farmer-rescue:ATSAMD21E18A-MU-Electronic_Cats-Catwan_Farmer-rescue U3
+L Catwan_Farmer-rescue:ATSAMD21E18A-MU-Electronic_Cats-Catwan_Farmer-rescue-Catwan_Farmer-rescue U3
 U 1 1 5E7C2C42
 P 2500 2160
 F 0 "U3" H 2500 3527 50  0000 C CNN
@@ -1527,7 +1526,7 @@ F 3 "SAMD21E Series 256 KB Flash 32 KB SRAM 48 MHz 32-Bit Microcontroller - QFN-
 	1    0    0    -1  
 $EndComp
 $Comp
-L Catwan_Farmer-rescue:74HC4052-Electronic_Cats-Catwan_Farmer-rescue U5
+L Catwan_Farmer-rescue:74HC4052-Electronic_Cats-Catwan_Farmer-rescue-Catwan_Farmer-rescue U5
 U 1 1 5E7C5328
 P 6390 3310
 F 0 "U5" H 6390 3880 50  0000 C CNN

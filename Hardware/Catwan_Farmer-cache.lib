@@ -22,11 +22,11 @@ X PROG 5 -400 -100 100 R 50 50 1 1 I
 ENDDRAW
 ENDDEF
 #
-# Catwan_Farmer-rescue_74HC4052-Electronic_Cats-Catwan_Farmer-rescue
+# Catwan_Farmer-rescue_74HC4052-Electronic_Cats-Catwan_Farmer-rescue-Catwan_Farmer-rescue
 #
-DEF Catwan_Farmer-rescue_74HC4052-Electronic_Cats-Catwan_Farmer-rescue U 0 40 Y Y 1 L N
+DEF Catwan_Farmer-rescue_74HC4052-Electronic_Cats-Catwan_Farmer-rescue-Catwan_Farmer-rescue U 0 40 Y Y 1 L N
 F0 "U" -300 425 50 H V L BNN
-F1 "Catwan_Farmer-rescue_74HC4052-Electronic_Cats-Catwan_Farmer-rescue" -300 -601 50 H V L BNN
+F1 "Catwan_Farmer-rescue_74HC4052-Electronic_Cats-Catwan_Farmer-rescue-Catwan_Farmer-rescue" -300 -601 50 H V L BNN
 F2 "" 0 0 50 H I C CNN
 F3 "Sig/Phil 74hc4052d Smd 50/Tube" 0 0 50 H I L BNN
 F4 "NXP Semiconductors" 0 0 50 H I L BNN
@@ -62,11 +62,11 @@ X B 9 -400 -100 100 R 40 40 0 0 I
 ENDDRAW
 ENDDEF
 #
-# Catwan_Farmer-rescue_ATSAMD21E18A-MU-Electronic_Cats-Catwan_Farmer-rescue
+# Catwan_Farmer-rescue_ATSAMD21E18A-MU-Electronic_Cats-Catwan_Farmer-rescue-Catwan_Farmer-rescue
 #
-DEF Catwan_Farmer-rescue_ATSAMD21E18A-MU-Electronic_Cats-Catwan_Farmer-rescue U 0 40 Y Y 1 L N
+DEF Catwan_Farmer-rescue_ATSAMD21E18A-MU-Electronic_Cats-Catwan_Farmer-rescue-Catwan_Farmer-rescue U 0 40 Y Y 1 L N
 F0 "U" -500 1251 50 H V L BNN
-F1 "Catwan_Farmer-rescue_ATSAMD21E18A-MU-Electronic_Cats-Catwan_Farmer-rescue" -501 -1202 50 H V L BNN
+F1 "Catwan_Farmer-rescue_ATSAMD21E18A-MU-Electronic_Cats-Catwan_Farmer-rescue-Catwan_Farmer-rescue" -501 -1202 50 H V L BNN
 F2 "QFN50P500X500X100-33N" 0 0 50 H I L BNN
 F3 "SAMD21E Series 256 KB Flash 32 KB SRAM 48 MHz 32-Bit Microcontroller - QFN-32" 0 0 50 H I L BNN
 F4 "ATSAMD21E18A-MU-ND" 0 0 50 H I L BNN
@@ -435,7 +435,7 @@ F0 "U" -150 125 50 H V C CNN
 F1 "Regulator_Linear_AP2127N-1.0" 0 125 50 H V L CNN
 F2 "Package_TO_SOT_SMD:SOT-23" 0 225 50 H I C CIN
 F3 "" 0 0 50 H I C CNN
-ALIAS APE8865N-15-HF-3 APE8865N-16-HF-3 APE8865N-17-HF-3 APE8865N-18-HF-3 APE8865N-19-HF-3 APE8865N-20-HF-3 APE8865N-21-HF-3 APE8865N-22-HF-3 APE8865N-23-HF-3 APE8865N-24-HF-3 APE8865N-25-HF-3 APE8865N-26-HF-3 APE8865N-27-HF-3 APE8865N-28-HF-3 APE8865N-29-HF-3 APE8865N-30-HF-3 APE8865N-31-HF-3 APE8865N-32-HF-3 APE8865N-33-HF-3 AP2127N-1.0 AP2127N-1.2 AP2127N-1.5 AP2127N-1.8 AP2127N-2.5 AP2127N-2.8 AP2127N-3.0 AP2127N-3.3
+ALIAS APE8865N-15-HF-3 APE8865N-16-HF-3 APE8865N-17-HF-3 APE8865N-18-HF-3 APE8865N-19-HF-3 APE8865N-20-HF-3 APE8865N-21-HF-3 APE8865N-22-HF-3 APE8865N-23-HF-3 APE8865N-24-HF-3 APE8865N-25-HF-3 APE8865N-26-HF-3 APE8865N-27-HF-3 APE8865N-28-HF-3 APE8865N-29-HF-3 APE8865N-30-HF-3 APE8865N-31-HF-3 APE8865N-32-HF-3 APE8865N-33-HF-3 AP2127N-1.0 AP2127N-1.2 AP2127N-1.5 AP2127N-1.8 AP2127N-2.5 AP2127N-2.8 AP2127N-3.0 AP2127N-3.3 XC6206PxxxMR
 $FPLIST
  SOT?23*
 $ENDFPLIST
