@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:Catwan_Farmer-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
@@ -21,6 +22,7 @@ F 0 "U1" H 9160 1752 50  0000 C CNN
 F 1 "AP2114N-1.0" H 9160 1661 50  0000 C CNN
 F 2 "Package_TO_SOT_SMD:SOT-223-3_TabPin2" H 9160 1735 50  0001 C CIN
 F 3 "https://www.diodes.com/assets/Datasheets/AP2127.pdf" H 9160 1510 50  0001 C CNN
+F 4 "AP2114H-3.3TRG1" H 9160 1510 50  0001 C CNN "manf#"
 	1    9160 1510
 	1    0    0    -1  
 $EndComp
@@ -32,6 +34,7 @@ F 0 "C2" H 9765 1756 50  0000 L CNN
 F 1 "0.1uf" H 9765 1665 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 9688 1560 50  0001 C CNN
 F 3 "~" H 9650 1710 50  0001 C CNN
+F 4 "-" H 9650 1710 50  0001 C CNN "manf#"
 	1    9650 1710
 	1    0    0    -1  
 $EndComp
@@ -76,6 +79,7 @@ F 0 "C5" H 10175 1756 50  0000 L CNN
 F 1 "10uf" H 10175 1665 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 10098 1560 50  0001 C CNN
 F 3 "~" H 10060 1710 50  0001 C CNN
+F 4 "-" H 10060 1710 50  0001 C CNN "manf#"
 	1    10060 1710
 	1    0    0    -1  
 $EndComp
@@ -194,6 +198,7 @@ F 0 "C1" H 729 6127 50  0000 L CNN
 F 1 "0.1uf" H 729 6036 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 652 5931 50  0001 C CNN
 F 3 "~" H 614 6081 50  0001 C CNN
+F 4 "-" H 614 6081 50  0001 C CNN "manf#"
 	1    614  6081
 	1    0    0    -1  
 $EndComp
@@ -209,6 +214,7 @@ F 0 "J5" H 5364 1971 50  0000 C CNN
 F 1 "USB_B" H 5364 1880 50  0000 C CNN
 F 2 "Connectors electroniccats:U254051N4BH806" H 5459 1454 50  0001 C CNN
 F 3 " ~" H 5459 1454 50  0001 C CNN
+F 4 "	C46394" H 5309 1504 50  0001 C CNN "manf#"
 	1    5309 1504
 	1    0    0    -1  
 $EndComp
@@ -313,6 +319,7 @@ F 0 "R2" H 5553 3554 50  0000 L CNN
 F 1 "4K7" H 5511 3483 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 5635 3490 50  0001 C CNN
 F 3 "~" H 5705 3490 50  0001 C CNN
+F 4 "CRCW0805J-4.7K-E3" H 5705 3490 50  0001 C CNN "manf#"
 	1    5705 3490
 	1    0    0    -1  
 $EndComp
@@ -337,6 +344,7 @@ F 0 "D10" V 10748 1262 50  0000 R CNN
 F 1 "ON" V 10657 1262 50  0000 R CNN
 F 2 "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 10710 1379 50  0001 C CNN
 F 3 "~" H 10710 1379 50  0001 C CNN
+F 4 "-" H 10710 1379 50  0001 C CNN "manf#"
 	1    10710 1379
 	0    -1   -1   0   
 $EndComp
@@ -359,6 +367,7 @@ F 0 "R3" H 4115 6729 50  0000 R CNN
 F 1 "10K" H 4115 6820 50  0000 R CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 4115 6775 50  0001 C CNN
 F 3 "~" H 4185 6775 50  0001 C CNN
+F 4 "-" H 4185 6775 50  0001 C CNN "manf#"
 	1    4185 6775
 	-1   0    0    1   
 $EndComp
@@ -396,6 +405,7 @@ F 0 "R6" H 10780 1851 50  0000 L CNN
 F 1 "1K" H 10780 1760 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 10640 1805 50  0001 C CNN
 F 3 "~" H 10710 1805 50  0001 C CNN
+F 4 "-" H 10710 1805 50  0001 C CNN "manf#"
 	1    10710 1805
 	1    0    0    -1  
 $EndComp
@@ -496,6 +506,7 @@ F 0 "C7" H 4263 3042 50  0000 L CNN
 F 1 "0.1uf" H 4263 2951 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 4186 2846 50  0001 C CNN
 F 3 "~" H 4148 2996 50  0001 C CNN
+F 4 "-" H 4148 2996 50  0001 C CNN "manf#"
 	1    4148 2996
 	1    0    0    -1  
 $EndComp
@@ -618,6 +629,7 @@ F 0 "C8" H 3665 1636 50  0000 L CNN
 F 1 "0.1uf" H 3665 1545 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 3588 1440 50  0001 C CNN
 F 3 "~" H 3550 1590 50  0001 C CNN
+F 4 "-" H 3550 1590 50  0001 C CNN "manf#"
 	1    3550 1590
 	1    0    0    -1  
 $EndComp
@@ -657,6 +669,7 @@ F 0 "D1" V 8426 1181 50  0000 R CNN
 F 1 "D_Schottky" V 8335 1181 50  0000 R CNN
 F 2 "Diode_SMD:D_SOD-123" H 8380 1260 50  0001 C CNN
 F 3 "~" H 8380 1260 50  0001 C CNN
+F 4 "NRVB120VLSFT1G" H 8380 1260 50  0001 C CNN "manf#"
 	1    8380 1260
 	0    -1   -1   0   
 $EndComp
@@ -668,6 +681,7 @@ F 0 "C4" H 8495 1766 50  0000 L CNN
 F 1 "10uf" H 8495 1675 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 8418 1570 50  0001 C CNN
 F 3 "~" H 8380 1720 50  0001 C CNN
+F 4 "-" H 8380 1720 50  0001 C CNN "manf#"
 	1    8380 1720
 	1    0    0    -1  
 $EndComp
@@ -725,6 +739,7 @@ F 0 "U4" H 4539 6656 50  0000 C CNN
 F 1 "MCP73831-4-OT" H 4407 6564 50  0000 C CNN
 F 2 "Package_TO_SOT_SMD:SOT-23-5" H 4655 6065 50  0001 L CIN
 F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/20001984g.pdf" H 4455 6265 50  0001 C CNN
+F 4 "MCP73831-3-OT" H 4605 6315 50  0001 C CNN "manf#"
 	1    4605 6315
 	1    0    0    -1  
 $EndComp
@@ -736,6 +751,7 @@ F 0 "D7" V 5713 5798 50  0000 R CNN
 F 1 "CHG" V 5622 5798 50  0000 R CNN
 F 2 "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 5675 5915 50  0001 C CNN
 F 3 "~" H 5675 5915 50  0001 C CNN
+F 4 "-" H 5675 5915 50  0001 C CNN "manf#"
 	1    5675 5915
 	0    -1   -1   0   
 $EndComp
@@ -747,6 +763,7 @@ F 0 "R5" H 5605 6219 50  0000 R CNN
 F 1 "1K" H 5605 6310 50  0000 R CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 5605 6265 50  0001 C CNN
 F 3 "~" H 5675 6265 50  0001 C CNN
+F 4 "-" H 5675 6265 50  0001 C CNN "manf#"
 	1    5675 6265
 	-1   0    0    1   
 $EndComp
@@ -769,6 +786,7 @@ F 0 "C6" H 4925 7055 50  0000 L CNN
 F 1 "10uf" H 4885 6945 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 5173 6895 50  0001 C CNN
 F 3 "~" H 5135 7045 50  0001 C CNN
+F 4 "-" H 5135 7045 50  0001 C CNN "manf#"
 	1    5135 7045
 	-1   0    0    1   
 $EndComp
@@ -813,6 +831,7 @@ F 0 "C11" V 3178 1060 50  0000 C CNN
 F 1 "1uF" V 3269 1060 50  0000 C CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 3468 910 50  0001 C CNN
 F 3 "~" H 3430 1060 50  0001 C CNN
+F 4 "-" H 3430 1060 50  0001 C CNN "manf#"
 	1    3430 1060
 	0    1    1    0   
 $EndComp
@@ -835,6 +854,7 @@ F 0 "D2" V 5876 1316 50  0000 R CNN
 F 1 "D_Schottky" V 5718 1560 50  0000 R CNN
 F 2 "Diode_SMD:D_SOD-123" H 5824 1100 50  0001 C CNN
 F 3 "~" H 5824 1100 50  0001 C CNN
+F 4 "NRVB120VLSFT1G" H 5824 1100 50  0001 C CNN "manf#"
 	1    5824 1100
 	0    1    1    0   
 $EndComp
@@ -856,6 +876,7 @@ F 0 "D3" V 4317 5391 50  0000 R CNN
 F 1 "D_Schottky" V 4203 5439 50  0000 R CNN
 F 2 "Diode_SMD:D_SOD-123" H 4295 5545 50  0001 C CNN
 F 3 "~" H 4295 5545 50  0001 C CNN
+F 4 "NRVB120VLSFT1G" H 4295 5545 50  0001 C CNN "manf#"
 	1    4295 5545
 	-1   0    0    1   
 $EndComp
@@ -892,6 +913,7 @@ F 0 "C10" H 4004 6295 50  0000 L CNN
 F 1 "10uF" H 4004 6204 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 3927 6099 50  0001 C CNN
 F 3 "~" H 3889 6249 50  0001 C CNN
+F 4 "-" H 3889 6249 50  0001 C CNN "manf#"
 	1    3889 6249
 	1    0    0    -1  
 $EndComp
@@ -939,6 +961,7 @@ F 0 "Y1" H 1035 2085 50  0000 C CNN
 F 1 "32.768Khz" H 1190 2015 50  0000 C CNN
 F 2 "Crystal:Crystal_SMD_MicroCrystal_CC7V-T1A-2Pin_3.2x1.5mm_HandSoldering" H 870 2020 50  0001 C CNN
 F 3 "~" H 870 2020 50  0001 C CNN
+F 4 "LFXTAL009678Reel" H 870 2020 50  0001 C CNN "manf#"
 	1    870  2020
 	1    0    0    -1  
 $EndComp
@@ -988,6 +1011,7 @@ F 0 "R4" H 7469 1176 50  0000 L CNN
 F 1 "100K" H 7469 1085 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 7410 1130 50  0001 C CNN
 F 3 "~" H 7410 1130 50  0001 C CNN
+F 4 "-" H 7410 1130 50  0001 C CNN "manf#"
 	1    7410 1130
 	1    0    0    -1  
 $EndComp
@@ -999,6 +1023,7 @@ F 0 "R7" H 7469 1436 50  0000 L CNN
 F 1 "100K" H 7469 1345 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 7410 1390 50  0001 C CNN
 F 3 "~" H 7410 1390 50  0001 C CNN
+F 4 "-" H 7410 1390 50  0001 C CNN "manf#"
 	1    7410 1390
 	1    0    0    -1  
 $EndComp
@@ -1093,6 +1118,7 @@ F 0 "D8" H 7225 4471 50  0000 C CNN
 F 1 "AZ23C9V1" H 7225 4380 50  0000 C CNN
 F 2 "Package_TO_SOT_SMD:SOT-23" H 7225 4255 50  0001 C CNN
 F 3 "~" H 7225 4255 50  0001 C CNN
+F 4 "AZ23C2V7" H 7225 4255 50  0001 C CNN "manf#"
 	1    7225 4255
 	1    0    0    -1  
 $EndComp
@@ -1116,7 +1142,7 @@ F 0 "D6" H 8895 4471 50  0000 C CNN
 F 1 "AZ23C9V1" H 8895 4380 50  0000 C CNN
 F 2 "Package_TO_SOT_SMD:SOT-23" H 8895 4255 50  0001 C CNN
 F 3 "~" H 8895 4255 50  0001 C CNN
-F 4 "" H 8895 4255 50  0001 C CNN "manf#"
+F 4 "AZ23C2V7" H 8895 4255 50  0001 C CNN "manf#"
 	1    8895 4255
 	-1   0    0    -1  
 $EndComp
@@ -1128,6 +1154,7 @@ F 0 "D4" H 9640 4466 50  0000 C CNN
 F 1 "AZ23C9V1" H 9640 4375 50  0000 C CNN
 F 2 "Package_TO_SOT_SMD:SOT-23" H 9640 4250 50  0001 C CNN
 F 3 "~" H 9640 4250 50  0001 C CNN
+F 4 "AZ23C2V7" H 9640 4250 50  0001 C CNN "manf#"
 	1    9640 4250
 	1    0    0    -1  
 $EndComp
@@ -1147,6 +1174,7 @@ F 0 "R9" H 6670 1761 50  0000 L CNN
 F 1 "1K" H 6670 1670 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 6530 1715 50  0001 C CNN
 F 3 "~" H 6600 1715 50  0001 C CNN
+F 4 "-" H 6600 1715 50  0001 C CNN "manf#"
 	1    6600 1715
 	1    0    0    -1  
 $EndComp
@@ -1203,6 +1231,7 @@ F 0 "U2" H 1796 6838 50  0000 C CNN
 F 1 "RFM95W-915S2" H 2136 6620 50  0000 C CNN
 F 2 "RF_Module:HOPERF_RFM9XW_SMD" H -1504 7807 50  0001 C CNN
 F 3 "https://www.hoperf.com/data/upload/portal/20181127/5bfcbea20e9ef.pdf" H -1504 7807 50  0001 C CNN
+F 4 "-" H 1796 6157 50  0001 C CNN "manf#"
 	1    1796 6157
 	1    0    0    -1  
 $EndComp
@@ -1251,6 +1280,7 @@ F 0 "R1" H 5297 3558 50  0000 L CNN
 F 1 "4K7" H 5249 3460 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 5385 3490 50  0001 C CNN
 F 3 "~" H 5455 3490 50  0001 C CNN
+F 4 "CRCW0805J-4.7K-E3" H 5455 3490 50  0001 C CNN "manf#"
 	1    5455 3490
 	1    0    0    -1  
 $EndComp
@@ -1309,6 +1339,7 @@ F 0 "C13" H 9345 5890 50  0000 L CNN
 F 1 "0.1uf" H 9255 5810 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 9603 5710 50  0001 C CNN
 F 3 "~" H 9565 5860 50  0001 C CNN
+F 4 "-" H 9565 5860 50  0001 C CNN "manf#"
 	1    9565 5860
 	1    0    0    -1  
 $EndComp
@@ -1322,6 +1353,7 @@ F 0 "R8" H 9825 5890 50  0000 L CNN
 F 1 "47K" H 9775 5810 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 9965 5850 50  0001 C CNN
 F 3 "~" H 9965 5850 50  0001 C CNN
+F 4 "CRGP0805F47K" H 9965 5850 50  0001 C CNN "manf#"
 	1    9965 5850
 	1    0    0    -1  
 $EndComp
@@ -1338,6 +1370,7 @@ F 0 "J7" H 10372 5726 50  0000 L CNN
 F 1 "DHT22" H 10372 5635 50  0000 L CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 10345 5750 50  0001 C CNN
 F 3 "~" H 10345 5750 50  0001 C CNN
+F 4 "DHT22 AM2302" H 10345 5750 50  0001 C CNN "manf#"
 	1    10345 5750
 	1    0    0    -1  
 $EndComp
@@ -1489,6 +1522,7 @@ F 0 "SW1" H 1520 1745 50  0000 C CNN
 F 1 "RST" H 1520 1654 50  0000 C CNN
 F 2 "Button_Switch_SMD:SW_SPST_SKQG_WithStem" H 1520 1660 50  0001 C CNN
 F 3 "~" H 1520 1660 50  0001 C CNN
+F 4 "-" H 1520 1460 50  0001 C CNN "manf#"
 	1    1520 1460
 	1    0    0    -1  
 $EndComp
@@ -1515,24 +1549,26 @@ Wire Notes Line
 Wire Notes Line
 	6975 4725 6965 4725
 $Comp
-L Catwan_Farmer-rescue:ATSAMD21E18A-MU-Electronic_Cats-Catwan_Farmer-rescue-Catwan_Farmer-rescue U3
+L Catwan_Farmer-rescue:ATSAMD21E18A-MU-Electronic_Cats-Catwan_Farmer-rescue-Catwan_Farmer-rescue-Catwan_Farmer-rescue U3
 U 1 1 5E7C2C42
 P 2500 2160
 F 0 "U3" H 2500 3527 50  0000 C CNN
 F 1 "ATSAMD21E18A-MU" H 2500 3436 50  0000 C CNN
 F 2 "Package_QFP:TQFP-32_7x7mm_P0.8mm" H 2500 2160 50  0001 L BNN
 F 3 "SAMD21E Series 256 KB Flash 32 KB SRAM 48 MHz 32-Bit Microcontroller - QFN-32" H 2500 2160 50  0001 L BNN
+F 4 "ATSAMD21E18A-AU" H 2500 2160 50  0001 C CNN "manf#"
 	1    2500 2160
 	1    0    0    -1  
 $EndComp
 $Comp
-L Catwan_Farmer-rescue:74HC4052-Electronic_Cats-Catwan_Farmer-rescue-Catwan_Farmer-rescue U5
+L Catwan_Farmer-rescue:74HC4052-Electronic_Cats-Catwan_Farmer-rescue-Catwan_Farmer-rescue-Catwan_Farmer-rescue U5
 U 1 1 5E7C5328
 P 6390 3310
 F 0 "U5" H 6390 3880 50  0000 C CNN
 F 1 "74HC4052" H 6390 3789 50  0000 C CNN
 F 2 "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm" H 6390 3310 50  0001 C CNN
 F 3 "Sig/Phil 74hc4052d Smd 50/Tube" H 6390 3310 50  0001 L BNN
+F 4 "74HC4052D,653" H 6390 3310 50  0001 C CNN "manf#"
 	1    6390 3310
 	1    0    0    -1  
 $EndComp
@@ -1546,6 +1582,7 @@ F 0 "D9" V 6638 1173 50  0000 R CNN
 F 1 "LED" V 6547 1173 50  0000 R CNN
 F 2 "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 6600 1290 50  0001 C CNN
 F 3 "~" H 6600 1290 50  0001 C CNN
+F 4 "-" H 6600 1290 50  0001 C CNN "manf#"
 	1    6600 1290
 	0    -1   -1   0   
 $EndComp
@@ -1562,6 +1599,7 @@ F 0 "C3" H 4085 1636 50  0000 L CNN
 F 1 "1uf" H 4085 1545 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 4008 1440 50  0001 C CNN
 F 3 "~" H 3970 1590 50  0001 C CNN
+F 4 "-" H 3970 1590 50  0001 C CNN "manf#"
 	1    3970 1590
 	1    0    0    -1  
 $EndComp
