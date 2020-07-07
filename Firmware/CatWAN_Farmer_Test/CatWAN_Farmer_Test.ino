@@ -1,7 +1,11 @@
- This code is beerware; if you see me (or any other Electronic Cats
+/*******************************************************
+  Test program for CatWAN Farmer
+  Andres Sabas @ Electronic Cats
+  Date Mar 28, 2019
+  Based in the work of Reinier van der Lee, www.vanderleevineyard.com
+  This code is beerware; if you see me (or any other Electronic Cats
   member) at the local, and you've found our code helpful,
   please buy us a round!
-
   Distributed as-is; no warranty is given.
 *********************************************************/
 #include <math.h>                 // Conversion equation from resistance to %
@@ -30,7 +34,7 @@ int zeroCalibration = 95;        // calibrate sensor resistace to zero when inpu
 
 values valueOf[NUM_READS];        // Calculated  resistances to be averaged
 long buffer[NUM_READS];
-int index2;
+int indice;
 int i;                            // Simple index variable
 int j = 0;                        // Simple index variable
 
@@ -161,7 +165,6 @@ void measureSensor()
         
         resistance = (knownResistor * (supplyVoltage - sensorVoltage ) / sensorVoltage)-zeroCalibration ;
         delay(1);
-        long resistance = (knownResistor * (supplyVoltage - sensorVoltage ) / sensorVoltage)-zeroCalibration ;
         addReading(resistance);
         
         
@@ -174,9 +177,9 @@ void measureSensor()
 
 // Averaging algorithm
 void addReading(long resistance) {
-  buffer[index] = resistance;
-  index++;
-  if (index >= NUM_READS) index = 0;
+  buffer[indice] = resistance;
+  indice++;
+  if (indice >= NUM_READS) indice = 0;
 }
 
 long average() {
