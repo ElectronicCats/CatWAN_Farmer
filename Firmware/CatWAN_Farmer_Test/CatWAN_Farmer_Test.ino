@@ -1,11 +1,4 @@
-/*******************************************************
-  Test program for CatWAN Farmer
-  Andres Sabas @ Electronic Cats
-  Date Mar 28, 2019
-
-  Based in the work of Reinier van der Lee, www.vanderleevineyard.com
-
-  This code is beerware; if you see me (or any other Electronic Cats
+ This code is beerware; if you see me (or any other Electronic Cats
   member) at the local, and you've found our code helpful,
   please buy us a round!
 
@@ -15,20 +8,20 @@
 
 typedef struct {        // Structure to be used in percentage and resistance values matrix to be filtered (have to be in pairs)
   int moisture;
-  int resistance;
+  int resistencia;
 } values;
 
 // Setting up format for reading 4 soil sensors
 #define NUM_READS 10   // Number of sensor reads for filtering
 
-#define SENS_X 12
-#define SENS_Y 13
-#define ENABLE 11
-#define S0 8
-#define S1 9
+#define SENS_X 5
+#define SENS_Y 6
+#define ENABLE 23
+#define S0 27
+#define S1 28
 #define ADC_BAT A2
 
-const long knownResistor = 4700;  // Value of R9 and R10 in Ohms, = reference for sensor
+const long knownResistor = 4700;  // Value of R1 and R2 in Ohms, = reference for sensor
 
 int supplyVoltage;      // Measured supply voltage
 int sensorVoltage;      // Measured sensor voltage
@@ -70,7 +63,7 @@ void loop()
 void soilsensors() {
 
   // Select sensor 1, and enable MUX
-  digitalWrite(S0, LOW);
+  /*digitalWrite(S0, LOW);
   digitalWrite(S1, LOW);
   digitalWrite(ENABLE, LOW);
   measureSensor();
@@ -91,12 +84,12 @@ void soilsensors() {
     unsigned long read3 = average();
   */
   // Select sensor 4, and enable MUX
-  /*digitalWrite(S0, HIGH);
+    digitalWrite(S0, HIGH);
     digitalWrite(S1, HIGH);
     digitalWrite(ENABLE, LOW);
     measureSensor();
     unsigned long read4 = average();
-  */
+  
   float Vsys = analogRead(ADC_BAT) * 0.00647; // read the battery voltage
   delay (50);
 
@@ -104,13 +97,13 @@ void soilsensors() {
   //Print/send results
   Serial.print("Farmer");
   Serial.print(",");
-  Serial.print(read1);
+  //Serial.print(read1);
   //Serial.print(",");
   //Serial.print(read2);
   //Serial.print(",");
   //Serial.print(read3);
   //Serial.print(",");
-  //Serial.print(read4);
+  Serial.print(read4);
   //Serial.print(",");
   Serial.println(Vsys, 2);
 
@@ -128,22 +121,24 @@ void measureSensor()
     pinMode(SENS_X, OUTPUT);
     digitalWrite(SENS_X, HIGH);
     delayMicroseconds(25);
-    //sensorVoltage = analogRead(A0);   // read the sensor voltage
+    sensorVoltage = analogRead(A0);   // read the sensor voltage
     supplyVoltage = analogRead(A1);   // read the supply voltage
     delayMicroseconds(25);
     digitalWrite(SENS_X, LOW);
     pinMode(SENS_X, INPUT);
     delay(1);
+    long resistance = (knownResistor * (supplyVoltage - sensorVoltage ) / sensorVoltage)-zeroCalibration ;
+    addReading(resistance);
     
-    //Serial.print("Resistor con: ");
-    //Serial.println(knownResistor);
-    //Serial.print("Supply V: ");
-    //Serial.println(supplyVoltage);
-    //Serial.print("Sensor V: ");
-    //Serial.println(sensorVoltage);
+    Serial.print("Resistor con: ");
+    Serial.println(knownResistor);
+    Serial.print("Supply V: ");
+    Serial.println(supplyVoltage);
+    Serial.print("Sensor V: ");
+    Serial.println(sensorVoltage);
     
-    //Serial.print("Resistor: ");
-    //Serial.println(resistance);
+    Serial.print("Resistor: ");
+    Serial.println(resistance);
     //addReading(resistance);
     //delay(1);
     
@@ -166,10 +161,13 @@ void measureSensor()
         
         resistance = (knownResistor * (supplyVoltage - sensorVoltage ) / sensorVoltage)-zeroCalibration ;
         delay(1);
+        long resistance = (knownResistor * (supplyVoltage - sensorVoltage ) / sensorVoltage)-zeroCalibration ;
+        addReading(resistance);
+        
         
         Serial.print("Resistor2: ");
         Serial.println(resistance);
-        addReading(resistance);
+        //addReading(resistance);
 
   }
 }
