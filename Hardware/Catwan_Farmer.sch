@@ -1,5 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:Catwan_Farmer-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
@@ -561,23 +560,23 @@ DHT SENSOR\n
 $Comp
 L power:GND #PWR0109
 U 1 1 5BDCFBA0
-P 7225 4515
-F 0 "#PWR0109" H 7225 4265 50  0001 C CNN
-F 1 "GND" H 7097 4453 50  0000 C CNN
-F 2 "" H 7225 4515 50  0001 C CNN
-F 3 "" H 7225 4515 50  0001 C CNN
-	1    7225 4515
+P 6705 4560
+F 0 "#PWR0109" H 6705 4310 50  0001 C CNN
+F 1 "GND" H 6577 4498 50  0000 C CNN
+F 2 "" H 6705 4560 50  0001 C CNN
+F 3 "" H 6705 4560 50  0001 C CNN
+	1    6705 4560
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR0110
 U 1 1 5BDCFC6E
-P 8895 4505
-F 0 "#PWR0110" H 8895 4255 50  0001 C CNN
-F 1 "GND" H 8767 4443 50  0000 C CNN
-F 2 "" H 8895 4505 50  0001 C CNN
-F 3 "" H 8895 4505 50  0001 C CNN
-	1    8895 4505
+P 9425 4515
+F 0 "#PWR0110" H 9425 4265 50  0001 C CNN
+F 1 "GND" H 9297 4453 50  0000 C CNN
+F 2 "" H 9425 4515 50  0001 C CNN
+F 3 "" H 9425 4515 50  0001 C CNN
+	1    9425 4515
 	1    0    0    -1  
 $EndComp
 Text Label 1800 2760 2    50   ~ 0
@@ -1102,24 +1101,24 @@ SENS_X
 $Comp
 L power:GND #PWR0111
 U 1 1 5BDCFCC3
-P 9640 4515
-F 0 "#PWR0111" H 9640 4265 50  0001 C CNN
-F 1 "GND" H 9512 4453 50  0000 C CNN
-F 2 "" H 9640 4515 50  0001 C CNN
-F 3 "" H 9640 4515 50  0001 C CNN
-	1    9640 4515
+P 10570 4520
+F 0 "#PWR0111" H 10570 4270 50  0001 C CNN
+F 1 "GND" H 10442 4458 50  0000 C CNN
+F 2 "" H 10570 4520 50  0001 C CNN
+F 3 "" H 10570 4520 50  0001 C CNN
+	1    10570 4520
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:D_Zener_x2_ACom_KKA D8
 U 1 1 5D5A9182
-P 7225 4255
-F 0 "D8" H 7225 4471 50  0000 C CNN
-F 1 "AZ23C9V1" H 7225 4380 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:SOT-23" H 7225 4255 50  0001 C CNN
-F 3 "~" H 7225 4255 50  0001 C CNN
-F 4 "AZ23C2V7" H 7225 4255 50  0001 C CNN "manf#"
-	1    7225 4255
+P 6705 4300
+F 0 "D8" H 6705 4516 50  0000 C CNN
+F 1 "AZ23C9V1" H 6705 4425 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 6705 4300 50  0001 C CNN
+F 3 "~" H 6705 4300 50  0001 C CNN
+F 4 "AZ23C2V7" H 6705 4300 50  0001 C CNN "manf#"
+	1    6705 4300
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1137,35 +1136,35 @@ $EndComp
 $Comp
 L Device:D_Zener_x2_ACom_KKA D6
 U 1 1 5D5C7D3F
-P 8895 4255
-F 0 "D6" H 8895 4471 50  0000 C CNN
-F 1 "AZ23C9V1" H 8895 4380 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:SOT-23" H 8895 4255 50  0001 C CNN
-F 3 "~" H 8895 4255 50  0001 C CNN
-F 4 "AZ23C2V7" H 8895 4255 50  0001 C CNN "manf#"
-	1    8895 4255
+P 9425 4265
+F 0 "D6" H 9425 4481 50  0000 C CNN
+F 1 "AZ23C9V1" H 9425 4390 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 9425 4265 50  0001 C CNN
+F 3 "~" H 9425 4265 50  0001 C CNN
+F 4 "AZ23C2V7" H 9425 4265 50  0001 C CNN "manf#"
+	1    9425 4265
 	-1   0    0    -1  
 $EndComp
 $Comp
 L Device:D_Zener_x2_ACom_KKA D4
 U 1 1 5D5C871F
-P 9640 4250
-F 0 "D4" H 9640 4466 50  0000 C CNN
-F 1 "AZ23C9V1" H 9640 4375 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:SOT-23" H 9640 4250 50  0001 C CNN
-F 3 "~" H 9640 4250 50  0001 C CNN
-F 4 "AZ23C2V7" H 9640 4250 50  0001 C CNN "manf#"
-	1    9640 4250
+P 10570 4255
+F 0 "D4" H 10570 4471 50  0000 C CNN
+F 1 "AZ23C9V1" H 10570 4380 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 10570 4255 50  0001 C CNN
+F 3 "~" H 10570 4255 50  0001 C CNN
+F 4 "AZ23C2V7" H 10570 4255 50  0001 C CNN "manf#"
+	1    10570 4255
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	7225 4515 7225 4455
+	6705 4560 6705 4500
 Wire Wire Line
 	8095 4525 8095 4455
 Wire Wire Line
-	8895 4455 8895 4505
+	9425 4465 9425 4515
 Wire Wire Line
-	9640 4515 9640 4450
+	10570 4520 10570 4455
 $Comp
 L Device:R R9
 U 1 1 5E206AC2
@@ -1398,8 +1397,6 @@ F 3 "" H 9965 6070 50  0001 C CNN
 	1    9965 6070
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	6790 3710 9990 3710
 $Comp
 L Connector_Generic:Conn_01x02 J1
 U 1 1 5BB53012
@@ -1445,75 +1442,21 @@ F 3 "~" H 10395 3610 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6790 3610 9295 3610
+	6405 4300 6365 4300
 Wire Wire Line
-	6790 3510 9230 3510
-Wire Wire Line
-	6790 3410 8555 3410
-Wire Wire Line
-	6790 3310 8425 3310
-Wire Wire Line
-	6790 3210 7735 3210
-Wire Wire Line
-	6790 3110 7585 3110
-Wire Wire Line
-	6790 3010 6885 3010
-Wire Wire Line
-	6925 4255 6885 4255
-Wire Wire Line
-	6885 4255 6885 3010
-Wire Wire Line
-	7525 4255 7585 4255
-Wire Wire Line
-	7585 4255 7585 3110
-Connection ~ 7585 3110
-Wire Wire Line
-	7585 3110 10195 3110
+	7005 4300 7065 4300
 Wire Wire Line
 	7795 4255 7735 4255
 Wire Wire Line
-	7735 4255 7735 3210
-Connection ~ 7735 3210
-Wire Wire Line
-	7735 3210 10195 3210
-Wire Wire Line
 	8395 4255 8425 4255
 Wire Wire Line
-	8425 4255 8425 3310
-Connection ~ 8425 3310
+	9125 4265 9085 4265
 Wire Wire Line
-	8425 3310 10195 3310
+	9725 4265 9760 4265
 Wire Wire Line
-	8595 4255 8555 4255
+	10270 4255 10225 4255
 Wire Wire Line
-	8555 3410 8555 4255
-Connection ~ 8555 3410
-Wire Wire Line
-	8555 3410 10195 3410
-Wire Wire Line
-	9195 4255 9230 4255
-Wire Wire Line
-	9230 4255 9230 3510
-Connection ~ 9230 3510
-Wire Wire Line
-	9230 3510 10195 3510
-Wire Wire Line
-	9340 4250 9295 4250
-Wire Wire Line
-	9295 4250 9295 3610
-Connection ~ 9295 3610
-Wire Wire Line
-	9295 3610 10195 3610
-Wire Wire Line
-	9940 4250 9990 4250
-Wire Wire Line
-	9990 4250 9990 3710
-Connection ~ 9990 3710
-Wire Wire Line
-	9990 3710 10195 3710
-Wire Wire Line
-	10195 3010 6885 3010
-Connection ~ 6885 3010
+	10870 4255 10920 4255
 $Comp
 L Switch:SW_Push SW1
 U 1 1 5E7A3257
@@ -1549,7 +1492,7 @@ Wire Notes Line
 Wire Notes Line
 	6975 4725 6965 4725
 $Comp
-L Catwan_Farmer-rescue:ATSAMD21E18A-MU-Electronic_Cats-Catwan_Farmer-rescue-Catwan_Farmer-rescue-Catwan_Farmer-rescue U3
+L Catwan_Farmer-rescue:ATSAMD21E18A-MU-Electronic_Cats-Catwan_Farmer-rescue-Catwan_Farmer-rescue-Catwan_Farmer-rescue-Catwan_Farmer-rescue U3
 U 1 1 5E7C2C42
 P 2500 2160
 F 0 "U3" H 2500 3527 50  0000 C CNN
@@ -1561,7 +1504,7 @@ F 4 "ATSAMD21E18A-AU" H 2500 2160 50  0001 C CNN "manf#"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Catwan_Farmer-rescue:74HC4052-Electronic_Cats-Catwan_Farmer-rescue-Catwan_Farmer-rescue-Catwan_Farmer-rescue U5
+L Catwan_Farmer-rescue:74HC4052-Electronic_Cats-Catwan_Farmer-rescue-Catwan_Farmer-rescue-Catwan_Farmer-rescue-Catwan_Farmer-rescue U5
 U 1 1 5E7C5328
 P 6390 3310
 F 0 "U5" H 6390 3880 50  0000 C CNN
@@ -1635,4 +1578,84 @@ Wire Wire Line
 Connection ~ 3550 1380
 Wire Wire Line
 	3550 1380 3970 1380
+Wire Wire Line
+	6790 3010 6930 3010
+Wire Wire Line
+	6790 3110 6930 3110
+Wire Wire Line
+	6790 3210 6930 3210
+Wire Wire Line
+	6790 3310 6930 3310
+Wire Wire Line
+	6790 3410 6925 3410
+Wire Wire Line
+	6790 3510 6925 3510
+Wire Wire Line
+	6790 3610 6930 3610
+Wire Wire Line
+	6790 3710 6930 3710
+Text Label 6930 3010 0    50   ~ 0
+SENS_X1
+Text Label 6925 3410 0    50   ~ 0
+SENS_Y1
+Text Label 6930 3110 0    50   ~ 0
+SENS_X2
+Text Label 6925 3510 0    50   ~ 0
+SENS_Y2
+Text Label 6930 3210 0    50   ~ 0
+SENS_X3
+Text Label 6930 3310 0    50   ~ 0
+SENS_X4
+Text Label 6930 3610 0    50   ~ 0
+SENS_Y3
+Text Label 6930 3710 0    50   ~ 0
+SENS_Y4
+Wire Wire Line
+	10195 3010 9795 3010
+Wire Wire Line
+	10195 3110 9800 3110
+Wire Wire Line
+	10195 3210 9805 3210
+Wire Wire Line
+	10195 3310 9810 3310
+Wire Wire Line
+	10195 3410 9810 3410
+Wire Wire Line
+	10195 3510 9810 3510
+Wire Wire Line
+	10195 3610 9805 3610
+Wire Wire Line
+	10195 3710 9810 3710
+Text Label 9795 3010 0    50   ~ 0
+SENS_X1
+Text Label 9805 3210 0    50   ~ 0
+SENS_X2
+Text Label 9810 3410 0    50   ~ 0
+SENS_X3
+Text Label 9805 3610 0    50   ~ 0
+SENS_X4
+Text Label 9800 3110 0    50   ~ 0
+SENS_Y1
+Text Label 9810 3310 0    50   ~ 0
+SENS_Y2
+Text Label 9810 3510 0    50   ~ 0
+SENS_Y3
+Text Label 9810 3710 0    50   ~ 0
+SENS_Y4
+Text Label 6365 4300 3    50   ~ 0
+SENS_Y1
+Text Label 7065 4300 3    50   ~ 0
+SENS_X1
+Text Label 7735 4255 3    50   ~ 0
+SENS_Y2
+Text Label 8425 4255 3    50   ~ 0
+SENS_X2
+Text Label 9085 4265 3    50   ~ 0
+SENS_Y3
+Text Label 9760 4265 3    50   ~ 0
+SENS_X3
+Text Label 10225 4255 3    50   ~ 0
+SENS_Y4
+Text Label 10920 4255 3    50   ~ 0
+SENS_X4
 $EndSCHEMATC
