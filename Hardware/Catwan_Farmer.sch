@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:Catwan_Farmer-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
@@ -265,7 +266,7 @@ Text Label 1800 2860 2    50   ~ 0
 DIO0
 Text Label 3200 1960 0    50   ~ 0
 S0
-Text Label 889  3279 3    50   ~ 0
+Text Label 989  3279 3    50   ~ 0
 SWCLK
 Text Label 1296 6057 2    50   ~ 0
 MIS0
@@ -654,7 +655,7 @@ F 3 "~" H 889 3079 50  0001 C CNN
 	1    889  3079
 	0    -1   -1   0   
 $EndComp
-Text Label 989  3279 3    50   ~ 0
+Text Label 889  3279 3    50   ~ 0
 SWDIO
 Wire Wire Line
 	789  3279 789  3503
