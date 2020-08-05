@@ -112,7 +112,7 @@ void soilsensors() {
   //Serial.print(",");
   //Serial.println(Vsys, 2);
 
-  delay (100);
+  delay (5000);
 
   return;
 }

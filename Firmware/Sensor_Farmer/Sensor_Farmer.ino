@@ -10,25 +10,29 @@
 *********************************************************/
 #include <math.h>                 // Conversion equation from resistance to %
 
+#include <RTCZero.h> // Include RTC library - make sure it's installed!
+
+
+RTCZero rtc; // Create an RTC object
+byte lastSecond = 60;
+byte alarmMinute = 1; // Minutes after clock starts to sound alarm
+bool alarmTriggered = false;
+
+
 typedef struct {        // Structure to be used in percentage and resistance values matrix to be filtered (have to be in pairs)
   int moisture;
   int resistencia;
 } values;
 
-#include "DHT.h"
-
-#define DHTPIN 11 
 // Setting up format for reading 4 soil sensors
 #define NUM_READS 10   // Number of sensor reads for filtering
 
-#define DHTTYPE DHT22   // DHT 22  (AM2302), AM2321
 #define SENS_X 5
 #define SENS_Y 6
 #define ENABLE 23
 #define S0 27
 #define S1 28
 #define ADC_BAT A2
-#define soilsensors
 
 const long knownResistor = 4700;  // Value of R1 and R2 in Ohms, = reference for sensor
 
@@ -42,8 +46,6 @@ long buffer[NUM_READS];
 int indice;
 int i;                            // Simple index variable
 int j = 0;                        // Simple index variable
-
-DHT dht(DHTPIN, DHTTYPE);
 
 void setup() {
 
@@ -61,9 +63,43 @@ void setup() {
   pinMode(S0, OUTPUT);  // S0
   pinMode(S1, OUTPUT);  // S1
 
-  Serial.println(F("DHTxx test!"));
+  
+  while (!SerialUSB) ; // Wait for Serial monitor to open
 
-  dht.begin();
+  byte hour = prompt("Hour", 0, 23); // Get the hour
+  delay (10000);
+  byte minute = prompt("Minute", 0, 59); // Get the minute
+  delay (10000);
+  byte second = prompt("Second", 0, 59); // Get the second
+  delay (10000);
+  byte day = prompt("Day", 0, 31); // Get the day
+  delay (10000);
+  byte month = prompt("Month", 0, 12); // Get the month
+  delay (10000);
+  byte year = prompt("Year (YY)", 0, 99); // Get the year
+  delay (10000);
+
+  SerialUSB.println("Press any key to begin");
+  while (!SerialUSB.available()) ; // Wait for keypress to start clock
+
+  rtc.begin(); // To use the RTC, first begin it
+  rtc.setTime(hour, minute, second); // Then set the time
+  rtc.setDate(day, month, year); // And the date
+  SerialUSB.println("RTC Started!");
+
+  SerialUSB.println("Setting alarm for " + String(alarmMinute) + " minute(s).");
+  SerialUSB.println();
+  byte alarmHour = hour + ((alarmMinute + minute) / 60);
+  alarmMinute = (alarmMinute + minute) % 60;
+
+  // To set an alarm, use the setAlarmTime function.
+  rtc.setAlarmTime(alarmHour, alarmMinute, second);
+  // After the time is set, enable the alarm, configuring
+  // which time values you want to trigger the alarm
+  rtc.enableAlarm(rtc.MATCH_HHMMSS); // Alarm when hours, minute, & second match
+  // When the alarm triggers, alarmMatch will be called:
+  rtc.attachInterrupt(alarmMatch);
+  
 }
 
 
@@ -72,12 +108,30 @@ void loop()
   soilsensors();
 
   delay (100);
+
+  reloj();
+
+  delay(100);
 }
 
 
-void soilsensors() 
-
+void reloj() 
 {
+  // If the second value is different:
+  if (lastSecond != rtc.getSeconds())
+  {
+    printTime(); // Print the time
+    lastSecond = rtc.getSeconds(); // Update lastSecond
+
+    if (alarmTriggered) // If the alarm has been triggered
+    {
+      SerialUSB.println("Alarm!"); // Print alarm!
+    }
+  }
+}
+
+
+void soilsensors() {
 
   // Select sensor 1, and enable MUX
   /*digitalWrite(S0, LOW);
@@ -125,50 +179,63 @@ void soilsensors()
   //Serial.print(",");
   //Serial.println(Vsys, 2);
 
-  delay (100);
+  delay (5000);
 
   return;
 }
+void printTime()
+{
+  // Use rtc.getDay(), .getMonth(), and .getYear()
+  // To get the numerical values for the date.
+  SerialUSB.print(rtc.getDay()); // Print day
+  SerialUSB.print("/");
+  SerialUSB.print(rtc.getMonth()); // Print Month
+  SerialUSB.print("/");
+  SerialUSB.print(rtc.getYear()); // Print year
+  SerialUSB.print("\t");
+
+  // Use rtc.getHours, .getMinutes, and .getSeconds()
+  // to get time values:
+  SerialUSB.print(rtc.getHours()); // Print hours
+  SerialUSB.print(":");
+  if (rtc.getMinutes() < 10) 
+    SerialUSB.print('0'); // Pad the 0
+  SerialUSB.print(rtc.getMinutes()); // Print minutes
+  SerialUSB.print(":");
+  if (rtc.getSeconds() < 10) 
+    SerialUSB.print('0'); // Pad the 0
+  SerialUSB.print(rtc.getSeconds()); // Print seconds
+  SerialUSB.println();
+}
 
 
+void alarmMatch()
+{
+  // This function is called when the alarm values match
+  // and the alarm is triggered.
+  alarmTriggered = true; // Set the global triggered flag
+}
 
-
-
-  void temperature();
+// Helper function to prompt for a value, and return
+// it if it's within a valid range.
+byte prompt(String ask, int mini, int maxi)
+{
+  SerialUSB.print(ask + "? ");
+  while (!SerialUSB.available()) ; // Wait for numbers to come in
+  byte rsp = SerialUSB.parseInt();
+  if ((rsp >= mini) && (rsp <= maxi))
   {
-  // Reading temperature or humidity takes about 250 milliseconds!
-  // Sensor readings may also be up to 2 seconds 'old' (its a very slow sensor)
-  float h = dht.readHumidity();
-  // Read temperature as Celsius (the default)
-  float t = dht.readTemperature();
-  // Read temperature as Fahrenheit (isFahrenheit = true)
-  float f = dht.readTemperature(true); 
- 
-
-  // Check if any reads failed and exit early (to try again).
-  if (isnan(h) || isnan(t) || isnan(f)) {
-    Serial.println(F("Failed to read from DHT sensor!"));
-    return;
+    SerialUSB.println(rsp);
+    return rsp;
+  }
+  else
+  {
+    SerialUSB.println("Invalid.");
+    return mini;
+  }
 }
 
- // Compute heat index in Fahrenheit (the default)
-  float hif = dht.computeHeatIndex(f, h);
-  // Compute heat index in Celsius (isFahreheit = false)
-  float hic = dht.computeHeatIndex(t, h, false);
 
-  Serial.print(F("Humidity: "));
-  Serial.print(h);
-  Serial.print(F("%  Temperature: "));
-  Serial.print(t);
-  Serial.print(F("°C "));
-  Serial.print(f);
-  Serial.print(F("°F  Heat index: "));
-  Serial.print(hic);
-  Serial.print(F("°C "));
-  Serial.print(hif);
-  Serial.println(F("°F"));
-}
-  
 void measureSensor()
 {
 
