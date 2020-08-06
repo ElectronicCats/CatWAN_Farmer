@@ -1,14 +1,21 @@
 /*******************************************************
-  Test program for CatWAN Farmer
+  Test program for Sensors in CatWAN Farmer
   Andres Sabas @ Electronic Cats
   Date Mar 28, 2019
   Based in the work of Reinier van der Lee, www.vanderleevineyard.com
-  
+
   This code is beerware; if you see me (or any other Electronic Cats
   member) at the local, and you've found our code helpful,
   please buy us a round!
   Distributed as-is; no warranty is given.
 *********************************************************/
+//#define SENSOR1
+//#define SENSOR2
+#define SENSOR3
+//#define SENSOR4
+
+//#define DEBUG
+
 #include <math.h>                 // Conversion equation from resistance to %
 
 typedef struct {        // Structure to be used in percentage and resistance values matrix to be filtered (have to be in pairs)
@@ -67,55 +74,68 @@ void loop()
 
 void soilsensors() {
 
-  // Select sensor 1, and enable MUX
-  /*digitalWrite(S0, LOW);
-    digitalWrite(S1, LOW);
-    digitalWrite(ENABLE, LOW);
-    measureSensor();
-    unsigned long read1 = average();
-  */
+#ifdef SENSOR1
+  //Select sensor 1, and enable MUX
+  digitalWrite(S0, LOW);
+  digitalWrite(S1, LOW);
+  digitalWrite(ENABLE, LOW);
+  measureSensor();
+  unsigned long read1 = average();
+#endif
+
+#ifdef SENSOR2
   // Select sensor 2, and enable MUX
-  /*digitalWrite(S0, LOW);
-    digitalWrite(S1, HIGH);
-    digitalWrite(ENABLE, LOW);
-    measureSensor();
-    unsigned long read2 = average();
-  */
+  digitalWrite(S0, LOW);
+  digitalWrite(S1, HIGH);
+  digitalWrite(ENABLE, LOW);
+  measureSensor();
+  unsigned long read2 = average();
+#endif
+
+#ifdef SENSOR3
   // Select sensor 3, and enable MUX
   digitalWrite(S0, HIGH);
   digitalWrite(S1, LOW);
   digitalWrite(ENABLE, LOW);
   measureSensor();
   unsigned long read3 = average();
+#endif
 
-
+#ifdef SENSOR4
   // Select sensor 4, and enable MUX
-  /*digitalWrite(S0, HIGH);
-    digitalWrite(S1, HIGH);
-    digitalWrite(ENABLE, LOW);
-    measureSensor();
-    unsigned long read4 = average();
-  */
+  digitalWrite(S0, HIGH);
+  digitalWrite(S1, HIGH);
+  digitalWrite(ENABLE, LOW);
+  measureSensor();
+  unsigned long read4 = average();
+#endif
+
+
   float Vsys = analogRead(ADC_BAT) * 0.00647; // read the battery voltage
   delay (50);
 
-
+#ifdef SENSOR1
   //Print/send results
   Serial.print("Farmer");
-  //Serial.print(",");
-  //Serial.println(read1);
-  //Serial.print(",");
-  //Serial.print(read2);
-  //Serial.print(",");
+  Serial.print(",");
+#ifdef SENSOR1
+  Serial.println(read1);
+  Serial.print(",");
+#endif
+#ifdef SENSOR2
+  Serial.print(read2);
+  Serial.print(",");
+#endif
+#ifdef SENSOR3
   Serial.println(read3);
-  //Serial.print(",");
-  //Serial.print(read4);
-  //Serial.print(",");
-  //Serial.println(Vsys, 2);
-
+  Serial.print(",");
+#endif
+#ifdef SENSOR4
+  Serial.print(read4);
+  Serial.print(",");
+#endif
+  Serial.println(Vsys, 2);
   delay (5000);
-
-  return;
 }
 
 void measureSensor()
@@ -136,17 +156,17 @@ void measureSensor()
     long resistance = (knownResistor * (supplyVoltage - sensorVoltage ) / sensorVoltage) - zeroCalibration ;
     addReading(resistance);
 
-    //Serial.print("Resistor con: ");
-    //Serial.println(knownResistor);
-    //Serial.print("Supply V: ");
-    //Serial.println(supplyVoltage);
-    //Serial.print("Sensor V: ");
-    //Serial.println(sensorVoltage);
-
-    //Serial.print("Resistor: ");
-    //Serial.println(resistance);
-    //addReading(resistance);
-    //delay(1);
+#ifdef DEBUG
+    Serial.print("Resistor con: ");
+    Serial.println(knownResistor);
+    Serial.print("Supply V: ");
+    Serial.println(supplyVoltage);
+    Serial.print("Sensor V: ");
+    Serial.println(sensorVoltage);
+    Serial.print("Resistor: ");
+    Serial.println(resistance);
+#endif
+    delay(1);
 
     pinMode(SENS_Y, OUTPUT);
     digitalWrite(SENS_Y, LOW);
@@ -158,21 +178,20 @@ void measureSensor()
     digitalWrite(SENS_Y, LOW);
     pinMode(SENS_Y, INPUT);
 
-    // Serial.print("Resistor con: ");
-    //Serial.println(knownResistor);
-    //Serial.print("Supply V2: ");
-    // Serial.println(supplyVoltage);
-    //Serial.print("Sensor V2: ");
-    //Serial.println(sensorVoltage);
+#ifdef DEBUG
+    Serial.print("Resistor con: ");
+    Serial.println(knownResistor);
+    Serial.print("Supply V2: ");
+    Serial.println(supplyVoltage);
+    Serial.print("Sensor V2: ");
+    Serial.println(sensorVoltage);
+    Serial.print("Resistor2: ");
+    Serial.println(resistance);
+#endif
 
     resistance = (knownResistor * (supplyVoltage - sensorVoltage ) / sensorVoltage) - zeroCalibration ;
     delay(100);
     addReading(resistance);
-
-
-    //Serial.print("Resistor2: ");
-    //Serial.println(resistance);
-    //addReading(resistance);
 
   }
 }
