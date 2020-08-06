@@ -3,6 +3,7 @@
   Andres Sabas @ Electronic Cats
   Date Mar 28, 2019
   Based in the work of Reinier van der Lee, www.vanderleevineyard.com
+  
   This code is beerware; if you see me (or any other Electronic Cats
   member) at the local, and you've found our code helpful,
   please buy us a round!
@@ -68,28 +69,28 @@ void soilsensors() {
 
   // Select sensor 1, and enable MUX
   /*digitalWrite(S0, LOW);
-  digitalWrite(S1, LOW);
-  digitalWrite(ENABLE, LOW);
-  measureSensor();
-  unsigned long read1 = average();
-*/
+    digitalWrite(S1, LOW);
+    digitalWrite(ENABLE, LOW);
+    measureSensor();
+    unsigned long read1 = average();
+  */
   // Select sensor 2, and enable MUX
-  /* digitalWrite(S0, LOW);
+  /*digitalWrite(S0, LOW);
     digitalWrite(S1, HIGH);
     digitalWrite(ENABLE, LOW);
     measureSensor();
     unsigned long read2 = average();
   */
   // Select sensor 3, and enable MUX
-    digitalWrite(S0, HIGH);
-    digitalWrite(S1, LOW);
-    digitalWrite(ENABLE, LOW);
-    measureSensor();
-    unsigned long read3 = average();
-  
-  
+  digitalWrite(S0, HIGH);
+  digitalWrite(S1, LOW);
+  digitalWrite(ENABLE, LOW);
+  measureSensor();
+  unsigned long read3 = average();
+
+
   // Select sensor 4, and enable MUX
-   /*  digitalWrite(S0, HIGH);
+  /*digitalWrite(S0, HIGH);
     digitalWrite(S1, HIGH);
     digitalWrite(ENABLE, LOW);
     measureSensor();
@@ -132,46 +133,46 @@ void measureSensor()
     digitalWrite(SENS_X, LOW);
     pinMode(SENS_X, INPUT);
     delay(100);
-    long resistance = (knownResistor * (supplyVoltage - sensorVoltage ) / sensorVoltage)-zeroCalibration ;
+    long resistance = (knownResistor * (supplyVoltage - sensorVoltage ) / sensorVoltage) - zeroCalibration ;
     addReading(resistance);
-    
+
     //Serial.print("Resistor con: ");
     //Serial.println(knownResistor);
-    // Serial.print("Supply V: ");
+    //Serial.print("Supply V: ");
     //Serial.println(supplyVoltage);
     //Serial.print("Sensor V: ");
     //Serial.println(sensorVoltage);
-    
-   // Serial.print("Resistor: ");
-   // Serial.println(resistance);
+
+    //Serial.print("Resistor: ");
+    //Serial.println(resistance);
     //addReading(resistance);
     //delay(1);
-    
-        pinMode(SENS_Y, OUTPUT);
-        digitalWrite(SENS_Y, LOW);
-        digitalWrite(SENS_Y, HIGH);
-        delayMicroseconds(25);
-        sensorVoltage = analogRead(A0);   // read the sensor voltage
-        supplyVoltage = analogRead(A1);   // read the supply voltage
-        delayMicroseconds(25);
-        digitalWrite(SENS_Y, LOW);
-        pinMode(SENS_Y, INPUT);
-        
-       // Serial.print("Resistor con: ");
-        //Serial.println(knownResistor);
-        //Serial.print("Supply V2: ");
-       // Serial.println(supplyVoltage);
-        //Serial.print("Sensor V2: ");
-        //Serial.println(sensorVoltage);
-        
-        resistance = (knownResistor * (supplyVoltage - sensorVoltage ) / sensorVoltage)-zeroCalibration ;
-        delay(100);
-        addReading(resistance);
-        
-        
-      //  Serial.print("Resistor2: ");
-       // Serial.println(resistance);
-        //addReading(resistance);
+
+    pinMode(SENS_Y, OUTPUT);
+    digitalWrite(SENS_Y, LOW);
+    digitalWrite(SENS_Y, HIGH);
+    delayMicroseconds(25);
+    sensorVoltage = analogRead(A0);   // read the sensor voltage
+    supplyVoltage = analogRead(A1);   // read the supply voltage
+    delayMicroseconds(25);
+    digitalWrite(SENS_Y, LOW);
+    pinMode(SENS_Y, INPUT);
+
+    // Serial.print("Resistor con: ");
+    //Serial.println(knownResistor);
+    //Serial.print("Supply V2: ");
+    // Serial.println(supplyVoltage);
+    //Serial.print("Sensor V2: ");
+    //Serial.println(sensorVoltage);
+
+    resistance = (knownResistor * (supplyVoltage - sensorVoltage ) / sensorVoltage) - zeroCalibration ;
+    delay(100);
+    addReading(resistance);
+
+
+    //Serial.print("Resistor2: ");
+    //Serial.println(resistance);
+    //addReading(resistance);
 
   }
 }
