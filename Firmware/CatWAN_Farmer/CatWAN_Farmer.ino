@@ -12,17 +12,15 @@
   Distributed as-is; no warranty is given.
 *********************************************************/
 #include <math.h>                 // Conversion equation from resistance to %
-
 #include <RTCZero.h> // Include RTC library - make sure it's installed!
-
 #include "DHT.h"
+#include <lorawan.h>
 
 RTCZero rtc; // Create an RTC object
 
 byte lastSecond = 60;
 byte alarmMinute = 1; // Minutes after clock starts to sound alarm
 bool alarmTriggered = false;
-
 
 typedef struct {        // Structure to be used in percentage and resistance values matrix to be filtered (have to be in pairs)
   int moisture;
@@ -60,6 +58,7 @@ void setup() {
 
   // initialize serial communications at 9600 bps:
   Serial.begin(9600);             // initialize LoRa module communications
+  while (!SerialUSB) ; // Wait for Serial monitor to open
 
   // setting up the sensor interface
   // initialize digital pins D5, D6 as an high impedance input.
@@ -71,9 +70,6 @@ void setup() {
   // Pin 8,9 are for selecting sensor 1-4
   pinMode(S0, OUTPUT);  // S0
   pinMode(S1, OUTPUT);  // S1
-
-
-  while (!SerialUSB) ; // Wait for Serial monitor to open
 
   byte hour = prompt("Hour", 0, 23); // Get the hour
   delay (10000);
