@@ -320,17 +320,17 @@ void measureSensor()
     long resistance = (knownResistor * (supplyVoltage - sensorVoltage ) / sensorVoltage) - zeroCalibration ;
     addReading(resistance);
 
-    //Serial.print("Resistor con: ");
-    //Serial.println(knownResistor);
-    // Serial.print("Supply V: ");
-    //Serial.println(supplyVoltage);
-    //Serial.print("Sensor V: ");
-    //Serial.println(sensorVoltage);
-
-    // Serial.print("Resistor: ");
-    // Serial.println(resistance);
-    //addReading(resistance);
-    //delay(1);
+#ifdef DEBUG
+    Serial.print("Resistor con: ");
+    Serial.println(knownResistor);
+    Serial.print("Supply V: ");
+    Serial.println(supplyVoltage);
+    Serial.print("Sensor V: ");
+    Serial.println(sensorVoltage);
+    Serial.print("Resistor: ");
+    Serial.println(resistance);
+#endif
+    delay(1);
 
     pinMode(SENS_Y, OUTPUT);
     digitalWrite(SENS_Y, LOW);
@@ -342,21 +342,20 @@ void measureSensor()
     digitalWrite(SENS_Y, LOW);
     pinMode(SENS_Y, INPUT);
 
-    // Serial.print("Resistor con: ");
-    //Serial.println(knownResistor);
-    //Serial.print("Supply V2: ");
-    // Serial.println(supplyVoltage);
-    //Serial.print("Sensor V2: ");
-    //Serial.println(sensorVoltage);
+#ifdef DEBUG
+    Serial.print("Resistor con: ");
+    Serial.println(knownResistor);
+    Serial.print("Supply V2: ");
+    Serial.println(supplyVoltage);
+    Serial.print("Sensor V2: ");
+    Serial.println(sensorVoltage);
+    Serial.print("Resistor2: ");
+    Serial.println(resistance);
+#endif
 
     resistance = (knownResistor * (supplyVoltage - sensorVoltage ) / sensorVoltage) - zeroCalibration ;
     delay(100);
     addReading(resistance);
-
-
-    //  Serial.print("Resistor2: ");
-    // Serial.println(resistance);
-    //addReading(resistance);
 
   }
 }
