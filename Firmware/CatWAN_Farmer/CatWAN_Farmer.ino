@@ -16,6 +16,13 @@
 #include "DHT.h"
 #include <lorawan.h>
 
+//#define SENSOR1
+//#define SENSOR2
+#define SENSOR3
+//#define SENSOR4
+
+//#define DEBUG
+
 RTCZero rtc; // Create an RTC object
 
 byte lastSecond = 60;
@@ -71,6 +78,9 @@ void setup() {
   pinMode(S0, OUTPUT);  // S0
   pinMode(S1, OUTPUT);  // S1
 
+  Serial.println(F("DHT Init!"));
+  dht.begin();
+
   byte hour = prompt("Hour", 0, 23); // Get the hour
   delay (10000);
   byte minute = prompt("Minute", 0, 59); // Get the minute
@@ -83,9 +93,6 @@ void setup() {
   delay (10000);
   byte year = prompt("Year (YY)", 0, 99); // Get the year
   delay (10000);
-
-  SerialUSB.println("Press any key to begin");
-  while (!SerialUSB.available()) ; // Wait for keypress to start clock
 
   rtc.begin(); // To use the RTC, first begin it
   rtc.setTime(hour, minute, second); // Then set the time
@@ -104,12 +111,6 @@ void setup() {
   rtc.enableAlarm(rtc.MATCH_HHMMSS); // Alarm when hours, minute, & second match
   // When the alarm triggers, alarmMatch will be called:
   rtc.attachInterrupt(alarmMatch);
-
-
-  Serial.println(F("DHTxx test!"));
-
-  dht.begin();
-
 
 }
 
@@ -183,56 +184,71 @@ void temperatura()
 
 void soilsensors() {
 
-  // Select sensor 1, and enable MUX
-  /*digitalWrite(S0, LOW);
-    digitalWrite(S1, LOW);
-    digitalWrite(ENABLE, LOW);
-    measureSensor();
-    unsigned long read1 = average();
-  */
+#ifdef SENSOR1
+  //Select sensor 1, and enable MUX
+  digitalWrite(S0, LOW);
+  digitalWrite(S1, LOW);
+  digitalWrite(ENABLE, LOW);
+  measureSensor();
+  unsigned long read1 = average();
+#endif
+
+#ifdef SENSOR2
   // Select sensor 2, and enable MUX
-  /* digitalWrite(S0, LOW);
-    digitalWrite(S1, HIGH);
-    digitalWrite(ENABLE, LOW);
-    measureSensor();
-    unsigned long read2 = average();
-  */
+  digitalWrite(S0, LOW);
+  digitalWrite(S1, HIGH);
+  digitalWrite(ENABLE, LOW);
+  measureSensor();
+  unsigned long read2 = average();
+#endif
+
+#ifdef SENSOR3
   // Select sensor 3, and enable MUX
   digitalWrite(S0, HIGH);
   digitalWrite(S1, LOW);
   digitalWrite(ENABLE, LOW);
   measureSensor();
   unsigned long read3 = average();
+#endif
 
-
+#ifdef SENSOR4
   // Select sensor 4, and enable MUX
-  /*  digitalWrite(S0, HIGH);
-    digitalWrite(S1, HIGH);
-    digitalWrite(ENABLE, LOW);
-    measureSensor();
-    unsigned long read4 = average();
-  */
+  digitalWrite(S0, HIGH);
+  digitalWrite(S1, HIGH);
+  digitalWrite(ENABLE, LOW);
+  measureSensor();
+  unsigned long read4 = average();
+#endif
+
+
   float Vsys = analogRead(ADC_BAT) * 0.00647; // read the battery voltage
   delay (50);
 
-
+#ifdef SENSOR1
   //Print/send results
   Serial.print("Farmer");
-  //Serial.print(",");
-  //Serial.println(read1);
-  //Serial.print(",");
-  //Serial.print(read2);
-  //Serial.print(",");
+  Serial.print(",");
+#ifdef SENSOR1
+  Serial.println(read1);
+  Serial.print(",");
+#endif
+#ifdef SENSOR2
+  Serial.print(read2);
+  Serial.print(",");
+#endif
+#ifdef SENSOR3
   Serial.println(read3);
-  //Serial.print(",");
-  //Serial.print(read4);
-  //Serial.print(",");
-  //Serial.println(Vsys, 2);
-
+  Serial.print(",");
+#endif
+#ifdef SENSOR4
+  Serial.print(read4);
+  Serial.print(",");
+#endif
+  Serial.println(Vsys, 2);
   delay (5000);
-
-  return;
 }
+
+
 void printTime()
 {
   // Use rtc.getDay(), .getMonth(), and .getYear()
