@@ -1,3 +1,0 @@
-(sym_lib_table
-  (lib (name Catwan_sensorwater-rescue)(type Legacy)(uri ${KIPRJMOD}/Catwan_sensorwater-rescue.lib)(options "")(descr ""))
-)
