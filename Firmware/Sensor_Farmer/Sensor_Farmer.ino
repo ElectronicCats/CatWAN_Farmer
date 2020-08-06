@@ -1,7 +1,10 @@
 /*******************************************************
-  Test program for CatWAN Farmer
+  Firmware for CatWAN Farmer
   Andres Sabas @ Electronic Cats
+  Montserrat Figueroa @ Electronic Cats
+
   Date Mar 28, 2019
+
   Based in the work of Reinier van der Lee, www.vanderleevineyard.com
   This code is beerware; if you see me (or any other Electronic Cats
   member) at the local, and you've found our code helpful,
@@ -15,6 +18,7 @@
 #include "DHT.h"
 
 RTCZero rtc; // Create an RTC object
+
 byte lastSecond = 60;
 byte alarmMinute = 1; // Minutes after clock starts to sound alarm
 bool alarmTriggered = false;
@@ -35,7 +39,7 @@ typedef struct {        // Structure to be used in percentage and resistance val
 #define S1 28
 #define ADC_BAT A2
 #define DHTPIN 11
-#define DHTTYPE DHT22 
+#define DHTTYPE DHT22
 
 DHT dht(DHTPIN, DHTTYPE);
 
@@ -68,7 +72,7 @@ void setup() {
   pinMode(S0, OUTPUT);  // S0
   pinMode(S1, OUTPUT);  // S1
 
-  
+
   while (!SerialUSB) ; // Wait for Serial monitor to open
 
   byte hour = prompt("Hour", 0, 23); // Get the hour
@@ -106,11 +110,11 @@ void setup() {
   rtc.attachInterrupt(alarmMatch);
 
 
-   Serial.println(F("DHTxx test!"));
+  Serial.println(F("DHTxx test!"));
 
   dht.begin();
 
-  
+
 }
 
 
@@ -129,7 +133,7 @@ void loop()
 }
 
 
-void reloj() 
+void reloj()
 {
   // If the second value is different:
   if (lastSecond != rtc.getSeconds())
@@ -185,11 +189,11 @@ void soilsensors() {
 
   // Select sensor 1, and enable MUX
   /*digitalWrite(S0, LOW);
-  digitalWrite(S1, LOW);
-  digitalWrite(ENABLE, LOW);
-  measureSensor();
-  unsigned long read1 = average();
-*/
+    digitalWrite(S1, LOW);
+    digitalWrite(ENABLE, LOW);
+    measureSensor();
+    unsigned long read1 = average();
+  */
   // Select sensor 2, and enable MUX
   /* digitalWrite(S0, LOW);
     digitalWrite(S1, HIGH);
@@ -198,15 +202,15 @@ void soilsensors() {
     unsigned long read2 = average();
   */
   // Select sensor 3, and enable MUX
-    digitalWrite(S0, HIGH);
-    digitalWrite(S1, LOW);
-    digitalWrite(ENABLE, LOW);
-    measureSensor();
-    unsigned long read3 = average();
-  
-  
+  digitalWrite(S0, HIGH);
+  digitalWrite(S1, LOW);
+  digitalWrite(ENABLE, LOW);
+  measureSensor();
+  unsigned long read3 = average();
+
+
   // Select sensor 4, and enable MUX
-   /*  digitalWrite(S0, HIGH);
+  /*  digitalWrite(S0, HIGH);
     digitalWrite(S1, HIGH);
     digitalWrite(ENABLE, LOW);
     measureSensor();
@@ -248,11 +252,11 @@ void printTime()
   // to get time values:
   SerialUSB.print(rtc.getHours()); // Print hours
   SerialUSB.print(":");
-  if (rtc.getMinutes() < 10) 
+  if (rtc.getMinutes() < 10)
     SerialUSB.print('0'); // Pad the 0
   SerialUSB.print(rtc.getMinutes()); // Print minutes
   SerialUSB.print(":");
-  if (rtc.getSeconds() < 10) 
+  if (rtc.getSeconds() < 10)
     SerialUSB.print('0'); // Pad the 0
   SerialUSB.print(rtc.getSeconds()); // Print seconds
   SerialUSB.println();
@@ -301,46 +305,46 @@ void measureSensor()
     digitalWrite(SENS_X, LOW);
     pinMode(SENS_X, INPUT);
     delay(100);
-    long resistance = (knownResistor * (supplyVoltage - sensorVoltage ) / sensorVoltage)-zeroCalibration ;
+    long resistance = (knownResistor * (supplyVoltage - sensorVoltage ) / sensorVoltage) - zeroCalibration ;
     addReading(resistance);
-    
+
     //Serial.print("Resistor con: ");
     //Serial.println(knownResistor);
     // Serial.print("Supply V: ");
     //Serial.println(supplyVoltage);
     //Serial.print("Sensor V: ");
     //Serial.println(sensorVoltage);
-    
-   // Serial.print("Resistor: ");
-   // Serial.println(resistance);
+
+    // Serial.print("Resistor: ");
+    // Serial.println(resistance);
     //addReading(resistance);
     //delay(1);
-    
-        pinMode(SENS_Y, OUTPUT);
-        digitalWrite(SENS_Y, LOW);
-        digitalWrite(SENS_Y, HIGH);
-        delayMicroseconds(25);
-        sensorVoltage = analogRead(A0);   // read the sensor voltage
-        supplyVoltage = analogRead(A1);   // read the supply voltage
-        delayMicroseconds(25);
-        digitalWrite(SENS_Y, LOW);
-        pinMode(SENS_Y, INPUT);
-        
-       // Serial.print("Resistor con: ");
-        //Serial.println(knownResistor);
-        //Serial.print("Supply V2: ");
-       // Serial.println(supplyVoltage);
-        //Serial.print("Sensor V2: ");
-        //Serial.println(sensorVoltage);
-        
-        resistance = (knownResistor * (supplyVoltage - sensorVoltage ) / sensorVoltage)-zeroCalibration ;
-        delay(100);
-        addReading(resistance);
-        
-        
-      //  Serial.print("Resistor2: ");
-       // Serial.println(resistance);
-        //addReading(resistance);
+
+    pinMode(SENS_Y, OUTPUT);
+    digitalWrite(SENS_Y, LOW);
+    digitalWrite(SENS_Y, HIGH);
+    delayMicroseconds(25);
+    sensorVoltage = analogRead(A0);   // read the sensor voltage
+    supplyVoltage = analogRead(A1);   // read the supply voltage
+    delayMicroseconds(25);
+    digitalWrite(SENS_Y, LOW);
+    pinMode(SENS_Y, INPUT);
+
+    // Serial.print("Resistor con: ");
+    //Serial.println(knownResistor);
+    //Serial.print("Supply V2: ");
+    // Serial.println(supplyVoltage);
+    //Serial.print("Sensor V2: ");
+    //Serial.println(sensorVoltage);
+
+    resistance = (knownResistor * (supplyVoltage - sensorVoltage ) / sensorVoltage) - zeroCalibration ;
+    delay(100);
+    addReading(resistance);
+
+
+    //  Serial.print("Resistor2: ");
+    // Serial.println(resistance);
+    //addReading(resistance);
 
   }
 }
