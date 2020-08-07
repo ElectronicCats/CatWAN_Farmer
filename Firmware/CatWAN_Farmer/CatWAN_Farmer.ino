@@ -12,9 +12,14 @@
   Distributed as-is; no warranty is given.
 *********************************************************/
 #include <math.h>                 // Conversion equation from resistance to %
-#include <RTCZero.h> // Include RTC library - make sure it's installed!
+
 #include "DHT.h"
 #include <lorawan.h>
+#include <RTCZero.h>
+
+
+/* Create an rtc object */
+RTCZero rtc;
 
 //#define SENSOR1
 //#define SENSOR2
@@ -23,11 +28,6 @@
 
 //#define DEBUG
 
-RTCZero rtc; // Create an RTC object
-
-byte lastSecond = 60;
-byte alarmMinute = 1; // Minutes after clock starts to sound alarm
-bool alarmTriggered = false;
 
 typedef struct {        // Structure to be used in percentage and resistance values matrix to be filtered (have to be in pairs)
   int moisture;
@@ -61,7 +61,19 @@ int indice;
 int i;                            // Simple index variable
 int j = 0;                        // Simple index variable
 
-void setup() {
+
+/* Change these values to set the current initial time */
+const byte seconds = 0;
+const byte minutes = 00;
+const byte hours = 17;
+
+/* Change these values to set the current initial date */
+const byte day = 17;
+const byte month = 11;
+const byte year = 15;
+
+void setup() 
+{
 
   // initialize serial communications at 9600 bps:
   Serial.begin(9600);             // initialize LoRa module communications
@@ -81,36 +93,22 @@ void setup() {
   Serial.println(F("DHT Init!"));
   dht.begin();
 
-  byte hour = prompt("Hour", 0, 23); // Get the hour
-  delay (10000);
-  byte minute = prompt("Minute", 0, 59); // Get the minute
-  delay (10000);
-  byte second = prompt("Second", 0, 59); // Get the second
-  delay (10000);
-  byte day = prompt("Day", 0, 31); // Get the day
-  delay (10000);
-  byte month = prompt("Month", 0, 12); // Get the month
-  delay (10000);
-  byte year = prompt("Year (YY)", 0, 99); // Get the year
-  delay (10000);
 
-  rtc.begin(); // To use the RTC, first begin it
-  rtc.setTime(hour, minute, second); // Then set the time
-  rtc.setDate(day, month, year); // And the date
-  SerialUSB.println("RTC Started!");
+ pinMode(LED_BUILTIN, OUTPUT);
+ digitalWrite(LED_BUILTIN, LOW);
 
-  SerialUSB.println("Setting alarm for " + String(alarmMinute) + " minute(s).");
-  SerialUSB.println();
-  byte alarmHour = hour + ((alarmMinute + minute) / 60);
-  alarmMinute = (alarmMinute + minute) % 60;
+  rtc.begin();
 
-  // To set an alarm, use the setAlarmTime function.
-  rtc.setAlarmTime(alarmHour, alarmMinute, second);
-  // After the time is set, enable the alarm, configuring
-  // which time values you want to trigger the alarm
-  rtc.enableAlarm(rtc.MATCH_HHMMSS); // Alarm when hours, minute, & second match
-  // When the alarm triggers, alarmMatch will be called:
+  rtc.setTime(hours, minutes, seconds);
+  rtc.setDate(day, month, year);
+
+  rtc.setAlarmTime(17, 00, 10);
+  rtc.enableAlarm(rtc.MATCH_HHMMSS);
+
   rtc.attachInterrupt(alarmMatch);
+
+  rtc.standbyMode();
+ 
 
 }
 
@@ -121,29 +119,21 @@ void loop()
 
   delay (100);
 
-  reloj();
-
-  delay(100);
 
   temperatura();
   delay(100);
+
+  rtc.standbyMode();    // Sleep until next alarm match
+  delay(100);
 }
 
 
-void reloj()
+void alarmMatch()
 {
-  // If the second value is different:
-  if (lastSecond != rtc.getSeconds())
-  {
-    printTime(); // Print the time
-    lastSecond = rtc.getSeconds(); // Update lastSecond
-
-    if (alarmTriggered) // If the alarm has been triggered
-    {
-      SerialUSB.println("Alarm!"); // Print alarm!
-    }
-  }
+  digitalWrite(LED_BUILTIN, HIGH);
 }
+
+
 
 void temperatura()
 {
@@ -228,6 +218,7 @@ void soilsensors() {
   //Print/send results
   Serial.print("Farmer");
   Serial.print(",");
+#endif
 #ifdef SENSOR1
   Serial.println(read1);
   Serial.print(",");
@@ -248,58 +239,6 @@ void soilsensors() {
   delay (5000);
 }
 
-
-void printTime()
-{
-  // Use rtc.getDay(), .getMonth(), and .getYear()
-  // To get the numerical values for the date.
-  SerialUSB.print(rtc.getDay()); // Print day
-  SerialUSB.print("/");
-  SerialUSB.print(rtc.getMonth()); // Print Month
-  SerialUSB.print("/");
-  SerialUSB.print(rtc.getYear()); // Print year
-  SerialUSB.print("\t");
-
-  // Use rtc.getHours, .getMinutes, and .getSeconds()
-  // to get time values:
-  SerialUSB.print(rtc.getHours()); // Print hours
-  SerialUSB.print(":");
-  if (rtc.getMinutes() < 10)
-    SerialUSB.print('0'); // Pad the 0
-  SerialUSB.print(rtc.getMinutes()); // Print minutes
-  SerialUSB.print(":");
-  if (rtc.getSeconds() < 10)
-    SerialUSB.print('0'); // Pad the 0
-  SerialUSB.print(rtc.getSeconds()); // Print seconds
-  SerialUSB.println();
-}
-
-
-void alarmMatch()
-{
-  // This function is called when the alarm values match
-  // and the alarm is triggered.
-  alarmTriggered = true; // Set the global triggered flag
-}
-
-// Helper function to prompt for a value, and return
-// it if it's within a valid range.
-byte prompt(String ask, int mini, int maxi)
-{
-  SerialUSB.print(ask + "? ");
-  while (!SerialUSB.available()) ; // Wait for numbers to come in
-  byte rsp = SerialUSB.parseInt();
-  if ((rsp >= mini) && (rsp <= maxi))
-  {
-    SerialUSB.println(rsp);
-    return rsp;
-  }
-  else
-  {
-    SerialUSB.println("Invalid.");
-    return mini;
-  }
-}
 
 
 void measureSensor()
