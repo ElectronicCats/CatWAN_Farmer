@@ -16,16 +16,19 @@
 #include "DHT.h"
 #include <lorawan.h>
 
+#include "SAMD_AnalogCorrection.h"
+
 #include <ArduinoLowPower.h>
 int flag=true;
 
+
+#define SENSOR0
 //#define SENSOR1
-//#define SENSOR2
-#define SENSOR3
-//#define SENSOR4
+#define SENSOR2
+//#define SENSOR3
 
 #define DEBUG
-//#define DEBUG2
+#define DEBUG2
 
 
 typedef struct {        // Structure to be used in percentage and resistance values matrix to be filtered (have to be in pairs)
@@ -48,7 +51,7 @@ typedef struct {        // Structure to be used in percentage and resistance val
 DHT dht(DHTPIN, DHTTYPE);
 float tempC=24.0;
 
-long WM1_Resistance,WM2_Resistance, WM3_Resistance,WM4_Resistance=0;
+long WM0_Resistance,WM1_Resistance, WM2_Resistance,WM3_Resistance=0;
 const long short_resistance=-20;
 const long open_resistance=-100;
 const long short_CB=240;
@@ -68,7 +71,11 @@ int j = 0;                        // Simple index variable
 
 void setup() 
 {
+  //analogReference(AR_EXTERNAL); // AR_EXTERNAL / AR_DEFAULT
+  analogReadResolution(12);
+  analogReadCorrection(9, 2126);
 
+  
   // initialize serial communications at 9600 bps:
   Serial.begin(9600);             // initialize LoRa module communications
   while (!Serial) ; // Wait for Serial monitor to open
@@ -92,7 +99,6 @@ void setup()
   // Uncomment this function if you wish to attach function dummy when RTC wakes up the chip
    LowPower.attachInterruptWakeup(RTC_ALARM_WAKEUP, lectura, CHANGE);
    #endif
-
 }
 
 void loop()
@@ -100,14 +106,22 @@ void loop()
   if(flag==true){
    temperatura();
    soilsensors();
-//float   cb1 = converter_cb(WM1_Resistance);
-//float   cb2 = converter_cb(WM2_Resistance);
-float   cb3 = converter_cb(WM3_Resistance);
-//float   cb4 = converter_cb(WM4_Resistance);
-  Serial.print("CB3:");
-  Serial.println(cb3);
+   
+   //float   cb0 = converter_cb(WM0_Resistance);
+   //Serial.print("CB0:");
+   //Serial.println(cb0);
+   //float   cb1 = converter_cb(WM1_Resistance);
+   //Serial.print("CB1:");
+   //Serial.println(cb1);
+   //float   cb2 = converter_cb(WM2_Resistance);
+   //Serial.print("CB2:");
+   //Serial.println(cb2);
+   //float   cb3 = converter_cb(WM3_Resistance);
+   //Serial.print("CB3:");
+   //Serial.println(cb3);
    //envio();
   }
+  
   // Triggers a 2000 ms sleep (the device will be woken up only by the registered wakeup sources and by internal RTC)
   // The power consumption of the chip will drop consistently
   #ifndef DEBUG
@@ -148,43 +162,42 @@ void temperatura()
 
 void soilsensors() {
 
-#ifdef SENSOR1
-  //Select sensor 1, and enable MUX
+#ifdef SENSOR0
+  //Select sensor 0, and enable MUX
   digitalWrite(S0, LOW);
   digitalWrite(S1, LOW);
   digitalWrite(ENABLE, LOW);
   measureSensor();
-  Serial.print("average: ");
-  Serial.println(average());
+  WM0_Resistance = average();
+#endif
+
+#ifdef SENSOR1
+  // Select sensor 1, and enable MUX
+  digitalWrite(S0, LOW);
+  digitalWrite(S1, HIGH);
+  digitalWrite(ENABLE, LOW);
+  measureSensor();
   WM1_Resistance = average();
 #endif
 
 #ifdef SENSOR2
   // Select sensor 2, and enable MUX
-  digitalWrite(S0, LOW);
-  digitalWrite(S1, HIGH);
-  digitalWrite(ENABLE, LOW);
-  measureSensor();
-  WM2_Resistance = average();
-#endif
-
-#ifdef SENSOR3
-  // Select sensor 3, and enable MUX
   digitalWrite(S0, HIGH);
   digitalWrite(S1, LOW);
   digitalWrite(ENABLE, LOW);
   delay(10);
   measureSensor();
-  WM3_Resistance = average();
+  WM2_Resistance = average();
+  
 #endif
 
-#ifdef SENSOR4
-  // Select sensor 4, and enable MUX
+#ifdef SENSOR3
+  // Select sensor 3, and enable MUX
   digitalWrite(S0, HIGH);
   digitalWrite(S1, HIGH);
   digitalWrite(ENABLE, LOW);
   measureSensor();
-  WM4_Resistance = average();
+  WM3_Resistance = average();
 #endif
 
 
@@ -195,20 +208,24 @@ void soilsensors() {
   //Print/send results
   Serial.print("Farmer");
   Serial.print(",");
+#ifdef SENSOR0
+  Serial.print("WM0_Resistance");
+  Serial.println( WM0_Resistance);
+  Serial.print(",");
+#endif
 #ifdef SENSOR1
-  Serial.println( WM1_Resistance);
+  Serial.print("WM1_Resistance");
+  Serial.print(WM1_Resistance);
   Serial.print(",");
 #endif
 #ifdef SENSOR2
-  Serial.print(WM2_Resistance);
+  Serial.print("WM2_Resistance");
+  Serial.println(WM2_Resistance);
   Serial.print(",");
 #endif
 #ifdef SENSOR3
-  Serial.println(WM3_Resistance);
-  Serial.print(",");
-#endif
-#ifdef SENSOR4
-  Serial.print(WM4_Resistance);
+  Serial.print("WM3_Resistance");
+  Serial.print(WM3_Resistance);
   Serial.print(",");
 #endif
   Serial.println(Vsys, 2);
@@ -226,8 +243,8 @@ void measureSensor()
     pinMode(SENS_X, OUTPUT);
     digitalWrite(SENS_X, HIGH);
     delayMicroseconds(25);
-    sensorVoltage = analogRead(A0);   // read the sensor voltage
-    supplyVoltage = analogRead(A1);   // read the supply voltage
+    sensorVoltage = analogRead(A1);   // read the sensor voltage
+    supplyVoltage = analogRead(A0);   // read the supply voltage
     delayMicroseconds(25);
     digitalWrite(SENS_X, LOW);
     pinMode(SENS_X, INPUT);
@@ -251,8 +268,8 @@ void measureSensor()
     digitalWrite(SENS_Y, LOW);
     digitalWrite(SENS_Y, HIGH);
     delayMicroseconds(25);
-    sensorVoltage = analogRead(A1);   // read the sensor voltage
-    supplyVoltage = analogRead(A0);   // read the supply voltage
+    sensorVoltage = analogRead(A0);   // read the sensor voltage
+    supplyVoltage = analogRead(A1);   // read the supply voltage
     delayMicroseconds(25);
     digitalWrite(SENS_Y, LOW);
     pinMode(SENS_Y, INPUT);
