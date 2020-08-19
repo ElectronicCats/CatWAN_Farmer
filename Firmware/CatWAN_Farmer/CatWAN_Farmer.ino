@@ -103,7 +103,7 @@ void setup()
 {
   //analogReference(AR_EXTERNAL); // AR_EXTERNAL / AR_DEFAULT
   analogReadResolution(12);
-  analogReadCorrection(9, 2126);
+ analogReadCorrection(9, 2069);
 
   
   // initialize serial communications at 9600 bps:
